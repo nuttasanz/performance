@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Regular [400] */
+@font-face {
+    font-family: 'FC Iconic';
+    font-weight: 400;
+    src: local('FC Iconic'), url('assets/font/FC Iconic Regular.ttf') format('truetype');
+}
+
+/* Bold [700] */
+@font-face {
+    font-family: 'FC Iconic';
+    font-weight: 700;
+    src: local('FC Iconic'), url('assets/font/FC Iconic Bold.ttf') format('truetype');
+}
+
+
+
+body {
+    font-family: "FC Iconic", sans-serif;
+}
