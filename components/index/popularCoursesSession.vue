@@ -21,7 +21,7 @@
             </div>
             <div class="flex justify-between">
               <div class="flex items-center">
-                <div class="w-6 h-6">
+                <div class="w-6 h-6 flex items-center justify-center">
                   <font-awesome-icon :icon="['fal', 'clock']" style="color: #7C89FF;"/>
                 </div>
                 <div class="text-[20px] leading-[28px] text-[#7C89FF] ml-[14.5px]">4-5 ชั่วโมง</div>

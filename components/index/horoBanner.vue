@@ -12,10 +12,10 @@
           <!--    CONTENT    -->
           <div class="absolute w-full h-full flex justify-between items-center pl-20 pr-[70px]">
             <div class="flex flex-col justify-center">
-              <div class="text-[84px] leading-[108.44px] tracking-[0.04em] font-bold text-white">Horo Academy</div>
+              <div class="text-[84px] leading-[108.44px] tracking-[0.04em] font-fraunces font-bold text-white" >Horo Academy</div>
               <div class="text-[32px] leading-[44.8px] tracking-[0.02em] text-white">สังคมพยากรณ์สมัยใหม่ ไม่งมงาย</div>
               <button-style
-                  class="font-bold text-[18px] py-[18px] px-9 mt-[54px]"
+                  class="font-bold text-[18px] tracking-[0.04em] py-[18px] px-9 mt-[54px]"
                   text-color="#5762C5"
                   button-color="#FFFFFF"
                   text="ดูหลักสูตรทั้งหมด"
@@ -43,6 +43,7 @@
 
 <script>
 import ButtonStyle from "~/components/utils/button/ButtonStyle.vue";
+
 
 export default {
   components: {ButtonStyle},

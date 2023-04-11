@@ -1,6 +1,6 @@
 <template>
   <button
-      class="w-fit flex items-center gap-x-2 text-base text-white leading-[18px] rounded-full py-3 px-6"
+      class="w-fit flex items-center gap-x-2 text-white leading-[18px] rounded-full py-3 px-6"
       :style="{backgroundColor: buttonColor}"
       @click="$emit('emitOnClick')">
     <div v-if="iconName" class="w-4 h-4 flex items-center">
@@ -32,7 +32,7 @@ export default {
     textColor: {
       type: String,
       default: 'text-white'
-    }
+    },
   }
 }
 </script>

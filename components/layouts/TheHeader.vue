@@ -26,12 +26,14 @@
         <div class="max-w-[1440px] mx-auto py-[10px] px-20">
           <div class="flex items-center justify-between "
                style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);">
-
-            <div class="flex gap-x-3">
-              <div class="max-w-[60px]"><img src="@/static/images/brandLogo/HeaderHoroLogo.png"></div>
-              <div class="max-w-[180px] flex items-center"><img src="@/static/images/brandLogo/HeaderHoroLogoText.png">
+            <nuxt-link to="/">
+              <div class="flex gap-x-3">
+                <div class="max-w-[60px]"><img src="@/static/images/brandLogo/HeaderHoroLogo.png"></div>
+                <div class="max-w-[180px] flex items-center"><img
+                    src="@/static/images/brandLogo/HeaderHoroLogoText.png">
+                </div>
               </div>
-            </div>
+            </nuxt-link>
 
             <div class="flex gap-x-10">
               <template v-for="(menu,i) in headerMenus">
@@ -42,13 +44,15 @@
                   </div>
                 </div>
               </template>
-              <button
-                  class="w-fit flex items-center gap-x-2 text-base text-white leading-[18px] bg-[#5762C5] rounded-full py-3 px-6">
-                <div class="w-4 h-4">
-                  <font-awesome-icon :icon="['fas', 'user']" size="sm"/>
-                </div>
-                <div>เข้าสู่ระบบ</div>
-              </button>
+              <nuxt-link to="/register">
+                <button
+                    class="w-fit flex items-center gap-x-2 text-base text-white leading-[18px] bg-[#5762C5] rounded-full py-3 px-6">
+                  <div class="w-4 h-4">
+                    <font-awesome-icon :icon="['fas', 'user']" size="sm"/>
+                  </div>
+                  <div>เข้าสู่ระบบ</div>
+                </button>
+              </nuxt-link>
             </div>
 
           </div>

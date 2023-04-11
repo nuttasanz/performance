@@ -18,7 +18,7 @@
             <div class="text-[20px] text-[#24285F] leading-[28px] font-medium mt-1 mb-3">{{ card.title }}</div>
             <div class="flex justify-between">
               <div class="flex items-center">
-                <div class="w-6 h-6">
+                <div class="w-6 h-6 flex items-center justify-center">
                   <font-awesome-icon :icon="['fal', 'clock']" style="color: #A2A2A8;"/>
                 </div>
                 <div class="text-[20px] leading-[28px] text-[#A2A2A8] ml-[14.5px]">{{ card.time }}</div>

@@ -1,24 +1,47 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+    font-family: "FC Iconic", sans-serif;
+}
 
+/* Italic */
+@font-face {
+    font-family: "FC Iconic";
+    font-weight: 400;
+    font-style: italic;
+    src: local('FC Iconic'), url('../../public/font/FC Iconic/FC-Iconic-Italic.ttf') format('truetype');
+}
 
 /* Regular [400] */
 @font-face {
     font-family: 'FC Iconic';
     font-weight: 400;
-    src: local('FC Iconic'), url('assets/font/FC Iconic Regular.ttf') format('truetype');
+    src: local('FC Iconic'), url('../../public/font/FC Iconic/FC-Iconic-Regular.ttf') format('truetype');
 }
 
 /* Bold [700] */
 @font-face {
     font-family: 'FC Iconic';
     font-weight: 700;
-    src: local('FC Iconic'), url('assets/font/FC Iconic Bold.ttf') format('truetype');
+    src: local('FC Iconic'), url('../../public/font/FC Iconic/FC-Iconic-Bold.ttf') format('truetype');
+}
+
+/* Fraunces */
+
+/* Bold [700] */
+@font-face {
+    font-family: 'Fraunces';
+    font-weight: 700;
+    src: local('Fraunces'), url("../../public/font/Fraunces/Fraunces-Bold.ttf") format('truetype');
 }
 
 
 
-body {
-    font-family: "FC Iconic", sans-serif;
+
+.font-fraunces {
+    font-family: 'Fraunces',sans-serif;
+    font-weight: 700;
 }
