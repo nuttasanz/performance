@@ -8,9 +8,9 @@
   </div>
 </template>
 <script setup lang="ts">
-import HoroBanner from "~/components/index/HoroBanner.vue";
-import RecommendedCourseSession from "~/components/index/RecommendedCourseSession.vue";
-import ExploreSession from "~/components/index/exploreSession.vue";
-import PopularCoursesSession from "~/components/index/popularCoursesSession.vue";
-import ActivitySession from "~/components/index/activitySession.vue";
+import HoroBanner from "~/components/home/HoroBanner.vue";
+import RecommendedCourseSession from "~/components/home/RecommendedCourseSession.vue";
+import ExploreSession from "~/components/home/exploreSession.vue";
+import PopularCoursesSession from "~/components/home/popularCoursesSession.vue";
+import ActivitySession from "~/components/home/activitySession.vue";
 </script>
