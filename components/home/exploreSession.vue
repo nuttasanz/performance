@@ -3,14 +3,14 @@
     <div class="max-w-[1440px] mx-auto mt-20 p-20">
       <div class="relative bg-[#24285F] rounded-[32px]">
         <img
-          src="@/static/images/recommendCourse/gettoknowBanner.png"
+          src="/images/recommendCourse/gettoknowBanner.png"
           class="relative w-full mix-blend-overlay rounded-[32px]"
         />
         <div class="absolute top-0 w-full h-full flex items-center">
           <div class="relative w-full max-w-[424px]">
             <div class="relative bottom-[32px]">
               <img
-                src="@/static/images/recommendCourse/master-zern2.png"
+                src="/images/recommendCourse/master-zern2.png"
                 class="w-full"
               />
             </div>

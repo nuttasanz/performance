@@ -13,30 +13,30 @@
           <div class="flex gap-x-8">
             <div class="flex flex-col justify-between">
               <div>
-                <img src="@/static/images/activitySeminar/activity1.png" />
+                <img src="/images/activitySeminar/activity1.png" />
               </div>
               <div>
-                <img src="@/static/images/activitySeminar/activity2.png" />
+                <img src="/images/activitySeminar/activity2.png" />
               </div>
             </div>
             <div>
-              <img src="@/static/images/activitySeminar/activity3video.png" />
+              <img src="/images/activitySeminar/activity3video.png" />
             </div>
           </div>
           <div class="flex gap-x-8">
             <div>
-              <img src="@/static/images/activitySeminar/activity5.png" />
+              <img src="/images/activitySeminar/activity5.png" />
             </div>
             <div>
-              <img src="@/static/images/activitySeminar/activity6.png" />
+              <img src="/images/activitySeminar/activity6.png" />
             </div>
           </div>
         </div>
 
         <div class="flex flex-col justify-between">
-          <div><img src="@/static/images/activitySeminar/activity4.png" /></div>
-          <div><img src="@/static/images/activitySeminar/activity7.png" /></div>
-          <div><img src="@/static/images/activitySeminar/activity8.png" /></div>
+          <div><img src="/images/activitySeminar/activity4.png" /></div>
+          <div><img src="/images/activitySeminar/activity7.png" /></div>
+          <div><img src="/images/activitySeminar/activity8.png" /></div>
         </div>
       </div>
 

@@ -33,10 +33,10 @@
             <nuxt-link to="/">
               <div class="flex gap-x-3">
                 <div class="max-w-[60px]">
-                  <img src="@/static/images/brandLogo/HeaderHoroLogo.png" />
+                  <img src="@/public/images/brandLogo/HeaderHoroLogo.png" />
                 </div>
                 <div class="max-w-[180px] flex items-center">
-                  <img src="@/static/images/brandLogo/HeaderHoroLogoText.png" />
+                  <img src="@/public/images/brandLogo/HeaderHoroLogoText.png" />
                 </div>
               </div>
             </nuxt-link>
@@ -78,10 +78,10 @@ export default {
   data() {
     return {
       brand: [
-        "_nuxt/static/images/brandLogo/facebookIcon.png",
-        "_nuxt/static/images/brandLogo/lineIcon.png",
-        "_nuxt/static/images/brandLogo/youtubeIcon.png",
-        "_nuxt/static/images/brandLogo/tiktokIcon.png",
+        "/images/brandLogo/facebookIcon.png",
+        "/images/brandLogo/lineIcon.png",
+        "/images/brandLogo/youtubeIcon.png",
+        "/images/brandLogo/tiktokIcon.png",
       ],
       headerMenus: [
         {

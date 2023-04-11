@@ -66,7 +66,7 @@ export default {
     return {
       courseCard: [
         {
-          image: "_nuxt/static/images/recommendCourse/course1.png",
+          image: "/images/recommendCourse/course1.png",
           tag: "คอร์สออนไลน์",
           title:
             "Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ สร้างรายได้หลักล้าน",
@@ -74,7 +74,7 @@ export default {
           cost: "฿15,000",
         },
         {
-          image: "_nuxt/static/images/recommendCourse/course2.png",
+          image: "/images/recommendCourse/course2.png",
           tag: "คอร์สออนไลน์",
           title:
             "คอร์สเลขศาสตร์ การพยากรณ์เบอร์โทร เลขที่บ้าน และตัวเลขทุกชนิด",
@@ -82,42 +82,42 @@ export default {
           cost: "฿8,900",
         },
         {
-          image: "_nuxt/static/images/recommendCourse/course3.png",
+          image: "/images/recommendCourse/course3.png",
           tag: "คอร์สออนไลน์",
           title: "คอร์สวิชาโหรทายหนู แม่นยำยิ่งกว่าตาเห็น",
           time: "4-5 ชั่วโมง",
           cost: "฿15,000",
         },
         {
-          image: "_nuxt/static/images/recommendCourse/course4.png",
+          image: "/images/recommendCourse/course4.png",
           tag: "คอร์สออนไลน์",
           title: "คอร์สชัยภูมิฮวงจุ้ย 1 ทำเลฮวงจุ้ยมั่งคั่ง",
           time: "4-5 ชั่วโมง",
           cost: "฿15,000",
         },
         {
-          image: "_nuxt/static/images/recommendCourse/course5.png",
+          image: "/images/recommendCourse/course5.png",
           tag: "คอร์สออนไลน์",
           title: "คอร์สฮวงจุ้ยดาวหิน (ดาว 9 ยุค ระบบซำง้วน)",
           time: "4-5 ชั่วโมง",
           cost: "฿15,000",
         },
         {
-          image: "_nuxt/static/images/recommendCourse/course6.png",
+          image: "/images/recommendCourse/course6.png",
           tag: "คอร์สออนไลน์",
           title: "คอร์สสร้างโลโก้ ถูกหลักฮวงจุ้ยเร่งความสำเร็จ",
           time: "4-5 ชั่วโมง",
           cost: "฿8,900",
         },
         {
-          image: "_nuxt/static/images/recommendCourse/course7.png",
+          image: "/images/recommendCourse/course7.png",
           tag: "คอร์สออนไลน์",
           title: "คอร์สเลข ๗ ตัว กาลโยคพม่า (เลข ๗ ตัวพิศดาร)",
           time: "4-5 ชั่วโมง",
           cost: "฿15,000",
         },
         {
-          image: "_nuxt/static/images/recommendCourse/course8.png",
+          image: "/images/recommendCourse/course8.png",
           tag: "หนังสือเสียง",
           title: "วิธีแก้เลขที่บ้านร้ายด้วยตัวเอง",
           time: "4-5 ชั่วโมง",

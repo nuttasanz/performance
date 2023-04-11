@@ -6,10 +6,10 @@
         <div class="flex flex-col">
           <div class="flex gap-x-3">
             <div class="max-w-[60px]">
-              <img src="@/static/images/brandLogo/FooterHoroLogo.png" />
+              <img src="@/public/images/brandLogo/FooterHoroLogo.png" />
             </div>
             <div class="max-w-[180px] flex items-center">
-              <img src="@/static/images/brandLogo/FooterHoroLogoText.png" />
+              <img src="@/public/images/brandLogo/FooterHoroLogoText.png" />
             </div>
           </div>
           <div class="max-w-[290px] h-[172px] mt-6">
@@ -79,13 +79,13 @@
         <!--   LINE QR CODE   -->
         <div class="flex flex-col gap-y-3">
           <div class="max-w-[180px]">
-            <img src="@/static/images/brandLogo/LineQR.png" />
+            <img src="/images/brandLogo/LineQR.png" />
           </div>
           <button
             class="flex items-center bg-[#06C755] py-2 px-4 rounded-[6px] gap-x-4"
           >
             <div class="max-w-[22px]">
-              <img src="@/static/images/brandLogo/lineIcon.png" />
+              <img src="@/public/images/brandLogo/lineIcon.png" />
             </div>
             <div class="text-base font-bold text-white">@aj_zern</div>
           </button>

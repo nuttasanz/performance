@@ -11,10 +11,10 @@
         <div class="relative flex justify-between">
           <!--    BG IMAGE CONTENT    -->
           <div class="relative">
-            <img src="@/static/images/HeroBanner/horo-tree.png" />
+            <img src="@/public/images/HeroBanner/horo-tree.png" />
           </div>
           <div class="relative top-[0px]">
-            <img src="@/static/images/HeroBanner/master-zern.png" />
+            <img src="@/public/images/HeroBanner/master-zern.png" />
           </div>
           <!--   END BG IMAGE CONTENT   -->
           <!--    CONTENT    -->
@@ -32,12 +32,12 @@
               >
                 สังคมพยากรณ์สมัยใหม่ ไม่งมงาย
               </div>
-              <button-style
+              <utils-button-style
                 class="font-bold text-[18px] tracking-[0.04em] py-[18px] px-9 mt-[54px]"
                 text-color="#5762C5"
                 button-color="#FFFFFF"
                 text="ดูหลักสูตรทั้งหมด"
-              ></button-style>
+              ></utils-button-style>
             </div>
             <div
               class="text-[20px] text-white font-light leading-[28px] tracking-[0.02em] italic"
@@ -68,27 +68,24 @@
 </template>
 
 <script>
-import ButtonStyle from "~/components/utils/button/ButtonStyle.vue";
-
 export default {
-  components: { ButtonStyle },
   data() {
     return {
       socialContact: [
         {
-          icon: "_nuxt/static/images/HeroBanner/facebook.png",
+          icon: "/images/HeroBanner/facebook.png",
           title: "zernhoroacademy",
         },
         {
-          icon: "_nuxt/static/images/HeroBanner/line.png",
+          icon: "/images/HeroBanner/line.png",
           title: "@aj_zern",
         },
         {
-          icon: "_nuxt/static/images/HeroBanner/youtube.png",
+          icon: "/images/HeroBanner/youtube.png",
           title: "อจ เซิน ซินแสที่ปรึกษาธุรกิจ",
         },
         {
-          icon: "_nuxt/static/images/HeroBanner/tiktok.png",
+          icon: "/images/HeroBanner/tiktok.png",
           title: "@horoacademy",
         },
       ],
