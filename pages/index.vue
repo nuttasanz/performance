@@ -7,10 +7,19 @@
     <activity-session></activity-session>
   </div>
 </template>
-<script setup lang="ts">
-import HoroBanner from "~/components/home/HoroBanner.vue";
-import RecommendedCourseSession from "~/components/home/RecommendedCourseSession.vue";
-import ExploreSession from "~/components/home/exploreSession.vue";
-import PopularCoursesSession from "~/components/home/popularCoursesSession.vue";
-import ActivitySession from "~/components/home/activitySession.vue";
+<script>
+import HoroBanner from "@/components/home/HoroBanner.vue";
+import RecommendedCourseSession from "@/components/home/RecommendedCourseSession.vue";
+import ExploreSession from "@/components/home/exploreSession.vue";
+import PopularCoursesSession from "@/components/home/popularCoursesSession.vue";
+import ActivitySession from "@/components/home/activitySession.vue";
+export default {
+  components: {
+    HoroBanner,
+    RecommendedCourseSession,
+    ExploreSession,
+    PopularCoursesSession,
+    ActivitySession,
+  },
+};
 </script>

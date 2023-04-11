@@ -46,6 +46,11 @@
     </div>
   </div>
 </template>
-<script setup lang="ts">
-import ButtonStyle from "~/components/utils/button/ButtonStyle.vue";
+<script>
+import ButtonStyle from "@/components/utils/button/ButtonStyle.vue";
+export default {
+  components: {
+    ButtonStyle,
+  },
+};
 </script>
