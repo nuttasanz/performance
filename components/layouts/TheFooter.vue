@@ -46,33 +46,33 @@
 
           <div class="flex flex-col text-base text-white gap-y-3">
             <div class="font-semibold mb-3">ช่องทางติดต่อ</div>
-            <button-style
+            <utils-button-style
               class="w-full"
               icon-type="fas"
               icon-name="phone"
               text="088-244-1915"
-            ></button-style>
-            <button-style
+            ></utils-button-style>
+            <utils-button-style
               class="w-full"
               icon-type="fab"
               icon-name="facebook"
               text="zernhoroacademy"
               button-color="#1877F2"
-            ></button-style>
-            <button-style
+            ></utils-button-style>
+            <utils-button-style
               class="w-full"
               icon-type="fab"
               icon-name="youtube"
               text="อจ เซิน ซินแส"
               button-color="#FF0000"
-            ></button-style>
-            <button-style
+            ></utils-button-style>
+            <utils-button-style
               class="w-full"
               icon-type="fab"
               icon-name="tiktok"
               text="@horoacademy"
               button-color="#000000"
-            ></button-style>
+            ></utils-button-style>
           </div>
         </div>
         <!--   END COURSE COURSE   -->
@@ -100,13 +100,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import ButtonStyle from "~/components/utils/button/ButtonStyle.vue";
-
-export default {
-  components: {
-    ButtonStyle,
-  },
-};
-</script>

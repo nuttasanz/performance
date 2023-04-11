@@ -7,13 +7,13 @@
         </div>
         <div class="flex flex-grow border border-[#5762C5]/[0.4] h-0"></div>
       </div>
-      <div class="grid grid-cols-4">
+      <div class="grid grid-cols-4 gap-y-12">
         <!--  COURSE CARD  -->
         <template v-for="(card, i) in courseCard" :key="i">
-          <div class="flex flex-col max-w-[305px] mb-12">
+          <div class="flex flex-col max-w-[305px] w-full">
             <div><img :src="card.image" /></div>
             <div
-              class="w-fit py-[6px] px-3 bg-[#6F93DD] rounded-full text-[12px] text-white leading-[12px] mt-4"
+              class="w-fit py-[6px] px-3 bg-[#6F93DD] rounded-full text-[12px] text-white leading-[12px]"
             >
               {{ card.tag }}
             </div>
@@ -22,22 +22,27 @@
             >
               {{ card.title }}
             </div>
-            <div class="flex justify-between">
-              <div class="flex items-center">
-                <div class="w-6 h-6 flex items-center justify-center">
-                  <font-awesome-icon
-                    :icon="['fal', 'clock']"
-                    style="color: #a2a2a8"
-                  />
+
+            <div class="flex flex-col h-full justify-end">
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <div class="w-6 h-6 flex items-center justify-center">
+                    <font-awesome-icon
+                      :icon="['fal', 'clock']"
+                      style="color: #a2a2a8"
+                    />
+                  </div>
+                  <div
+                    class="text-[20px] leading-[28px] text-[#A2A2A8] ml-[14.5px]"
+                  >
+                    {{ card.time }}
+                  </div>
                 </div>
                 <div
-                  class="text-[20px] leading-[28px] text-[#A2A2A8] ml-[14.5px]"
+                  class="text-[20px] leading-[28px] text-[#5762C5] font-bold"
                 >
-                  {{ card.time }}
+                  {{ card.cost }}
                 </div>
-              </div>
-              <div class="text-[20px] leading-[28px] text-[#5762C5] font-bold">
-                {{ card.cost }}
               </div>
             </div>
           </div>
@@ -119,6 +124,5 @@ export default {
       ],
     };
   },
-  methods: {},
 };
 </script>

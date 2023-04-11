@@ -1,25 +1,9 @@
 <template>
   <div class="w-full bg-[#F7F7FD]">
-    <horo-banner></horo-banner>
-    <popular-courses-session></popular-courses-session>
-    <recommended-course-session></recommended-course-session>
-    <explore-session></explore-session>
-    <activity-session></activity-session>
+    <home-horo-banner></home-horo-banner>
+    <home-popular-courses-session></home-popular-courses-session>
+    <home-recommended-course-session></home-recommended-course-session>
+    <home-explore-session></home-explore-session>
+    <home-activity-session></home-activity-session>
   </div>
 </template>
-<script>
-import HoroBanner from "@/components/home/HoroBanner.vue";
-import RecommendedCourseSession from "@/components/home/RecommendedCourseSession.vue";
-import ExploreSession from "@/components/home/exploreSession.vue";
-import PopularCoursesSession from "@/components/home/popularCoursesSession.vue";
-import ActivitySession from "@/components/home/activitySession.vue";
-export default {
-  components: {
-    HoroBanner,
-    RecommendedCourseSession,
-    ExploreSession,
-    PopularCoursesSession,
-    ActivitySession,
-  },
-};
-</script>

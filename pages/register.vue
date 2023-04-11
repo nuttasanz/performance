@@ -27,30 +27,22 @@
           ลืมรหัสผ่าน?
         </div>
         <div class="px-8">
-          <button-style
+          <utils-button-style
             class="w-full items-center justify-center font-bold py-[17px]"
             text="เข้าสู่ระบบ"
           >
-          </button-style>
+          </utils-button-style>
           <div class="text-center text-sm text-[#A2A2A8] my-[10px]">หรือ</div>
-          <button-style
+          <utils-button-style
             class="w-full items-center justify-center font-bold py-[17px]"
             text="เข้าสู่ระบบด้วย LINE"
             button-color="#06C755"
             icon-type="fab"
             icon-name="line"
           >
-          </button-style>
+          </utils-button-style>
         </div>
       </div>
     </div>
   </div>
 </template>
-<script>
-import ButtonStyle from "@/components/utils/button/ButtonStyle.vue";
-export default {
-  components: {
-    ButtonStyle,
-  },
-};
-</script>

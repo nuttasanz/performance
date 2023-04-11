@@ -28,13 +28,13 @@
               <span class="font-bold">ไม่เน้นงมงาย</span> อาจารย์ เซิน
               คือคนที่ท่านมองหาอยู่
             </div>
-            <button-style
+            <utils-button-style
               class="font-bold text-[18px] tracking-[0.04em] mt-8 px-8 py-[18px]"
               text-color="#5762C5"
               text="ทำความรู้จัก อาจารย์เซิน มากขึ้น"
               button-color="#FFFFFF"
             >
-            </button-style>
+            </utils-button-style>
           </div>
         </div>
       </div>
@@ -59,6 +59,3 @@
 <!--  ></elements-button>-->
 <!--</div>-->
 <!--</div>-->
-<script setup lang="ts">
-import ButtonStyle from "~/components/utils/button/ButtonStyle.vue";
-</script>
