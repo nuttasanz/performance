@@ -28,13 +28,13 @@
         </div>
         <div class="px-8">
           <utils-button-style
-            class="w-full items-center justify-center font-bold py-[17px]"
+            class="w-full items-center justify-center text-white font-bold py-[17px]"
             text="เข้าสู่ระบบ"
           >
           </utils-button-style>
           <div class="text-center text-sm text-[#A2A2A8] my-[10px]">หรือ</div>
           <utils-button-style
-            class="w-full items-center justify-center font-bold py-[17px]"
+            class="w-full items-center justify-center text-white font-bold py-[17px]"
             text="เข้าสู่ระบบด้วย LINE"
             button-color="#06C755"
             icon-type="fab"

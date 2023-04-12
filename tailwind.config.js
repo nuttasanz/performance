@@ -28,7 +28,14 @@ module.export = {
         lg: [
           "18px",
           {
-            lineHeight: "32px",
+            lineHeight: "25.2px",
+            letterSpacing: "-0.01em",
+          },
+        ],
+        xl: [
+          "20px",
+          {
+            lineHeight: "28px",
             letterSpacing: "-0.01em",
           },
         ],

@@ -7,10 +7,25 @@
         </div>
         <div class="flex flex-grow border border-[#A0A9F666]/[0.4] h-0"></div>
       </div>
-      <utils-card-course-card-session
-        :course="courseCard"
-        popular-course-color
-      ></utils-card-course-card-session>
+      <div class="relative" @mouseover="showArrows" @mouseleave="hideArrow">
+        <utils-card-course-card-session
+          :course="courseCard"
+          popular-course-color
+        ></utils-card-course-card-session>
+
+        <div
+          v-if="arrows"
+          class="w-[60px] h-[60px] absolute bottom-[240px] left-[-50px]"
+        >
+          <img src="/images/popularCourse/arrow-right.png" />
+        </div>
+        <div
+          v-if="arrows"
+          class="w-[60px] h-[60px] absolute bottom-[240px] right-[-50px]"
+        >
+          <img src="/images/popularCourse/arrow-left.png" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -50,7 +65,16 @@ export default {
           cost: "฿15,000",
         },
       ],
+      arrows: false,
     };
+  },
+  methods: {
+    showArrows() {
+      this.arrows = true;
+    },
+    hideArrow() {
+      this.arrows = false;
+    },
   },
 };
 </script>

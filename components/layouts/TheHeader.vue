@@ -24,12 +24,9 @@
       </div>
 
       <!-- HEADER MENU -->
-      <div class="w-full">
+      <div class="w-full" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04)">
         <div class="max-w-[1440px] mx-auto py-[10px] px-20">
-          <div
-            class="flex items-center justify-between"
-            style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04)"
-          >
+          <div class="flex items-center justify-between">
             <nuxt-link to="/">
               <div class="flex gap-x-3">
                 <div class="max-w-[60px]">

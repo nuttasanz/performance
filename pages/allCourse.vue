@@ -1,61 +1,38 @@
 <template>
-  <div class="w-full">
-    <div class="max-w-[1440px] mx-auto pt-8 px-20">
-      <div class="flex items-center gap-x-8 mb-10">
-        <div class="text-[40px] text-[#0E1F1D] leading-[52px] font-medium">
-          หลักสูตรแนะนำ
-        </div>
-        <div class="flex flex-grow border border-[#5762C5]/[0.4] h-0"></div>
-      </div>
-      <!--  COURSE CARD  -->
-      <!--        <template v-for="(card, i) in courseCard" :key="i">-->
-      <!--          <div class="flex flex-col max-w-[305px] w-full">-->
-      <!--            <div><img :src="card.image" /></div>-->
-      <!--            <div-->
-      <!--              class="w-fit py-[6px] px-3 bg-[#6F93DD] rounded-full text-[12px] text-white leading-[12px]"-->
-      <!--            >-->
-      <!--              {{ card.tag }}-->
-      <!--            </div>-->
-      <!--            <div-->
-      <!--              class="text-[20px] text-[#24285F] leading-[28px] font-medium mt-1 mb-3"-->
-      <!--            >-->
-      <!--              {{ card.title }}-->
-      <!--            </div>-->
-
-      <!--            <div class="flex flex-col h-full justify-end">-->
-      <!--              <div class="flex justify-between">-->
-      <!--                <div class="flex items-center">-->
-      <!--                  <div class="w-6 h-6 flex items-center justify-center">-->
-      <!--                    <font-awesome-icon-->
-      <!--                      :icon="['fal', 'clock']"-->
-      <!--                      style="color: #a2a2a8"-->
-      <!--                    />-->
-      <!--                  </div>-->
-      <!--                  <div-->
-      <!--                    class="text-[20px] leading-[28px] text-[#A2A2A8] ml-[14.5px]"-->
-      <!--                  >-->
-      <!--                    {{ card.time }}-->
-      <!--                  </div>-->
-      <!--                </div>-->
-      <!--                <div-->
-      <!--                  class="text-[20px] leading-[28px] text-[#5762C5] font-bold"-->
-      <!--                >-->
-      <!--                  {{ card.cost }}-->
-      <!--                </div>-->
-      <!--              </div>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--        </template>-->
-      <utils-card-course-card-session
-        :course="courseCard"
-        grid
-      ></utils-card-course-card-session>
-      <!--  END COURSE CARD  -->
+  <div class="w-full bg-[#F7F7FD]">
+    <div class="bg-[#24285F] relative">
+      <img
+        src="/images/HeroBanner/allCourseBanner.png"
+        class="mix-blend-overlay"
+      />
       <div
-        class="text-center text-[#5762C5] text-[20px] leading-[28px] font-medium border-2 rounded-full p-5"
+        class="absolute top-0 w-full h-full flex flex-col items-center justify-center"
       >
-        <NuxtLink to="/allCourse"> ดูหลักสูตรทั้งหมด </NuxtLink>
+        <div
+          class="text-[64px] text-white font-fraunces font-bold leading-[82.62px] tracking-[0.04em]"
+        >
+          Horo Academy
+        </div>
+        <div class="text-xl text-white tracking-[0.02em]">
+          สังคมพยากรณ์สมัยใหม่ ไม่งมงาย
+        </div>
       </div>
+    </div>
+
+    <div class="max-w-[1440px] mx-auto pt-[60px] px-20 pb-[72px]">
+      <div class="w-full flex flex-wrap gap-4 mb-10">
+        <template v-for="(button, i) in buttons" :key="i">
+          <button
+            class="w-fit bg-white text-[#5762C5] hover:bg-[#5762C5] hover:text-white py-[18px] px-9 rounded-full"
+          >
+            <div class="text-[18px] leading-[18px] font-bold">
+              {{ button.tag }}
+            </div>
+          </button>
+        </template>
+      </div>
+      <utils-card-course-card-session :course="courseCard" grid>
+      </utils-card-course-card-session>
     </div>
   </div>
 </template>
@@ -64,6 +41,14 @@
 export default {
   data() {
     return {
+      buttons: [
+        { tag: "ทั้งหมด" },
+        { tag: "หลักสูตรไพ่ยิบซี" },
+        { tag: "หลักสูตรเลขศาสตร์และยาม" },
+        { tag: "หลักสูตรฮวงจุ้ย" },
+        { tag: "หลักสูตรโหราศาสตร์และเลข ๗ ตัว" },
+        { tag: "หนังสือเสียง (Audio book)" },
+      ],
       courseCard: [
         {
           image: "/images/recommendCourse/course1.png",

@@ -33,8 +33,7 @@
                 สังคมพยากรณ์สมัยใหม่ ไม่งมงาย
               </div>
               <utils-button-style
-                class="font-bold text-[18px] tracking-[0.04em] py-[18px] px-9 mt-[54px]"
-                text-color="#5762C5"
+                class="text-[#5762C5] font-bold text-[18px] tracking-[0.04em] py-[18px] px-9 mt-[54px]"
                 button-color="#FFFFFF"
                 text="ดูหลักสูตรทั้งหมด"
               ></utils-button-style>

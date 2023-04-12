@@ -1,12 +1,13 @@
 <template>
   <button
-    class="w-fit flex items-center gap-x-2 text-white leading-[18px] rounded-full py-3 px-6"
+    class="w-fit flex items-center gap-x-2 leading-[18px] rounded-full py-3 px-6"
     :style="{ backgroundColor: buttonColor }"
   >
     <div v-if="iconName" class="w-4 h-4 flex items-center">
       <font-awesome-icon :icon="[iconType, iconName]" />
+      <img />
     </div>
-    <div :style="{ color: textColor }">{{ text }}</div>
+    <div>{{ text }}</div>
   </button>
 </template>
 
@@ -32,6 +33,10 @@ export default {
     textColor: {
       type: String,
       default: "text-white",
+    },
+    iconImage: {
+      type: String,
+      default: null,
     },
   },
 };
