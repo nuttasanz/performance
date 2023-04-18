@@ -1,4 +1,13 @@
 <template>
+  <div v-if="title" class="flex items-center gap-x-8 mb-10">
+    <div
+      class="text-[40px] leading-[52px] font-medium"
+      :class="popularCourseColor ? 'text-white' : 'text-[#0E1F1D]'"
+    >
+      {{ title }}
+    </div>
+    <div class="flex flex-grow border border-[#5762C5]/[0.4] h-0"></div>
+  </div>
   <div class="grid-cols-4 flex-row gap-x-5" :class="grid ? 'grid' : 'flex'">
     <template v-for="(card, i) in course" :key="i">
       <div class="flex flex-col w-full mb-12">
@@ -44,6 +53,10 @@
 <script>
 export default {
   props: {
+    title: {
+      type: String,
+      default: null,
+    },
     grid: Boolean,
     popularCourseColor: Boolean,
     course: {

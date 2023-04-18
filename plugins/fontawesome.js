@@ -7,13 +7,14 @@ import { far } from "@fortawesome/pro-regular-svg-icons";
 import { fal } from "@fortawesome/pro-light-svg-icons";
 import { fat } from "@fortawesome/pro-thin-svg-icons";
 import { fad } from "@fortawesome/pro-duotone-svg-icons";
+import { fasl } from "@fortawesome/sharp-light-svg-icons";
 
 // This is important, we are going to let Nuxt worry about the CSS
 config.autoAddCss = false;
 
 // You can add your icons directly in this plugin. See other examples for how you
 // can add other styles or just individual icons.
-library.add(fas, fab, far, fal, fat, fad);
+library.add(fas, fab, far, fal, fat, fad, fasl);
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.component("font-awesome-icon", FontAwesomeIcon, {});

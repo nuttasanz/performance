@@ -1,12 +1,6 @@
 <template>
   <div class="w-full">
     <div class="max-w-[1440px] mx-auto pt-8 px-20">
-      <div class="flex items-center gap-x-8 mb-10">
-        <div class="text-[40px] text-[#0E1F1D] leading-[52px] font-medium">
-          หลักสูตรแนะนำ
-        </div>
-        <div class="flex flex-grow border border-[#5762C5]/[0.4] h-0"></div>
-      </div>
       <!--  COURSE CARD  -->
       <!--        <template v-for="(card, i) in courseCard" :key="i">-->
       <!--          <div class="flex flex-col max-w-[305px] w-full">-->
@@ -47,6 +41,7 @@
       <!--          </div>-->
       <!--        </template>-->
       <utils-card-course-card-session
+        title="หลักสูตรแนะนำ"
         :course="courseCard"
         grid
       ></utils-card-course-card-session>
@@ -54,7 +49,7 @@
       <div
         class="text-center text-[#5762C5] text-[20px] leading-[28px] font-medium border-2 rounded-full p-5"
       >
-        <NuxtLink to="/allCourse"> ดูหลักสูตรทั้งหมด </NuxtLink>
+        <NuxtLink to="/all-course"> ดูหลักสูตรทั้งหมด</NuxtLink>
       </div>
     </div>
   </div>

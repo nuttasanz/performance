@@ -1,18 +1,12 @@
 <template>
   <div class="w-full bg-[#24285F]">
     <div class="max-w-[1440px] mx-auto py-[30px] px-20 pb-[50px]">
-      <div class="flex items-center gap-x-8 mb-10">
-        <div class="text-[40px] text-[#FFFFFF] leading-[52px] font-medium">
-          หลักสูตรยอดนิยม
-        </div>
-        <div class="flex flex-grow border border-[#A0A9F666]/[0.4] h-0"></div>
-      </div>
       <div class="relative" @mouseover="showArrows" @mouseleave="hideArrow">
         <utils-card-course-card-session
+          title="หลักสูตรยอดนิยม"
           :course="courseCard"
           popular-course-color
         ></utils-card-course-card-session>
-
         <div
           v-if="arrows"
           class="w-[60px] h-[60px] absolute bottom-[240px] left-[-50px]"
