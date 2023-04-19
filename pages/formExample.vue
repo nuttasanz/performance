@@ -125,6 +125,11 @@
       </div>
     </div>
     <!--  END FAQ  -->
+    <!--  TEST SWIPER  -->
+    <div class="max-w-[1440px] mx-auto px-20">
+      <test-test title="test"></test-test>
+    </div>
+    <!--  END TEST SWIPER  -->
   </div>
 </template>
 

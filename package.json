@@ -36,6 +36,7 @@
     "@fortawesome/sharp-light-svg-icons": "^6.4.0",
     "@fortawesome/sharp-regular-svg-icons": "^6.4.0",
     "@fortawesome/sharp-solid-svg-icons": "^6.4.0",
-    "@fortawesome/vue-fontawesome": "^3.0.3"
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "nuxt-swiper": "^1.1.0"
   }
 }
