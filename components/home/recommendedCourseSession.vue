@@ -1,51 +1,11 @@
 <template>
   <div class="w-full">
     <div class="max-w-[1440px] mx-auto pt-8 px-20">
-      <!--  COURSE CARD  -->
-      <!--        <template v-for="(card, i) in courseCard" :key="i">-->
-      <!--          <div class="flex flex-col max-w-[305px] w-full">-->
-      <!--            <div><img :src="card.image" /></div>-->
-      <!--            <div-->
-      <!--              class="w-fit py-[6px] px-3 bg-[#6F93DD] rounded-full text-[12px] text-white leading-[12px]"-->
-      <!--            >-->
-      <!--              {{ card.tag }}-->
-      <!--            </div>-->
-      <!--            <div-->
-      <!--              class="text-[20px] text-[#24285F] leading-[28px] font-medium mt-1 mb-3"-->
-      <!--            >-->
-      <!--              {{ card.title }}-->
-      <!--            </div>-->
-
-      <!--            <div class="flex flex-col h-full justify-end">-->
-      <!--              <div class="flex justify-between">-->
-      <!--                <div class="flex items-center">-->
-      <!--                  <div class="w-6 h-6 flex items-center justify-center">-->
-      <!--                    <font-awesome-icon-->
-      <!--                      :icon="['fal', 'clock']"-->
-      <!--                      style="color: #a2a2a8"-->
-      <!--                    />-->
-      <!--                  </div>-->
-      <!--                  <div-->
-      <!--                    class="text-[20px] leading-[28px] text-[#A2A2A8] ml-[14.5px]"-->
-      <!--                  >-->
-      <!--                    {{ card.time }}-->
-      <!--                  </div>-->
-      <!--                </div>-->
-      <!--                <div-->
-      <!--                  class="text-[20px] leading-[28px] text-[#5762C5] font-bold"-->
-      <!--                >-->
-      <!--                  {{ card.cost }}-->
-      <!--                </div>-->
-      <!--              </div>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--        </template>-->
       <utils-card-course-card-session
         title="หลักสูตรแนะนำ"
         :course="courseCard"
         grid
       ></utils-card-course-card-session>
-      <!--  END COURSE CARD  -->
       <div
         class="text-center text-[#5762C5] text-[20px] leading-[28px] font-medium border-2 rounded-full p-5"
       >

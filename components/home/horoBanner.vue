@@ -11,10 +11,10 @@
         <div class="relative flex justify-between">
           <!--    BG IMAGE CONTENT    -->
           <div class="relative">
-            <img src="@/public/images/HeroBanner/horo-tree.png" />
+            <img src="/images/HeroBanner/horo-tree.png" />
           </div>
           <div class="relative top-[0px]">
-            <img src="@/public/images/HeroBanner/master-zern.png" />
+            <img src="/images/HeroBanner/master-zern.png" />
           </div>
           <!--   END BG IMAGE CONTENT   -->
           <!--    CONTENT    -->

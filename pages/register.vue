@@ -19,6 +19,7 @@
             >รหัสผ่าน</label
           >
           <input
+            type="password"
             class="w-full border-b border-[#AEAFC5] mt-2"
             placeholder="กรอกรหัสผ่าน"
           />
@@ -33,14 +34,11 @@
           >
           </utils-button-style>
           <div class="text-center text-sm text-[#A2A2A8] my-[10px]">หรือ</div>
-          <utils-button-style
-            class="w-full items-center justify-center text-white font-bold py-[17px]"
-            text="เข้าสู่ระบบด้วย LINE"
-            button-color="#06C755"
-            icon-type="fab"
-            icon-name="line"
-          >
-          </utils-button-style>
+          <utils-button-line
+            class="w-full"
+            text="เข้าสู่ระบด้วย LINE"
+            icon
+          ></utils-button-line>
         </div>
       </div>
     </div>
