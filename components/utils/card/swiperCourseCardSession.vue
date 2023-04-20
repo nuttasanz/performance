@@ -17,7 +17,7 @@
     :modules="modules"
     :slides-per-view="4"
     :slides-per-group="4"
-    :space-between="50"
+    :space-between="20"
     :loop="true"
     @mouseover="showArrow"
     @mouseleave="hideArrow"

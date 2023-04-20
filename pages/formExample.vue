@@ -2,6 +2,7 @@
   <div class="w-full bg-[#F7F7FD]">
     <!--  VDO COURSE  -->
     <div class="max-w-[1440px] mx-auto pt-6 px-20 pb-[54px]">
+      <!--   VDO HEADER   -->
       <div class="flex justify-between mb-[34px]">
         <div class="flex items-center gap-x-2">
           <div>
@@ -17,8 +18,9 @@
         </div>
         <div class="flex gap-x-2">
           <button
-            v-if="quiz"
-            class="border border-[#5762C533] rounded-full text-[#5762C5] py-4 px-6 focus:bg-[#5762C5] focus:text-white"
+            v-if="quiz && !example"
+            class="border border-[#5762C533] rounded-full text-[#5762C5] py-4 px-6 hover:bg-[#5762C5] hover:text-white"
+            @click="openExample"
           >
             <div class="flex items-center gap-x-2">
               <div>
@@ -31,46 +33,24 @@
             </div>
           </button>
           <button
-            class="w-fit border border-[#5762C533] rounded-full text-[#5762C5] py-4 px-6 focus:bg-[#5762C5] focus:text-white"
+            class="w-fit border border-[#5762C533] rounded-full text-[#5762C5] py-4 px-6 hover:bg-[#5762C5] hover:text-white"
+            @click="closeExample"
           >
             <div class="flex items-center gap-x-2">
               <div>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 17 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.204 5.7987V4.54843C10.204 4.21684 10.0723 3.89882 9.8378 3.66435C9.60333 3.42988 9.28532 3.29816 8.95373 3.29816H2.95242C2.62083 3.29816 2.30282 3.42988 2.06834 3.66435C1.83387 3.89882 1.70215 4.21684 1.70215 4.54843V12.0501C1.70215 12.3817 1.83387 12.6997 2.06834 12.9341C2.30282 13.1686 2.62083 13.3003 2.95242 13.3003H8.95373C9.28532 13.3003 9.60333 13.1686 9.8378 12.9341C10.0723 12.6997 10.204 12.3817 10.204 12.0501V10.7998"
-                    stroke="#5762C5"
-                    stroke-width="1.00189"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M12.2051 5.79884L14.706 8.29975L12.2051 10.8006"
-                    stroke="#5762C5"
-                    stroke-width="1.00189"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M6.17261 8.29944H14.7057"
-                    stroke="#5762C5"
-                    stroke-width="1.00189"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <font-awesome-icon
+                  :icon="['far', 'arrow-right-from-bracket']"
+                  class="w-4 h-4"
+                />
               </div>
               <div>ออกจากการเรียน</div>
             </div>
           </button>
         </div>
       </div>
-      <div class="relative">
+      <!--   END VDO HEADER   -->
+      <!--   VDO CONTENT   -->
+      <div v-if="!example" class="relative">
         <video
           id="course-video"
           class="w-full h-full rounded-[32px] object-cover"
@@ -90,7 +70,8 @@
             คุณได้เรียนหลักสูตรนี้เสร็จสิ้นแล้ว กรุณทำแบบทดสอบหลังเรียน
           </div>
           <button
-            class="border border-[#5762C533] rounded-full text-[#5762C5] bg-white py-4 px-6 focus:bg-[#5762C5] focus:text-white"
+            class="border border-[#5762C533] rounded-full text-[#5762C5] bg-white py-4 px-6 hover:bg-[#5762C5] hover:text-white"
+            @click="openExample"
           >
             <div class="flex items-center gap-x-2">
               <div>
@@ -104,6 +85,12 @@
           </button>
         </div>
       </div>
+      <!--   END VDO CONTENT   -->
+      <!--   EXAMPLE CONTENT   -->
+      <div v-else class="w-full max-w-[798px] mx-auto mt-[9px]">
+        <example-form></example-form>
+      </div>
+      <!--   END EXAMPLE CONTENT   -->
     </div>
     <!--  END VDO COURSE  -->
     <!--  FAQ  -->
@@ -150,11 +137,6 @@
       </div>
     </div>
     <!--  END FAQ  -->
-    <!--  TEST SWIPER  -->
-    <div class="max-w-[1440px] mx-auto px-20">
-      <test-test title="test"></test-test>
-    </div>
-    <!--  END TEST SWIPER  -->
   </div>
 </template>
 
@@ -162,6 +144,7 @@
 export default {
   data() {
     return {
+      example: false,
       quiz: false,
       whatLearn: [
         {
@@ -214,6 +197,12 @@ export default {
       document.getElementById("course-video").addEventListener("seeked", () => {
         this.quiz = false;
       });
+    },
+    openExample() {
+      this.example = true;
+    },
+    closeExample() {
+      this.example = false;
     },
   },
 };
