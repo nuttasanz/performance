@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full flex items-center">
-    <div class="relative h-full flex items-center justify-center">
+  <div class="w-full flex">
+    <div class="relative">
       <label class="input-radio-fields">
         <input
           type="radio"
@@ -9,7 +9,7 @@
           :checked="checked"
           @click="setValue"
         />
-        {{ label }}
+        <div class="ml-8">{{ label }}</div>
         <span class="checkmark"></span>
       </label>
     </div>
@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     setValue() {
-      this.content = this.text;
+      this.content = this.label;
       // this.$emit("input", this.content);
       // this.$emit("emitOnClick");
     },

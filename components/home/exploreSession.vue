@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <div class="max-w-[1440px] mx-auto mt-20 p-20">
+    <div class="max-w-[1440px] mx-auto mt-11 p-20">
       <div class="relative bg-[#24285F] rounded-[32px]">
         <img
           src="/images/recommendCourse/gettoknowBanner.png"
@@ -28,15 +28,30 @@
               <span class="font-bold">ไม่เน้นงมงาย</span> อาจารย์ เซิน
               คือคนที่ท่านมองหาอยู่
             </div>
-            <utils-button-style
-              class="font-bold text-[#5762C5] text-[18px] tracking-[0.04em] mt-8 px-8 py-[18px]"
-              text="ทำความรู้จัก อาจารย์เซิน มากขึ้น"
-              button-color="#FFFFFF"
-            >
-            </utils-button-style>
+            <div class="flex h-[54px] gap-x-8 mt-8">
+              <utils-button-style
+                class="w-full max-w-[320px] font-bold text-[#5762C5] text-[18px] tracking-[0.04em]"
+                text="ทำความรู้จัก อาจารย์เซิน มากขึ้น"
+                button-color="#FFFFFF"
+              ></utils-button-style>
+              <utils-button-line
+                v-if="lineButton"
+                class="w-full max-w-[320px] font-bold text-white text-[16px] leading-[18px]"
+                text="LINE: @aj_zern"
+                icon
+              ></utils-button-line>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    lineButton: Boolean,
+  },
+};
+</script>

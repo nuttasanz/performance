@@ -7,6 +7,8 @@
         :class="checkbox_class"
         type="checkbox"
         :name="name"
+        :value="checked"
+        :checked="checked"
       />
       <div
         v-if="check_status"

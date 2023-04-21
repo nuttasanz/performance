@@ -18,7 +18,7 @@
         </div>
         <div class="flex gap-x-2">
           <button
-            v-if="quiz && !example"
+            v-if="quiz && !exam"
             class="border border-[#5762C533] rounded-full text-[#5762C5] py-4 px-6 hover:bg-[#5762C5] hover:text-white"
             @click="openExample"
           >
@@ -50,7 +50,7 @@
       </div>
       <!--   END VDO HEADER   -->
       <!--   VDO CONTENT   -->
-      <div v-if="!example" class="relative">
+      <div v-if="!exam" class="relative">
         <video
           id="course-video"
           class="w-full h-full rounded-[32px] object-cover"
@@ -88,7 +88,7 @@
       <!--   END VDO CONTENT   -->
       <!--   EXAMPLE CONTENT   -->
       <div v-else class="w-full max-w-[798px] mx-auto mt-[9px]">
-        <example-form></example-form>
+        <exam-form></exam-form>
       </div>
       <!--   END EXAMPLE CONTENT   -->
     </div>
@@ -137,14 +137,23 @@
       </div>
     </div>
     <!--  END FAQ  -->
+    <!--  CONTACT US  -->
+    <contact-us></contact-us>
+    <!------------------>
+
+    <test-validate></test-validate>
   </div>
 </template>
 
 <script>
+import ContactUs from "~/pages/contact-us.vue";
+
 export default {
+  components: { ContactUs },
+  setup() {},
   data() {
     return {
-      example: false,
+      exam: false,
       quiz: false,
       whatLearn: [
         {
@@ -195,14 +204,14 @@ export default {
         this.quiz = true;
       });
       document.getElementById("course-video").addEventListener("seeked", () => {
-        this.quiz = false;
+        this.quiz = null;
       });
     },
     openExample() {
-      this.example = true;
+      this.exam = true;
     },
     closeExample() {
-      this.example = false;
+      this.exam = false;
     },
   },
 };

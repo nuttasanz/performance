@@ -33,7 +33,7 @@
                 สังคมพยากรณ์สมัยใหม่ ไม่งมงาย
               </div>
               <utils-button-style
-                class="text-[#5762C5] font-bold text-[18px] tracking-[0.04em] py-[18px] px-9 mt-[54px]"
+                class="max-w-[207px] text-[#5762C5] font-bold text-[18px] tracking-[0.04em] py-[18px] px-9 mt-[54px]"
                 button-color="#FFFFFF"
                 text="ดูหลักสูตรทั้งหมด"
               ></utils-button-style>
@@ -51,7 +51,10 @@
       <!--   SOCIAL CONTACT   -->
       <div class="flex justify-center gap-x-14 mt-8">
         <template v-for="(social, i) in socialContact" :key="i">
-          <div class="flex items-center gap-x-4">
+          <div
+            class="flex items-center gap-x-4 cursor-pointer"
+            @click="go(social.link)"
+          >
             <div class="w-6 h-6"><img :src="social.icon" /></div>
             <div
               class="text-[18px] leading-[32px] tracking-[0.04em] font-medium"
@@ -72,23 +75,32 @@ export default {
     return {
       socialContact: [
         {
-          icon: "/images/HeroBanner/facebook.png",
+          icon: "/images/icons/facebook.png",
           title: "zernhoroacademy",
+          link: "https://www.facebook.com/zernhoroacademy",
         },
         {
-          icon: "/images/HeroBanner/line.png",
+          icon: "/images/icons/line.png",
           title: "@aj_zern",
+          link: "https://liff.line.me/1645278921-kWRPP32q/?accountId=aj_zern",
         },
         {
-          icon: "/images/HeroBanner/youtube.png",
+          icon: "/images/icons/youtube.png",
           title: "อจ เซิน ซินแสที่ปรึกษาธุรกิจ",
+          link: "https://youtube.com/@aj_zern",
         },
         {
-          icon: "/images/HeroBanner/tiktok.png",
+          icon: "/images/icons/tiktok.png",
           title: "@horoacademy",
+          link: "https://www.tiktok.com/@horoacademy?_t=8bfrFDmItCj&_r=1",
         },
       ],
     };
+  },
+  methods: {
+    go(url) {
+      window.open(url);
+    },
   },
 };
 </script>

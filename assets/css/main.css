@@ -21,7 +21,6 @@ textarea::placeholder {
   align-items: center;
   cursor: pointer;
   font-size: 16px;
-  padding-left: 32px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -42,7 +41,7 @@ textarea::placeholder {
     w-5
     h-5
     left-0
-    bottom-0
+    top-[2px]
     rounded-full;
 }
 

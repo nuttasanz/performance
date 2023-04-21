@@ -51,6 +51,7 @@
               icon-type="fas"
               icon-name="phone"
               text="088-244-1915"
+              @click="go('tel:0882441915')"
             ></utils-button-style>
             <utils-button-style
               class="w-full"
@@ -58,6 +59,7 @@
               icon-name="facebook"
               text="zernhoroacademy"
               button-color="#1877F2"
+              @click="go('https:www.facebook.com/zernhoroacademy')"
             ></utils-button-style>
             <utils-button-style
               class="w-full"
@@ -65,6 +67,7 @@
               icon-name="youtube"
               text="อจ เซิน ซินแส"
               button-color="#FF0000"
+              @click="go('https://youtube.com/@aj_zern')"
             ></utils-button-style>
             <utils-button-style
               class="w-full"
@@ -72,6 +75,9 @@
               icon-name="tiktok"
               text="@horoacademy"
               button-color="#000000"
+              @click="
+                go('https://www.tiktok.com/@horoacademy?_t=8bfrFDmItCj&_r=1')
+              "
             ></utils-button-style>
           </div>
         </div>
@@ -83,9 +89,12 @@
           </div>
           <button
             class="flex items-center bg-[#06C755] py-2 px-4 rounded-[6px] gap-x-4"
+            @click="
+              go('https://liff.line.me/1645278921-kWRPP32q/?accountId=aj_zern')
+            "
           >
             <div class="max-w-[22px]">
-              <img src="@/public/images/brandLogo/lineIcon.png" />
+              <img src="/images/brandLogo/lineIcon.png" />
             </div>
             <div class="text-base font-bold text-white">@aj_zern</div>
           </button>
@@ -100,3 +109,13 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    go(url) {
+      window.open(url);
+    },
+  },
+};
+</script>
