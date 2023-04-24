@@ -9,17 +9,17 @@
       >
     </div>
 
-    <template v-for="(answer, i) in choices">
+    <template v-for="(choice, i) in choices" :key="i">
       <utils-input-check-box-fields
         v-if="multiChoices"
-        :key="`choices-${i}`"
-        :label="answer"
+        :choice="choice"
+        :answer="`objective-check-answer-${i + 1}`"
       ></utils-input-check-box-fields>
 
       <utils-input-radio-fields
         v-else
-        :key="`choices-${i}`"
-        :label="answer"
+        :choice="choice"
+        :answer="`objective-radio-answer`"
       ></utils-input-radio-fields>
     </template>
   </div>
@@ -36,6 +36,10 @@ export default {
     choices: {
       type: Array,
       default: () => [],
+    },
+    answer: {
+      type: String,
+      default: null,
     },
   },
 };

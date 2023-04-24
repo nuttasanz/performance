@@ -1,14 +1,14 @@
 <template>
   <div class="w-full">
-    <div class="text-white bg-[#5762C5] rounded-[16px] py-6 px-8 mb-6">
-      <div class="text-base mb-2">แบบทดสอบ</div>
-      <div class="text-[24px] leading-[31.2px] font-medium">
-        Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ
-        สร้างรายได้หลักล้าน
+    <ValidationForm @submit="onSubmit">
+      <div class="text-white bg-[#5762C5] rounded-[16px] py-6 px-8 mb-6">
+        <div class="text-base mb-2">แบบทดสอบ</div>
+        <div class="text-[24px] leading-[31.2px] font-medium">
+          Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ
+          สร้างรายได้หลักล้าน
+        </div>
       </div>
-    </div>
 
-    <Form id="exam" @submit.prevent="onSubmit">
       <div class="flex flex-col gap-y-4">
         <div
           class="bg-white rounded-[16px] py-6 px-8 border-t-[8px] border-t-[#5762C5] shadow-[#0000000F]"
@@ -23,6 +23,7 @@
           :key="`subjective-${i}`"
         >
           <utils-card-exam-subjective-card
+            :answer="`subjective-answer-${i + 1}`"
             :title="subjective.title"
             :url="subjective.url"
           ></utils-card-exam-subjective-card>
@@ -49,21 +50,23 @@
       </div>
       <div class="flex justify-between items-center mt-[50px]">
         <utils-button-style
-          type="submit"
-          class="max-w-[261px] text-white w-[261px] h-[52px] justify-center"
+          class="max-w-[261px] text-white h-[52px] justify-center"
           text="ส่งคำตอบ"
           text-color="bg-white"
         ></utils-button-style>
-        <div class="text-[#5762C5] cursor-pointer" @click="resetValue">
+        <button type="reset" class="text-[#5762C5] cursor-pointer">
           ล้างคำตอบทั้งหมด
-        </div>
+        </button>
       </div>
-    </Form>
+    </ValidationForm>
   </div>
 </template>
 
 <script>
+import { Form as ValidationForm } from "vee-validate";
+
 export default {
+  components: { ValidationForm },
   props: {
     image: {
       type: String,
@@ -100,10 +103,9 @@ export default {
     };
   },
   methods: {
-    resetValue() {
-      document.getElementById("exam").reset();
+    onSubmit(values) {
+      alert(values);
     },
-    onSubmit() {},
   },
 };
 </script>

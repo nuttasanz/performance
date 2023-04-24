@@ -1,6 +1,7 @@
 <template>
   <button
     class="w-full flex justify-center items-center gap-x-2 leading-[18px] rounded-full py-3 px-6"
+    type="submit"
     :style="{ backgroundColor: buttonColor }"
   >
     <div v-if="iconName" class="w-4 h-4 flex items-center">

@@ -140,14 +140,11 @@
     <!--  CONTACT US  -->
     <contact-us></contact-us>
     <!------------------>
-
-    <test-validate></test-validate>
   </div>
 </template>
 
 <script>
 import ContactUs from "~/pages/contact-us.vue";
-
 export default {
   components: { ContactUs },
   setup() {},

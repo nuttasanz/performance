@@ -1,46 +1,38 @@
 <template>
-  <div class="w-full flex">
-    <div class="relative">
-      <label class="input-radio-fields">
-        <input
-          type="radio"
-          :name="name"
-          :value="checked"
-          :checked="checked"
-          @click="setValue"
-        />
-        <div class="ml-8">{{ label }}</div>
-        <span class="checkmark"></span>
-      </label>
-    </div>
-  </div>
+  <label :for="choice" class="radio-button">
+    <Field
+      :id="choice"
+      name="objective-radio-answer"
+      :value="choice"
+      type="radio"
+      checked="checked"
+    ></Field>
+    <span class="radio-checkmark"></span>
+    {{ choice }}
+  </label>
 </template>
 
 <script>
+import {
+  Field,
+  // ErrorMessage
+} from "vee-validate";
+
 export default {
+  components: {
+    Field,
+    // ErrorMessage
+  },
   props: {
-    label: {
+    choice: {
       type: String,
       default: null,
     },
-    name: {
+    answer: {
       type: String,
-      default: "radio",
-    },
-    checked: Boolean,
-  },
-  data() {
-    return {
-      content: null,
-      active: false,
-    };
-  },
-  methods: {
-    setValue() {
-      this.content = this.label;
-      // this.$emit("input", this.content);
-      // this.$emit("emitOnClick");
+      default: null,
     },
   },
+  methods: {},
 };
 </script>
