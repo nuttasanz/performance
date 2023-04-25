@@ -13,7 +13,7 @@
       <utils-input-check-box-fields
         v-if="multiChoices"
         :choice="choice"
-        :answer="`objective-check-answer-${i + 1}`"
+        :answer="`objective-check-answer`"
       ></utils-input-check-box-fields>
 
       <utils-input-radio-fields

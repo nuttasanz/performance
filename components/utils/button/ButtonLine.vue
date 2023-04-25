@@ -1,6 +1,6 @@
 <template>
   <button
-    class="w-fit flex justify-center items-center gap-x-2 text-white leading-[18px] rounded-full py-3 px-6"
+    class="flex justify-center items-center gap-x-2 rounded-full text-white"
     :style="{ backgroundColor: buttonColor }"
     @click="go"
   >

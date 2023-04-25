@@ -2,7 +2,8 @@
   <label :for="choice" class="radio-button">
     <Field
       :id="choice"
-      name="objective-radio-answer"
+      rules="required"
+      :name="answer"
       :value="choice"
       type="radio"
       checked="checked"
@@ -13,16 +14,10 @@
 </template>
 
 <script>
-import {
-  Field,
-  // ErrorMessage
-} from "vee-validate";
+import { Field } from "vee-validate";
 
 export default {
-  components: {
-    Field,
-    // ErrorMessage
-  },
+  components: { Field },
   props: {
     choice: {
       type: String,

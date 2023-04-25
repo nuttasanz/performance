@@ -46,31 +46,31 @@
 
           <div class="flex flex-col text-base text-white gap-y-3">
             <div class="font-semibold mb-3">ช่องทางติดต่อ</div>
-            <utils-button-style
-              class="w-full"
+            <utils-button-small
+              class="w-full max-h-[34px]"
               icon-type="fas"
               icon-name="phone"
               text="088-244-1915"
               @click="go('tel:0882441915')"
-            ></utils-button-style>
-            <utils-button-style
-              class="w-full"
+            ></utils-button-small>
+            <utils-button-small
+              class="w-full max-h-[34px]"
               icon-type="fab"
               icon-name="facebook"
               text="zernhoroacademy"
               button-color="#1877F2"
               @click="go('https:www.facebook.com/zernhoroacademy')"
-            ></utils-button-style>
-            <utils-button-style
-              class="w-full"
+            ></utils-button-small>
+            <utils-button-small
+              class="w-full max-h-[34px]"
               icon-type="fab"
               icon-name="youtube"
               text="อจ เซิน ซินแส"
               button-color="#FF0000"
               @click="go('https://youtube.com/@aj_zern')"
-            ></utils-button-style>
-            <utils-button-style
-              class="w-full"
+            ></utils-button-small>
+            <utils-button-small
+              class="w-full max-h-[34px]"
               icon-type="fab"
               icon-name="tiktok"
               text="@horoacademy"
@@ -78,7 +78,7 @@
               @click="
                 go('https://www.tiktok.com/@horoacademy?_t=8bfrFDmItCj&_r=1')
               "
-            ></utils-button-style>
+            ></utils-button-small>
           </div>
         </div>
         <!--   END COURSE COURSE   -->

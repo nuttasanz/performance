@@ -1,4 +1,5 @@
 <template>
+  <div></div>
   <div v-if="title" class="flex items-center gap-x-8 mb-10">
     <div
       class="text-[40px] leading-[52px] font-medium"

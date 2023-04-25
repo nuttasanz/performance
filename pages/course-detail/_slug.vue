@@ -49,9 +49,20 @@
         <div
           class="max-w-[734px] flex flex-col bg-white rounded-[24px] pt-8 px-8 pb-[85px]"
         >
+          <!--    COURSE VIDEO      -->
+          <iframe
+            width="100%"
+            height="414"
+            src="https://www.youtube.com/embed/qJ5JCX8o7sE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <!--    END COURSE VIDEO      -->
           <!--    HEADER CONTENT    -->
           <div
-            class="text-lg text-[#24285F] leading-[25.2px] font-medium mb-[50px]"
+            class="text-lg text-[#24285F] leading-[25.2px] font-medium mt-8 mb-[50px]"
           >
             Online Tarot Course 1/63 คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ
             สร้างรายได้หลักล้าน

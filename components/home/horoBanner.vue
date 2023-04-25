@@ -33,7 +33,7 @@
                 สังคมพยากรณ์สมัยใหม่ ไม่งมงาย
               </div>
               <utils-button-style
-                class="max-w-[207px] text-[#5762C5] font-bold text-[18px] tracking-[0.04em] py-[18px] px-9 mt-[54px]"
+                class="max-w-[207px] max-h-[54px] py-[18px] px-9 mt-[54px] text-[#5762C5] font-bold text-[18px] tracking-[0.04em]"
                 button-color="#FFFFFF"
                 text="ดูหลักสูตรทั้งหมด"
               ></utils-button-style>
@@ -69,38 +69,67 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      socialContact: [
-        {
-          icon: "/images/icons/facebook.png",
-          title: "zernhoroacademy",
-          link: "https://www.facebook.com/zernhoroacademy",
-        },
-        {
-          icon: "/images/icons/line.png",
-          title: "@aj_zern",
-          link: "https://liff.line.me/1645278921-kWRPP32q/?accountId=aj_zern",
-        },
-        {
-          icon: "/images/icons/youtube.png",
-          title: "อจ เซิน ซินแสที่ปรึกษาธุรกิจ",
-          link: "https://youtube.com/@aj_zern",
-        },
-        {
-          icon: "/images/icons/tiktok.png",
-          title: "@horoacademy",
-          link: "https://www.tiktok.com/@horoacademy?_t=8bfrFDmItCj&_r=1",
-        },
-      ],
-    };
+<!--<script>-->
+<!--export default {-->
+<!--  data() {-->
+<!--    return {-->
+<!--      socialContact: [-->
+<!--        {-->
+<!--          icon: "/images/icons/facebook.png",-->
+<!--          title: "zernhoroacademy",-->
+<!--          link: "https://www.facebook.com/zernhoroacademy",-->
+<!--        },-->
+<!--        {-->
+<!--          icon: "/images/icons/line.png",-->
+<!--          title: "@aj_zern",-->
+<!--          link: "https://liff.line.me/1645278921-kWRPP32q/?accountId=aj_zern",-->
+<!--        },-->
+<!--        {-->
+<!--          icon: "/images/icons/youtube.png",-->
+<!--          title: "อจ เซิน ซินแสที่ปรึกษาธุรกิจ",-->
+<!--          link: "https://youtube.com/@aj_zern",-->
+<!--        },-->
+<!--        {-->
+<!--          icon: "/images/icons/tiktok.png",-->
+<!--          title: "@horoacademy",-->
+<!--          link: "https://www.tiktok.com/@horoacademy?_t=8bfrFDmItCj&_r=1",-->
+<!--        },-->
+<!--      ],-->
+<!--    };-->
+<!--  },-->
+<!--  methods: {-->
+<!--    go(url) {-->
+<!--      window.open(url);-->
+<!--    },-->
+<!--  },-->
+<!--};-->
+<!--</script>-->
+
+<script setup>
+function go(url) {
+  window.open(url);
+}
+
+const socialContact = ref([
+  {
+    icon: "/images/icons/facebook.png",
+    title: "zernhoroacademy",
+    link: "https://www.facebook.com/zernhoroacademy",
   },
-  methods: {
-    go(url) {
-      window.open(url);
-    },
+  {
+    icon: "/images/icons/line.png",
+    title: "@aj_zern",
+    link: "https://liff.line.me/1645278921-kWRPP32q/?accountId=aj_zern",
   },
-};
+  {
+    icon: "/images/icons/youtube.png",
+    title: "อจ เซิน ซินแสที่ปรึกษาธุรกิจ",
+    link: "https://youtube.com/@aj_zern",
+  },
+  {
+    icon: "/images/icons/tiktok.png",
+    title: "@horoacademy",
+    link: "https://www.tiktok.com/@horoacademy?_t=8bfrFDmItCj&_r=1",
+  },
+]);
 </script>

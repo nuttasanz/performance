@@ -49,11 +49,11 @@
         </template>
       </div>
       <div class="flex justify-between items-center mt-[50px]">
-        <utils-button-style
-          class="max-w-[261px] text-white h-[52px] justify-center"
+        <utils-button-form
+          class="max-w-[261px] h-[52px]"
           text="ส่งคำตอบ"
           text-color="bg-white"
-        ></utils-button-style>
+        ></utils-button-form>
         <button type="reset" class="text-[#5762C5] cursor-pointer">
           ล้างคำตอบทั้งหมด
         </button>
@@ -63,7 +63,14 @@
 </template>
 
 <script>
-import { Form as ValidationForm } from "vee-validate";
+import { defineRule, Form as ValidationForm } from "vee-validate";
+
+defineRule("required", (value) => {
+  if (!value || !value.length) {
+    return "This field is required";
+  }
+  return true;
+});
 
 export default {
   components: { ValidationForm },
@@ -104,7 +111,7 @@ export default {
   },
   methods: {
     onSubmit(values) {
-      alert(values);
+      alert(JSON.stringify(values));
     },
   },
 };

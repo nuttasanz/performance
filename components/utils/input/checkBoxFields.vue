@@ -2,6 +2,7 @@
   <label :for="choice" class="check-button">
     <Field
       :id="choice"
+      rules="required"
       :name="answer"
       :value="choice"
       type="checkbox"
@@ -13,16 +14,10 @@
 </template>
 
 <script>
-import {
-  Field,
-  // ErrorMessage
-} from "vee-validate";
+import { Field } from "vee-validate";
 
 export default {
-  components: {
-    Field,
-    // ErrorMessage
-  },
+  components: { Field },
   props: {
     choice: {
       type: String,

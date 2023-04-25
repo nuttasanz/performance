@@ -80,7 +80,7 @@
                   </div>
                 </div>
               </template>
-              <nuxt-link to="/register">
+              <nuxt-link to="/login">
                 <button
                   class="w-fit flex items-center gap-x-2 text-base text-white leading-[18px] bg-[#5762C5] rounded-full py-3 px-6"
                 >

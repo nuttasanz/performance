@@ -145,6 +145,7 @@
 
 <script>
 import ContactUs from "~/pages/contact-us.vue";
+
 export default {
   components: { ContactUs },
   setup() {},
