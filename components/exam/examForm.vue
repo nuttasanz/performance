@@ -62,6 +62,54 @@
   </div>
 </template>
 
+<!--<script setup>-->
+<!--import { defineRule, Form as ValidationForm } from "vee-validate";-->
+
+<!--defineRule("required", (value) => {-->
+<!--  if (!value || !value.length) {-->
+<!--    return "This field is required";-->
+<!--  }-->
+<!--  return true;-->
+<!--});-->
+
+<!--function onSubmit(values) {-->
+<!--  alert(JSON.stringify(values));-->
+<!--}-->
+
+<!--defineProps({-->
+<!--  image: {-->
+<!--    type: String,-->
+<!--    default: null,-->
+<!--  },-->
+<!--});-->
+
+<!--const examSubjective = [-->
+<!--  {-->
+<!--    title: "1. หาฤกษ์ออกรถที่ดี คนละ 1 ฤกษ์ วันอะไร กี่โมง พร้อมเหตุผล?",-->
+<!--    url: "",-->
+<!--  },-->
+<!--  {-->
+<!--    title: "2. ขับรถไปต่างจังหวัดไกล วันเสาร์ ออกกี่โมงปลอดภัย?",-->
+<!--    url: "",-->
+<!--  },-->
+<!--  {-->
+<!--    title: "3. คนที่แอบชอบคิดอย่างไรกับเรา วันจันทร์ 21.58 น.?",-->
+<!--    url: "/images/example/moon-night-yarm3.png",-->
+<!--  },-->
+<!--];-->
+
+<!--const examObjective = [-->
+<!--  {-->
+<!--    title: "4. ตำแหน่งไหนที่ทำนายเรื่องเพื่อน คนสนิท และการใช้มือ?",-->
+<!--    choices: ["ตำแหน่งยาม", "ตำแหน่งวัน", "ตำแหน่งเดือน", "ตำแหน่งปี"],-->
+<!--  },-->
+<!--  {-->
+<!--    title: "5. สีน้ำเงิน ฟ้า ดำ ขาว เงิน ทอง เป็นสีของธาตุอะไรบ้าง",-->
+<!--    choices: ["ธาตุดิน", "ธาตุน้ำ", "ธาตุทอง", "ธาตุไม้", "ธาตุไฟ"],-->
+<!--    multiChoices: true,-->
+<!--  },-->
+<!--];-->
+<!--</script>-->
 <script>
 import { defineRule, Form as ValidationForm } from "vee-validate";
 

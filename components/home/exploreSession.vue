@@ -48,10 +48,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    lineButton: Boolean,
-  },
-};
+<script setup>
+defineProps({
+  lineButton: Boolean,
+});
 </script>

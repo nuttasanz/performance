@@ -19,7 +19,7 @@
         <div class="flex gap-x-2">
           <button
             v-if="quiz && !exam"
-            class="border border-[#5762C533] rounded-full text-[#5762C5] py-4 px-6 hover:bg-[#5762C5] hover:text-white"
+            class="border border-[#5762C533] rounded-full text-[#5762C5] py-3 px-6 hover:bg-[#5762C5] hover:text-white"
             @click="openExample"
           >
             <div class="flex items-center gap-x-2">
@@ -33,7 +33,7 @@
             </div>
           </button>
           <button
-            class="w-fit border border-[#5762C533] rounded-full text-[#5762C5] py-4 px-6 hover:bg-[#5762C5] hover:text-white"
+            class="w-fit border border-[#5762C533] rounded-full text-[#5762C5] py-3 px-6 hover:bg-[#5762C5] hover:text-white"
             @click="closeExample"
           >
             <div class="flex items-center gap-x-2">
@@ -148,7 +148,6 @@ import ContactUs from "~/pages/contact-us.vue";
 
 export default {
   components: { ContactUs },
-  setup() {},
   data() {
     return {
       exam: false,
@@ -200,9 +199,6 @@ export default {
     showQuiz() {
       document.getElementById("course-video").addEventListener("ended", () => {
         this.quiz = true;
-      });
-      document.getElementById("course-video").addEventListener("seeked", () => {
-        this.quiz = null;
       });
     },
     openExample() {

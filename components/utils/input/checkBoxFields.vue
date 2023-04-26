@@ -2,11 +2,11 @@
   <label :for="choice" class="check-button">
     <Field
       :id="choice"
-      rules="required"
       :name="answer"
       :value="choice"
       type="checkbox"
       checked="checked"
+      rules="required"
     ></Field>
     <span class="check-checkmark"></span>
     {{ choice }}

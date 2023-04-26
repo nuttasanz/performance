@@ -100,38 +100,30 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      headerMenus: [
-        {
-          title: "หลักสูตร",
-          arrow: "",
-        },
-        {
-          title: "ไพ่ยิปซี",
-          arrow: "",
-        },
-        {
-          title: "เกร็ดความรู้",
-          arrow: "",
-        },
-        {
-          title: "ฮวงจุ้ย",
-          arrow: "",
-        },
-        {
-          title: "ประวัติอาจารย์เซิน",
-          arrow: "",
-        },
-      ],
-    };
+<script setup>
+function go(url) {
+  window.open(url);
+}
+const headerMenus = [
+  {
+    title: "หลักสูตร",
+    arrow: "",
   },
-  methods: {
-    go(url) {
-      window.open(url);
-    },
+  {
+    title: "ไพ่ยิปซี",
+    arrow: "",
   },
-};
+  {
+    title: "เกร็ดความรู้",
+    arrow: "",
+  },
+  {
+    title: "ฮวงจุ้ย",
+    arrow: "",
+  },
+  {
+    title: "ประวัติอาจารย์เซิน",
+    arrow: "",
+  },
+];
 </script>

@@ -2,11 +2,11 @@
   <label :for="choice" class="radio-button">
     <Field
       :id="choice"
-      rules="required"
       :name="answer"
       :value="choice"
       type="radio"
       checked="checked"
+      rules="required"
     ></Field>
     <span class="radio-checkmark"></span>
     {{ choice }}

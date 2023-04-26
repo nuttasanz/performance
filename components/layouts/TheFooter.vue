@@ -110,12 +110,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    go(url) {
-      window.open(url);
-    },
-  },
-};
+<script setup>
+function go(url) {
+  window.open(url);
+}
 </script>

@@ -8,13 +8,19 @@
     </div>
     <div class="flex flex-grow border border-[#5762C5]/[0.4] h-0"></div>
   </div>
-  <div class="grid-cols-4 flex-row gap-x-5" :class="grid ? 'grid' : 'flex'">
+  <div
+    class="grid-cols-4 flex-row gap-y-12 gap-x-5"
+    :class="grid ? 'grid' : 'flex'"
+  >
     <template v-for="(card, i) in course" :key="i">
       <nuxt-link to="/course-detail/_slug">
-        <div class="flex flex-col w-full mb-12">
+        <div class="h-full flex flex-col">
           <div><img :src="card.image" /></div>
           <div
-            class="w-fit py-[6px] px-3 bg-[#6F93DD] rounded-full text-[12px] text-white leading-[12px] mt-4"
+            class="w-fit py-[6px] px-3 rounded-full text-[12px] text-white leading-[12px] mt-4"
+            :class="
+              card.tag === 'หนังสือเสียง' ? 'bg-[#979789]' : 'bg-[#6F93DD]'
+            "
           >
             {{ card.tag }}
           </div>

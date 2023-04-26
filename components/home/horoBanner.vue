@@ -69,48 +69,12 @@
   </div>
 </template>
 
-<!--<script>-->
-<!--export default {-->
-<!--  data() {-->
-<!--    return {-->
-<!--      socialContact: [-->
-<!--        {-->
-<!--          icon: "/images/icons/facebook.png",-->
-<!--          title: "zernhoroacademy",-->
-<!--          link: "https://www.facebook.com/zernhoroacademy",-->
-<!--        },-->
-<!--        {-->
-<!--          icon: "/images/icons/line.png",-->
-<!--          title: "@aj_zern",-->
-<!--          link: "https://liff.line.me/1645278921-kWRPP32q/?accountId=aj_zern",-->
-<!--        },-->
-<!--        {-->
-<!--          icon: "/images/icons/youtube.png",-->
-<!--          title: "อจ เซิน ซินแสที่ปรึกษาธุรกิจ",-->
-<!--          link: "https://youtube.com/@aj_zern",-->
-<!--        },-->
-<!--        {-->
-<!--          icon: "/images/icons/tiktok.png",-->
-<!--          title: "@horoacademy",-->
-<!--          link: "https://www.tiktok.com/@horoacademy?_t=8bfrFDmItCj&_r=1",-->
-<!--        },-->
-<!--      ],-->
-<!--    };-->
-<!--  },-->
-<!--  methods: {-->
-<!--    go(url) {-->
-<!--      window.open(url);-->
-<!--    },-->
-<!--  },-->
-<!--};-->
-<!--</script>-->
-
 <script setup>
 function go(url) {
   window.open(url);
 }
 
-const socialContact = ref([
+const socialContact = [
   {
     icon: "/images/icons/facebook.png",
     title: "zernhoroacademy",
@@ -131,5 +95,5 @@ const socialContact = ref([
     title: "@horoacademy",
     link: "https://www.tiktok.com/@horoacademy?_t=8bfrFDmItCj&_r=1",
   },
-]);
+];
 </script>

@@ -7,40 +7,56 @@
         เข้าสู่ระบบ
       </div>
       <div class="bg-white rounded-[10px] p-6">
-        <label class="text-[#24285F] text-[20px] leading-[28px] font-bold"
-          >อีเมล/เบอร์โทรศัพท์
-          <input
-            class="w-full border-b border-[#AEAFC5] text-[14px] leading-[19.6px] font-normal mt-2"
+        <ValidateForm @submit="onSubmit">
+          <utils-input-text-fields
+            id="email-phone"
+            label="อีเมล/เบอร์โทรศัพท์"
+            name="email-phone"
+            type="text"
             placeholder="กรอกอีเมล หรือเบอร์โทรศัพท์"
-          />
-        </label>
-        <div class="mt-6">
-          <label class="text-[#24285F] text-[20px] leading-[28px] font-bold"
-            >รหัสผ่าน
-            <input
-              type="password"
-              class="w-full border-b border-[#AEAFC5] text-[14px] leading-[19.6px] font-normal mt-2"
-              placeholder="กรอกรหัสผ่าน"
-            />
-          </label>
-        </div>
-        <div class="text-right text-sm text-[#5762C5] my-4 mb-6">
-          ลืมรหัสผ่าน?
-        </div>
-        <div class="px-8">
-          <utils-button-style
-            class="w-full max-h-[52px] text-white font-bold py-[17px]"
-            text="เข้าสู่ระบบ"
-          >
-          </utils-button-style>
-          <div class="text-center text-sm text-[#A2A2A8] my-[10px]">หรือ</div>
-          <utils-button-line
-            class="w-full max-h-[58px] text-white font-bold py-5"
-            text="เข้าสู่ระบด้วย LINE"
-            icon
-          ></utils-button-line>
-        </div>
+            rules="required"
+          ></utils-input-text-fields>
+          <div class="mt-6"></div>
+          <utils-input-text-fields
+            id="password"
+            label="รหัสผ่าน"
+            name="password"
+            type="password"
+            placeholder="กรอกรหัสผ่าน"
+            rules="required"
+          ></utils-input-text-fields>
+          <div class="text-right text-sm text-[#5762C5] my-4 mb-6">
+            ลืมรหัสผ่าน?
+          </div>
+          <div class="px-8">
+            <utils-button-style
+              class="w-full max-h-[52px] text-white font-bold py-[17px]"
+              text="เข้าสู่ระบบ"
+            >
+            </utils-button-style>
+            <div class="text-center text-sm text-[#A2A2A8] my-[10px]">หรือ</div>
+            <utils-button-line
+              class="w-full max-h-[58px] text-white font-bold py-5"
+              text="เข้าสู่ระบด้วย LINE"
+              icon
+            ></utils-button-line>
+          </div>
+        </ValidateForm>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import { Form as ValidateForm } from "vee-validate";
+export default {
+  components: {
+    ValidateForm,
+  },
+  methods: {
+    onSubmit(value) {
+      alert(JSON.stringify(value));
+    },
+  },
+};
+</script>

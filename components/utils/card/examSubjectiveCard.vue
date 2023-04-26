@@ -12,12 +12,12 @@
         <Field
           :id="answer"
           as="textarea"
-          rules="required"
           :name="answer"
           type="text"
-          class="h-11 py-[10px] px-[14px] overflow-hidden"
           placeholder="ใส่คำตอบของคุณ"
           maxlength="300"
+          rules="required"
+          class="h-11 py-[10px] px-[14px] overflow-hidden"
         ></Field>
       </div>
       <!--      <ErrorMessage :name="answer"></ErrorMessage>-->
@@ -25,12 +25,12 @@
     <div v-else>
       <Field
         :id="answer"
-        rules="required"
         as="textarea"
         :name="answer"
         type="text"
         placeholder="ใส่คำตอบของคุณ"
         maxlength="300"
+        rules="required"
       ></Field>
       <!--      <ErrorMessage :name="answer"></ErrorMessage>-->
       <div class="text-sm text-[#979789]">จำกัด 300 ตัวอักษร</div>
