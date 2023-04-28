@@ -70,13 +70,46 @@
 
             <div class="flex gap-x-10">
               <template v-for="(menu, i) in headerMenus" :key="i">
-                <div class="flex items-center gap-x-[7px]">
-                  <div class="text-base text-[#24285F]">{{ menu.title }}</div>
-                  <div v-if="i < 3 && i % 2 === 0" class="w-[18px] h-[18px]">
-                    <font-awesome-icon
-                      :icon="['far', 'chevron-down']"
-                      style="color: #28364d"
-                    />
+                <div
+                  class="flex flex-col justify-center"
+                  @mouseleave="mouseLeave"
+                  @click="onChange"
+                >
+                  <div class="flex items-center gap-x-[7px]">
+                    <div
+                      class="text-base text-[#24285F]"
+                      @mouseover="mouseOver"
+                    >
+                      {{ menu.title }}
+                    </div>
+                    <div v-if="menu.arrow">
+                      <div class="w-[18px] h-[18px]">
+                        <font-awesome-icon
+                          :icon="['far', 'chevron-down']"
+                          style="color: #28364d"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!--                  v-if="subMenu === `${menu.title}` && menu.arrow"-->
+                  <div
+                    v-if="subMenu === `${menu.title}` && menu.arrow"
+                    class="relative flex justify-center"
+                  >
+                    <div
+                      class="w-[295px] absolute z-50 bg-white border border-[#EAECF0] rounded-[12px] p-6"
+                    >
+                      <template
+                        v-for="(subMenus, j) in menu.dropDownMenus"
+                        :key="j"
+                      >
+                        <div class="text-[#24285F] text-base">
+                          <nuxt-link :to="subMenus.link">
+                            {{ subMenus.title }}
+                          </nuxt-link>
+                        </div>
+                      </template>
+                    </div>
                   </div>
                 </div>
               </template>
@@ -104,10 +137,17 @@
 function go(url) {
   window.open(url);
 }
+
 const headerMenus = [
   {
     title: "หลักสูตร",
-    arrow: "",
+    arrow: true,
+    dropDownMenus: [
+      {
+        title: "หลักสูตรทั้งหมด",
+        link: "/all-course",
+      },
+    ],
   },
   {
     title: "ไพ่ยิปซี",
@@ -115,7 +155,17 @@ const headerMenus = [
   },
   {
     title: "เกร็ดความรู้",
-    arrow: "",
+    arrow: true,
+    dropDownMenus: [
+      {
+        title: "ติดต่อเรา",
+        link: "/contact",
+      },
+      {
+        title: "คำถามที่พบบ่อย (FAQs)",
+        link: "/faq",
+      },
+    ],
   },
   {
     title: "ฮวงจุ้ย",
@@ -126,4 +176,29 @@ const headerMenus = [
     arrow: "",
   },
 ];
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      dropDown: false,
+      subMenu: null,
+    };
+  },
+  methods: {
+    mouseOver(menu) {
+      this.subMenu = menu.target.innerHTML;
+      this.dropDown = true;
+    },
+    mouseLeave() {
+      this.subMenu = null;
+      this.dropDown = false;
+    },
+    onChange() {
+      this.subMenu = null;
+      this.dropDown = false;
+    },
+  },
+};
 </script>

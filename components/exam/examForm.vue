@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full max-w-[798px] mx-auto mt-[9px]">
     <ValidationForm @submit="onSubmit">
       <div class="text-white bg-[#5762C5] rounded-[16px] py-6 px-8 mb-6">
         <div class="text-base mb-2">แบบทดสอบ</div>
@@ -26,6 +26,7 @@
             :answer="`subjective-answer-${i + 1}`"
             :title="subjective.title"
             :url="subjective.url"
+            :upload="subjective.upload"
           ></utils-card-exam-subjective-card>
         </template>
 
@@ -138,6 +139,7 @@ export default {
         {
           title: "2. ขับรถไปต่างจังหวัดไกล วันเสาร์ ออกกี่โมงปลอดภัย?",
           url: "",
+          upload: true,
         },
         {
           title: "3. คนที่แอบชอบคิดอย่างไรกับเรา วันจันทร์ 21.58 น.?",

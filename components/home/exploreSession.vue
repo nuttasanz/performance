@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full">
-    <div class="max-w-[1440px] mx-auto mt-11 p-20">
+  <div class="w-full" :class="bgColor ? 'bg-[#F7F7FD]' : ''">
+    <div class="max-w-[1440px] mx-auto pt-[114px] px-20 pb-20">
       <div class="relative bg-[#24285F] rounded-[32px]">
         <img
           src="/images/recommendCourse/gettoknowBanner.png"
@@ -51,5 +51,9 @@
 <script setup>
 defineProps({
   lineButton: Boolean,
+  bgColor: {
+    type: String,
+    default: "bg-white",
+  },
 });
 </script>

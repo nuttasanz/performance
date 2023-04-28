@@ -17,7 +17,7 @@
     </div>
 
     <div class="w-full bg-white">
-      <div class="max-w-[1440px] mx-auto py-14 px-20">
+      <div class="max-w-[1440px] mx-auto pt-14 px-20 pb-9">
         <div class="flex justify-between">
           <div>
             <div class="text-[40px] text-[#0e1f1d] leading-[58px] font-medium">
@@ -28,17 +28,6 @@
               10230
             </div>
           </div>
-          <!--          <div class="w-full max-w-[632px]">-->
-          <!--            <iframe-->
-          <!--              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.201712420316!2d100.62102411506041!3d13.82692299029889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d637d5bb11961%3A0xcb3de4a880a3ae0c!2zSG9ybyBBY2FkZW15IOC5guC4lOC4oiDguK3guLLguIjguLLguKPguKLguYzguYDguIvguLTguJk!5e0!3m2!1sth!2sth!4v1680851542177!5m2!1sth!2sth"-->
-          <!--              width="100%"-->
-          <!--              height="100%"-->
-          <!--              style="border: 0"-->
-          <!--              allowfullscreen=""-->
-          <!--              loading="lazy"-->
-          <!--              referrerpolicy="no-referrer-when-downgrade"-->
-          <!--            ></iframe>-->
-          <!--          </div>-->
           <div class="flex gap-x-[73px]">
             <div class="flex flex-col gap-y-4">
               <template
@@ -89,15 +78,15 @@
       </div>
     </div>
 
-    <explore-session line-button></explore-session>
+    <home-explore-session
+      bg-color="bg-[#F7F7FD]"
+      line-button
+    ></home-explore-session>
   </div>
 </template>
 
 <script>
-import ExploreSession from "~/components/home/exploreSession.vue";
-
 export default {
-  components: { ExploreSession },
   data() {
     return {
       socialContact: [

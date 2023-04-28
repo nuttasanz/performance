@@ -87,109 +87,21 @@
       </div>
       <!--   END VDO CONTENT   -->
       <!--   EXAMPLE CONTENT   -->
-      <div v-else class="w-full max-w-[798px] mx-auto mt-[9px]">
+      <div v-else>
         <exam-form></exam-form>
       </div>
       <!--   END EXAMPLE CONTENT   -->
     </div>
     <!--  END VDO COURSE  -->
-    <!--  FAQ  -->
-    <div class="bg-gradient-to-r from-[#4148AD] to-[#6570DA]">
-      <div class="max-w-[1440px] mx-auto py-24 px-20">
-        <div class="flex justify-between items-center">
-          <div class="w-full flex flex-col">
-            <div class="text-base text-[#AAAACB] font-semibold">Support</div>
-            <div
-              class="text-[48px] leading-[60px] text-[#FFF] font-semibold mt-3 mb-10"
-            >
-              คำถามที่พบบ่อย (FAQs)
-            </div>
-            <div
-              class="max-w-[320px] bg-white rounded-[8px] flex gap-x-2 py-3 px-[14px]"
-            >
-              <div class="w-5 h-5">
-                <img src="/images/icons/search-lg.png" class="w-full h-full" />
-              </div>
-              <input class="w-full" placeholder="Search" />
-            </div>
-          </div>
-          <div class="text-base leading-[30px] text-[#AAAACB]">
-            Need something cleared up? Here are our most frequently asked
-            questions.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="max-w-[1440px] mx-auto p-20">
-      <div class="text-center mb-11">
-        <div class="text-[#101828] text-[36px] leading-[44px] font-semibold">
-          คำถามที่พบบ่อย
-        </div>
-        <div class="text-[#475467] text-base leading-[30px] mt-5">
-          Everything you need to know about the product and billing.
-        </div>
-      </div>
-      <div class="w-full max-w-[768px] mx-auto flex flex-col gap-y-4">
-        <template v-for="(item, index) in whatLearn" :key="index">
-          <utils-dropbox-drop-box-session :title="item.title" :desc="item.desc">
-          </utils-dropbox-drop-box-session>
-        </template>
-      </div>
-    </div>
-    <!--  END FAQ  -->
-    <!--  CONTACT US  -->
-    <contact-us></contact-us>
-    <!------------------>
   </div>
 </template>
 
 <script>
-import ContactUs from "~/pages/contact-us.vue";
-
 export default {
-  components: { ContactUs },
   data() {
     return {
       exam: false,
       quiz: false,
-      whatLearn: [
-        {
-          title: "เรียนผ่านอุปกรณ์อะไรได้บ้าง",
-          desc: "สามารถเรียนผ่านได้ทาง computer (windows,Mac os) และ Smart phone (IOS, Android)",
-        },
-        {
-          title: "วิธีการเข้าเรียน และการใช้งาน",
-          desc: "วิธีการกรีดไพ่ กางไพ่ มือซ้ายหรือมือขวา สาเหตุเพราะอะไรหันหน้าทิศไหน หลังพิงอะไรถึงจะดี นำความสำเร็จ ร่ำรวยวิธีตรวจสอบ เมื่อไรพร้อมดูดวง เมื่อไรไม่พร้อมดูดวงข้อห้ามการพยากรณ์ต่างๆ ต้องรู้ค่าครูต้องมีไหมการทำบุญอย่างไร2",
-        },
-        {
-          title: "วิธีการสมัครเรียน และชำระค่าหลักสูตร",
-          desc: "วิธีการกรีดไพ่ กางไพ่ มือซ้ายหรือมือขวา สาเหตุเพราะอะไรหันหน้าทิศไหน หลังพิงอะไรถึงจะดี นำความสำเร็จ ร่ำรวยวิธีตรวจสอบ เมื่อไรพร้อมดูดวง เมื่อไรไม่พร้อมดูดวงข้อห้ามการพยากรณ์ต่างๆ ต้องรู้ค่าครูต้องมีไหมการทำบุญอย่างไร3",
-        },
-        {
-          title: "เข้าเรียนที่ไหน และเรียนได้ตอนไหน",
-          desc: "วิธีการกรีดไพ่ กางไพ่ มือซ้ายหรือมือขวา สาเหตุเพราะอะไรหันหน้าทิศไหน หลังพิงอะไรถึงจะดี นำความสำเร็จ ร่ำรวยวิธีตรวจสอบ เมื่อไรพร้อมดูดวง เมื่อไรไม่พร้อมดูดวงข้อห้ามการพยากรณ์ต่างๆ ต้องรู้ค่าครูต้องมีไหมการทำบุญอย่างไร4",
-        },
-        {
-          title: "ไม่มี internet สามารถเรียนได้หรือไม่",
-          desc: "วิธีการกรีดไพ่ กางไพ่ มือซ้ายหรือมือขวา สาเหตุเพราะอะไรหันหน้าทิศไหน หลังพิงอะไรถึงจะดี นำความสำเร็จ ร่ำรวยวิธีตรวจสอบ เมื่อไรพร้อมดูดวง เมื่อไรไม่พร้อมดูดวงข้อห้ามการพยากรณ์ต่างๆ ต้องรู้ค่าครูต้องมีไหมการทำบุญอย่างไร5",
-        },
-        {
-          title: "มีเอกสารประกอบการเรียนหรือไม่",
-          desc: "วิธีการกรีดไพ่ กางไพ่ มือซ้ายหรือมือขวา สาเหตุเพราะอะไรหันหน้าทิศไหน หลังพิงอะไรถึงจะดี นำความสำเร็จ ร่ำรวยวิธีตรวจสอบ เมื่อไรพร้อมดูดวง เมื่อไรไม่พร้อมดูดวงข้อห้ามการพยากรณ์ต่างๆ ต้องรู้ค่าครูต้องมีไหมการทำบุญอย่างไร6",
-        },
-        {
-          title: "ถ้าเรียนจบคอร์สแล้ว สามารถย้อนกลับมาเรียนซ้ำได้หรือไม่",
-          desc: "วิธีการกรีดไพ่ กางไพ่ มือซ้ายหรือมือขวา สาเหตุเพราะอะไรหันหน้าทิศไหน หลังพิงอะไรถึงจะดี นำความสำเร็จ ร่ำรวยวิธีตรวจสอบ เมื่อไรพร้อมดูดวง เมื่อไรไม่พร้อมดูดวงข้อห้ามการพยากรณ์ต่างๆ ต้องรู้ค่าครูต้องมีไหมการทำบุญอย่างไร6",
-        },
-        {
-          title: "ระยะเวลาในการเรียนกี่ชั่วโมง",
-          desc: "วิธีการกรีดไพ่ กางไพ่ มือซ้ายหรือมือขวา สาเหตุเพราะอะไรหันหน้าทิศไหน หลังพิงอะไรถึงจะดี นำความสำเร็จ ร่ำรวยวิธีตรวจสอบ เมื่อไรพร้อมดูดวง เมื่อไรไม่พร้อมดูดวงข้อห้ามการพยากรณ์ต่างๆ ต้องรู้ค่าครูต้องมีไหมการทำบุญอย่างไร6",
-        },
-        {
-          title: "ไม่มีพื้นฐานสามารถเรียนได้หรือไม่",
-          desc: "วิธีการกรีดไพ่ กางไพ่ มือซ้ายหรือมือขวา สาเหตุเพราะอะไรหันหน้าทิศไหน หลังพิงอะไรถึงจะดี นำความสำเร็จ ร่ำรวยวิธีตรวจสอบ เมื่อไรพร้อมดูดวง เมื่อไรไม่พร้อมดูดวงข้อห้ามการพยากรณ์ต่างๆ ต้องรู้ค่าครูต้องมีไหมการทำบุญอย่างไร6",
-        },
-      ],
     };
   },
   mounted() {
