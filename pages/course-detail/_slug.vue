@@ -65,13 +65,10 @@
             class="text-lg text-[#24285F] leading-[25.2px] font-medium mt-8 mb-[50px]"
           >
             Online Tarot Course 1/63 คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ
-            สร้างรายได้หลักล้าน
-            <br /><br />
-            สอนไพ่ยิปซีที่แก่นแท้ ไม่เน้นท่องจำ ทำนายได้เร็ว หลักสูตรเข้มข้น กับ
-            อาจารย์ เซิน
-            <br /><br />
-            ไม่ว่าจะเรียนไปเพื่อดูเองทั่วไป หรือเพื่อเป็นนักพยากรณ์
-            เน้นการสอนแบบคุณภาพ เข้าใจจริง เน้นการทำนายต่อยอดเองได้
+            สร้างรายได้หลักล้าน สอนไพ่ยิปซีที่แก่นแท้ ไม่เน้นท่องจำ ทำนายได้เร็ว
+            หลักสูตรเข้มข้น กับ อาจารย์ เซิน ไม่ว่าจะเรียนไปเพื่อดูเองทั่วไป
+            หรือเพื่อเป็นนักพยากรณ์ เน้นการสอนแบบคุณภาพ เข้าใจจริง
+            เน้นการทำนายต่อยอดเองได้
           </div>
           <!---->
           <!--     RECOMMEND CONTENT     -->
@@ -108,91 +105,21 @@
               <utils-dropbox-drop-box-session
                 :title="item.title"
                 :desc="item.desc"
-              >
-              </utils-dropbox-drop-box-session>
+              ></utils-dropbox-drop-box-session>
             </template>
           </div>
         </div>
         <!--    Master Profile Card    -->
         <div class="w-full max-w-[458px] flex flex-col gap-y-4">
-          <div
-            class="bg-white rounded-[24px]"
-            style="box-shadow: 0px 0.742667px 22.28px rgba(0, 0, 0, 0.06)"
-          >
-            <div class="border-b-[0.74px] border-[#D5D5DC] py-4 px-[30px]">
-              <div class="text-[24px] text-[#26242E] leading-[33.6px]">
-                ผู้สอน
-              </div>
-            </div>
-            <div class="flex items-center gap-x-6 pt-6 px-[30px] pb-8">
-              <div class="w-[60px] h-[60px]">
-                <img src="/images/courseDetail/profile-image.png" />
-              </div>
-              <div>
-                <div
-                  class="text-[24px] text-[#24285F] leading-[33.6px] font-bold"
-                >
-                  อาจารย์เซิน
-                </div>
-                <div class="text-[#A2A2A8] leading-[17.82px]">
-                  เจ้าของสถาบัน Horo Academy
-                </div>
-              </div>
-            </div>
-          </div>
+          <utils-card-instructor-card
+            profile-img="/images/courseDetail/profile-image.png"
+            title="อาจารย์เซิน"
+            desc="เจ้าของสถาบัน Horo Academy"
+          ></utils-card-instructor-card>
           <!------------->
-          <!--     Detail     -->
-          <div
-            class="bg-white rounded-[24px]"
-            style="box-shadow: 0px 0.742667px 22.28px rgba(0, 0, 0, 0.06)"
-          >
-            <div class="border-b-[0.74px] border-[#D5D5DC] py-4 px-[30px]">
-              <div class="text-[24px] text-[#26242E] leading-[33.6px]">
-                รายละเอียดการสมัคร
-              </div>
-            </div>
-            <div class="flex flex-col pt-6 px-[30px] pb-8">
-              <div class="flex gap-x-[10px] mb-4">
-                <img
-                  src="/images/courseDetail/caret-forward-circle.png"
-                  class="w-6 h-6 mt-0.5"
-                />
-
-                <div class="text-base text-[#26242E]">
-                  สามารถเรียน Online ผ่านทาง Website e-learning เรียนได้ทุกที่
-                  ทุกเวลา
-                </div>
-              </div>
-              <div class="flex gap-x-[10px] mb-10">
-                <img
-                  src="/images/courseDetail/certificate.png"
-                  class="w-6 h-6 mt-0.5"
-                />
-
-                <div class="text-base text-[#26242E]">
-                  มีใบ certificate ให้หลังเรียนจบหลักสูตร
-                </div>
-              </div>
-              <div
-                class="text-[32px] text-[#5762C5] leading-[44.8px] font-bold"
-              >
-                ราคา 15,000 บาท
-              </div>
-              <div class="text-base text-[#87898D] mt-4">
-                *สำหรับท่านที่ต้องการไพ่ หรือผ้า จัดส่งถึงบ้าน
-                สามารถแจ้งทีมงานเพื่อสอบถามราคาได้ครับ
-              </div>
-              <utils-button-line
-                class="w-full py-[17px] px-[37px] font-bold mt-[42px] mb-[22px]"
-                text="สนใจเรียนคอร์สนี้"
-                icon
-              ></utils-button-line>
-              <div class="text-base text-[#5762C5] text-center">
-                ขั้นตอนการสมัคร / วิธีการเรียน
-              </div>
-            </div>
-          </div>
-          <!--     End Detail     -->
+          <!------ Detail ------>
+          <utils-card-course-description></utils-card-course-description>
+          <!---- End Detail ---->
         </div>
       </div>
       <!--      -->

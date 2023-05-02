@@ -17,21 +17,21 @@
           </div>
         </div>
         <div class="flex gap-x-2">
-          <button
-            v-if="quiz && !exam"
-            class="border border-[#5762C533] rounded-full text-[#5762C5] py-3 px-6 hover:bg-[#5762C5] hover:text-white"
-            @click="openExample"
-          >
-            <div class="flex items-center gap-x-2">
-              <div>
-                <font-awesome-icon
-                  :icon="['far', 'square-check']"
-                  class="w-4 h-4"
-                />
-              </div>
-              <div>ทำแบบทดสอบ</div>
-            </div>
-          </button>
+          <!--          <button-->
+          <!--              v-if="quiz"-->
+          <!--              class="border border-[#5762C533] rounded-full text-[#5762C5] py-3 px-6 hover:bg-[#5762C5] hover:text-white"-->
+          <!--              @click="openExample"-->
+          <!--          >-->
+          <!--            <div class="flex items-center gap-x-2">-->
+          <!--              <div>-->
+          <!--                <font-awesome-icon-->
+          <!--                    :icon="['far', 'square-check']"-->
+          <!--                    class="w-4 h-4"-->
+          <!--                />-->
+          <!--              </div>-->
+          <!--              <div>ทำแบบทดสอบ</div>-->
+          <!--            </div>-->
+          <!--          </button>-->
           <button
             class="w-fit border border-[#5762C533] rounded-full text-[#5762C5] py-3 px-6 hover:bg-[#5762C5] hover:text-white"
             @click="closeExample"
@@ -53,8 +53,9 @@
       <div v-if="!exam" class="relative">
         <video
           id="course-video"
-          class="w-full h-full rounded-[32px] object-cover"
+          class="w-full h-full object-cover rounded-[32px]"
           controls
+          @click="showQuiz"
         >
           <source src="/images/video/videotest.mp4" type="video/mp4" />
         </video>
@@ -104,20 +105,26 @@ export default {
       quiz: false,
     };
   },
-  mounted() {
-    this.showQuiz();
-  },
   methods: {
     showQuiz() {
       document.getElementById("course-video").addEventListener("ended", () => {
         this.quiz = true;
       });
+      document
+        .getElementById("course-video")
+        .addEventListener("seeking", () => {
+          this.quiz = false;
+        });
     },
     openExample() {
       this.exam = true;
+      this.quiz = false;
     },
     closeExample() {
       this.exam = false;
+      document
+        .getElementById("course-video")
+        .removeEventListener("ended", () => {});
     },
   },
 };

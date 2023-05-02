@@ -52,36 +52,31 @@
               accept=".jpeg, .jpg, .png, .pdf"
               rules="required"
               class="w-full h-full absolute z-40 opacity-0 top-0 left-0 cursor-pointer"
-              @change="handleSelected"
+              @change="uploadFile"
             ></Field>
           </div>
 
           <div
-            v-if="fileUrl"
+            v-if="fileName"
             class="border border-[#5762C5] rounded-[16px] p-4"
           >
             <div class="flex justify-between">
               <div class="text-sm text-[#344054] font-medium">
                 {{ fileName }}
               </div>
-              <div @click="fileUrl = null">
+              <div @click="deleteInput">
                 <img src="/images/icons/trash.png" class="w-5 h-5" />
               </div>
             </div>
             <div class="text-sm text-[#475467]">
-              {{ (totalSize / 1000000).toFixed(2) + " MB" }}
+              {{ fileSize }}
             </div>
 
             <div class="flex items-center gap-x-3">
               <div class="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  class="bg-blue-600 h-2 rounded-full"
-                  :style="{ width: currentProgress }"
-                ></div>
+                <div class="bg-blue-600 h-2 rounded-full w-100%"></div>
               </div>
-              <div class="text-sm text-[#344054] font-medium">
-                {{ currentProgress }}
-              </div>
+              <div class="text-sm text-[#344054] font-medium">100%</div>
             </div>
           </div>
         </div>
@@ -102,8 +97,6 @@
     </div>
   </div>
 </template>
-
-<script setup></script>
 
 <script>
 import { Field } from "vee-validate";
@@ -128,65 +121,22 @@ export default {
     },
     upload: Boolean,
   },
-  setup() {
-    const reader = new FileReader();
-    const fileUrl = ref(null);
-    const totalSize = ref(0);
-    const currentProgress = ref("0%");
-    const fileName = ref(null);
-
-    function handleEvent(event) {
-      if (["loadend", "load"].includes(event.type)) {
-        // console.log('finished loading file');
-        // currentProgress.value = 'Finished loading file';
-        fileUrl.value = reader.result;
-      }
-      if (event.type === "progress") {
-        currentProgress.value = `${
-          (event.loaded / totalSize.value).toFixed(2) * 100
-        }%`;
-        // console.log('Progress: ', currentProgress.value);
-        // console.log('Bytes transferred: ', event.loaded, 'kilobytes');
-      }
-      if (event.type === "loadstart") {
-        totalSize.value = event.total;
-      }
-    }
-
-    function addListeners(reader) {
-      reader.addEventListener("loadstart", handleEvent);
-      reader.addEventListener("load", handleEvent);
-      reader.addEventListener("loadend", handleEvent);
-      reader.addEventListener("progress", handleEvent);
-      reader.addEventListener("error", handleEvent);
-      reader.addEventListener("abort", handleEvent);
-      // dont do this, make diffrent functions for every
-      // event listener please, your code's readability will be 100% better,
-      // i am on a bus rn, but will make it prettier later :D
-    }
-
-    function handleSelected(e) {
-      // console.log(e);
-      const selectedFile = e.target.files[0];
-      if (selectedFile) {
-        addListeners(reader);
-        reader.readAsDataURL(selectedFile);
-        this.fileName = selectedFile.name;
-      }
-    }
-
+  data() {
     return {
-      handleSelected,
-      fileUrl,
-      currentProgress,
-      fileName,
-      totalSize,
+      fileName: null,
+      fileSize: "",
     };
   },
-  data() {
-    return {};
-  },
 
-  methods: {},
+  methods: {
+    uploadFile(e) {
+      this.fileName = e.target.files[0].name;
+      this.fileSize = (e.target.files[0].size / 1000000).toFixed(2) + " MB";
+    },
+    deleteInput() {
+      this.fileName = null;
+      this.fileSize = "";
+    },
+  },
 };
 </script>

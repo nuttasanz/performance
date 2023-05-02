@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full relative top-0">
+  <div class="w-full relative top-0" @mouseleave="closeDropDown">
     <div class="flex flex-col">
       <div class="w-full bg-[#24285F]">
         <div
@@ -70,15 +70,18 @@
 
             <div class="flex gap-x-10">
               <template v-for="(menu, i) in headerMenus" :key="i">
-                <div
-                  class="flex flex-col justify-center"
-                  @mouseleave="mouseLeave"
-                  @click="onChange"
-                >
-                  <div class="flex items-center gap-x-[7px]">
+                <div class="flex flex-col justify-center cursor-pointer">
+                  <div
+                    class="flex items-center gap-x-2"
+                    @mouseover="openDropDown"
+                  >
                     <div
                       class="text-base text-[#24285F]"
-                      @mouseover="mouseOver"
+                      :class="
+                        subMenu === `${menu.title}` && menu.arrow
+                          ? 'font-bold'
+                          : ''
+                      "
                     >
                       {{ menu.title }}
                     </div>
@@ -87,24 +90,33 @@
                         <font-awesome-icon
                           :icon="['far', 'chevron-down']"
                           style="color: #28364d"
+                          :class="
+                            subMenu === `${menu.title}` && menu.arrow
+                              ? 'rotate-[180deg]'
+                              : ''
+                          "
                         />
                       </div>
                     </div>
                   </div>
-                  <!--                  v-if="subMenu === `${menu.title}` && menu.arrow"-->
                   <div
                     v-if="subMenu === `${menu.title}` && menu.arrow"
-                    class="relative flex justify-center"
+                    class="flex justify-center"
+                    @mouseleave="closeDropDown"
                   >
                     <div
-                      class="w-[295px] absolute z-50 bg-white border border-[#EAECF0] rounded-[12px] p-6"
+                      class="w-[295px] absolute z-50 bg-white border border-[#EAECF0] rounded-[12px] mt-4 p-6"
                     >
                       <template
                         v-for="(subMenus, j) in menu.dropDownMenus"
                         :key="j"
                       >
                         <div class="text-[#24285F] text-base">
-                          <nuxt-link :to="subMenus.link">
+                          <nuxt-link
+                            :to="subMenus.link"
+                            class="hover:underline hover:font-bold"
+                            @click="onChange"
+                          >
                             {{ subMenus.title }}
                           </nuxt-link>
                         </div>
@@ -187,11 +199,11 @@ export default {
     };
   },
   methods: {
-    mouseOver(menu) {
+    openDropDown(menu) {
       this.subMenu = menu.target.innerHTML;
       this.dropDown = true;
     },
-    mouseLeave() {
+    closeDropDown() {
       this.subMenu = null;
       this.dropDown = false;
     },
