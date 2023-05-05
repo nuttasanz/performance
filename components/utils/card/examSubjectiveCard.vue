@@ -2,7 +2,7 @@
   <div class="bg-white rounded-[16px] py-10 px-8">
     <div
       :for="answer"
-      class="text-[20px] text-[#0E1F1D] leading-[26px] font-bold mb-6"
+      class="text-[22px] text-[#0E1F1D] leading-[26px] font-bold mb-6"
     >
       {{ title }}
     </div>
@@ -34,13 +34,13 @@
               <div>
                 <img src="/images/icons/cloudUpload.png" class="w-5 h-[18px]" />
               </div>
-              <div class="text-sm text-[#24285F] font-semibold mt-4 mb-1">
+              <div class="text-base text-[#24285F] font-semibold mt-4 mb-1">
                 คลิกเพื่ออัพโหลด
                 <span class="text-[#475467] font-normal"
                   >หรือ ลากไฟล์เพื่ออัพโหลด</span
                 >
               </div>
-              <div class="text-[12px] text-[#A2A2A8]">
+              <div class="text-sm text-[#A2A2A8]">
                 PNG, JPG หรือ PDF (ขนาดสูงสุด 25MB)
               </div>
             </div>
@@ -61,14 +61,14 @@
             class="border border-[#5762C5] rounded-[16px] p-4"
           >
             <div class="flex justify-between">
-              <div class="text-sm text-[#344054] font-medium">
+              <div class="text-base text-[#344054] font-medium">
                 {{ fileName }}
               </div>
               <div @click="deleteInput">
                 <img src="/images/icons/trash.png" class="w-5 h-5" />
               </div>
             </div>
-            <div class="text-sm text-[#475467]">
+            <div class="text-base text-[#475467]">
               {{ fileSize }}
             </div>
 
@@ -76,7 +76,7 @@
               <div class="w-full bg-gray-200 rounded-full h-2">
                 <div class="bg-blue-600 h-2 rounded-full w-100%"></div>
               </div>
-              <div class="text-sm text-[#344054] font-medium">100%</div>
+              <div class="text-base text-[#344054] font-medium">100%</div>
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@
         rules="required"
       ></Field>
       <!--      <ErrorMessage :name="answer"></ErrorMessage>-->
-      <div class="text-sm text-[#979789]">จำกัด 300 ตัวอักษร</div>
+      <div class="text-base text-[#979789]">จำกัด 300 ตัวอักษร</div>
     </div>
   </div>
 </template>

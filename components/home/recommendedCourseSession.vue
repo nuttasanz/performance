@@ -7,7 +7,7 @@
         grid
       ></utils-card-course-card-session>
       <div
-        class="text-center text-[#5762C5] text-[20px] leading-[28px] font-medium border-2 rounded-full p-5 mt-12"
+        class="text-center text-[#5762C5] text-[22px] leading-[28px] font-medium border-2 rounded-full p-5 mt-12"
       >
         <NuxtLink to="/all-course"> ดูหลักสูตรทั้งหมด</NuxtLink>
       </div>

@@ -11,7 +11,7 @@
               class="w-[18px] h-[18px]"
             />
           </div>
-          <div class="text-base font-semibold text-[#24285F]">
+          <div class="text-lg font-semibold text-[#24285F]">
             Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ
             สร้างรายได้หลักล้าน
           </div>
@@ -33,7 +33,7 @@
           <!--            </div>-->
           <!--          </button>-->
           <button
-            class="w-fit border border-[#5762C533] rounded-full text-[#5762C5] py-3 px-6 hover:bg-[#5762C5] hover:text-white"
+            class="w-fit border border-[#5762C533] rounded-full text-lg text-[#5762C5] py-3 px-6 hover:bg-[#5762C5] hover:text-white"
             @click="closeExample"
           >
             <div class="flex items-center gap-x-2">
@@ -64,14 +64,14 @@
           v-if="quiz"
           class="absolute bg-[#000]/[0.2] top-[10%] w-full h-[80%] flex flex-col items-center justify-center"
         >
-          <div class="text-white text-[58px] leading-[81.2px] font-bold">
+          <div class="text-white text-[60px] leading-[81.2px] font-bold">
             ยินดีด้วย!
           </div>
-          <div class="text-xl text-white mt-3 mb-[30px]">
+          <div class="text-[22px] text-white mt-3 mb-[30px]">
             คุณได้เรียนหลักสูตรนี้เสร็จสิ้นแล้ว กรุณทำแบบทดสอบหลังเรียน
           </div>
           <button
-            class="border border-[#5762C533] rounded-full text-[#5762C5] bg-white py-4 px-6 hover:bg-[#5762C5] hover:text-white"
+            class="border border-[#5762C533] rounded-full text-lg text-[#5762C5] bg-white py-4 px-6 hover:bg-[#5762C5] hover:text-white"
             @click="openExample"
           >
             <div class="flex items-center gap-x-2">

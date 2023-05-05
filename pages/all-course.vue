@@ -9,11 +9,11 @@
         class="absolute top-0 w-full h-full flex flex-col items-center justify-center"
       >
         <div
-          class="text-[64px] text-white font-fraunces font-bold leading-[82.62px] tracking-[0.04em]"
+          class="text-[66px] text-white font-fraunces font-bold leading-[82.62px] tracking-[0.04em]"
         >
           Horo Academy
         </div>
-        <div class="text-xl text-white tracking-[0.02em]">
+        <div class="text-[22px] text-white tracking-[0.02em]">
           สังคมพยากรณ์สมัยใหม่ ไม่งมงาย
         </div>
       </div>
@@ -25,7 +25,7 @@
           <button
             class="w-fit bg-white text-[#5762C5] hover:bg-[#5762C5] hover:text-white py-[18px] px-9 rounded-full"
           >
-            <div class="text-[18px] leading-[18px] font-bold">
+            <div class="text-xl leading-[18px] font-bold">
               {{ button.tag }}
             </div>
           </button>

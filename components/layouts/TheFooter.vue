@@ -27,7 +27,7 @@
         <!--   END LOGO & MAPS   -->
         <!--   COURSE   -->
         <div class="flex gap-x-[50px]">
-          <div class="flex flex-col text-base text-white gap-y-3">
+          <div class="flex flex-col text-lg text-white gap-y-3">
             <div class="font-semibold mb-3">หลักสูตร</div>
             <div>หลักสูตรไพ่ยิปซี</div>
             <div>หลักสูตรเลขศาสตร์และยาม</div>
@@ -36,7 +36,7 @@
             <div>หนังสือเสียง (Audio book)</div>
           </div>
 
-          <div class="flex flex-col text-base text-white gap-y-3">
+          <div class="flex flex-col text-lg text-white gap-y-3">
             <div class="font-semibold mb-3">เมนูต่างๆ</div>
             <div>ไพ่ยิปซี</div>
             <div>เกร็ดความรู้</div>
@@ -44,32 +44,32 @@
             <div>ประวัติอาจารย์เซิน</div>
           </div>
 
-          <div class="flex flex-col text-base text-white gap-y-3">
+          <div class="flex flex-col text-lg text-white gap-y-3">
             <div class="font-semibold mb-3">ช่องทางติดต่อ</div>
-            <utils-button-small
+            <UtilsButtonSmall
               class="w-full max-h-[34px]"
               icon-type="fas"
               icon-name="phone"
               text="088-244-1915"
               @click="go('tel:0882441915')"
-            ></utils-button-small>
-            <utils-button-small
+            />
+            <UtilsButtonSmall
               class="w-full max-h-[34px]"
               icon-type="fab"
               icon-name="facebook"
               text="zernhoroacademy"
               button-color="#1877F2"
               @click="go('https:www.facebook.com/zernhoroacademy')"
-            ></utils-button-small>
-            <utils-button-small
+            />
+            <UtilsButtonSmall
               class="w-full max-h-[34px]"
               icon-type="fab"
               icon-name="youtube"
               text="อจ เซิน ซินแส"
               button-color="#FF0000"
               @click="go('https://youtube.com/@aj_zern')"
-            ></utils-button-small>
-            <utils-button-small
+            />
+            <UtilsButtonSmall
               class="w-full max-h-[34px]"
               icon-type="fab"
               icon-name="tiktok"
@@ -78,7 +78,7 @@
               @click="
                 go('https://www.tiktok.com/@horoacademy?_t=8bfrFDmItCj&_r=1')
               "
-            ></utils-button-small>
+            />
           </div>
         </div>
         <!--   END COURSE COURSE   -->
@@ -96,7 +96,7 @@
             <div class="max-w-[22px]">
               <img src="/images/brandLogo/lineIcon.png" />
             </div>
-            <div class="text-base font-bold text-white">@aj_zern</div>
+            <div class="text-lg font-bold text-white">@aj_zern</div>
           </button>
         </div>
         <!--   END LINE QR CODE   -->

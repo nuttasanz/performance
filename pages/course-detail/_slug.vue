@@ -14,12 +14,12 @@
         </div>
         <div class="flex flex-col">
           <div
-            class="w-fit bg-[#6F93DD] rounded-full py-[10px] px-[14px] text-white text-[14px] leading-[12px]"
+            class="w-fit bg-[#6F93DD] rounded-full py-[10px] px-[14px] text-white text-[16px] leading-[12px]"
           >
             คอร์สออนไลน์
           </div>
           <div
-            class="text-[32px] leading-[44.8px] font-medium text-white mt-1 mb-3"
+            class="text-[34px] leading-[44.8px] font-medium text-white mt-1 mb-3"
           >
             Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ
             สร้างรายได้หลักล้าน
@@ -29,13 +29,13 @@
               <div class="w-5 h-5 flex items-center justify-center">
                 <font-awesome-icon :icon="['fal', 'clock']" />
               </div>
-              <div class="text-[20px] leading-[28px] ml-[14.5px]">
+              <div class="text-[22px] leading-[28px] ml-[14.5px]">
                 4-5 ชั่วโมง
               </div>
             </div>
           </div>
           <utils-button-line
-            class="w-[242px] h-[58px] font-bold py-[17px] px-[37px] mt-[50px]"
+            class="w-[242px] h-[58px] text-lg font-bold py-[17px] px-[37px] mt-[50px]"
             text="สนใจเรียนคอร์สนี้"
             icon
           >
@@ -62,7 +62,7 @@
           <!--    END COURSE VIDEO      -->
           <!--    HEADER CONTENT    -->
           <div
-            class="text-lg text-[#24285F] leading-[25.2px] font-medium mt-8 mb-[50px]"
+            class="text-xl text-[#24285F] leading-[25.2px] font-medium mt-8 mb-[50px]"
           >
             Online Tarot Course 1/63 คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ
             สร้างรายได้หลักล้าน สอนไพ่ยิปซีที่แก่นแท้ ไม่เน้นท่องจำ ทำนายได้เร็ว
@@ -73,7 +73,7 @@
           <!---->
           <!--     RECOMMEND CONTENT     -->
           <div
-            class="text-[24px] leading-[31.2px] font-bold text-[#0E1F1D] mb-[25px]"
+            class="text-[26px] leading-[33.8px] font-bold text-[#0E1F1D] mb-[25px]"
           >
             คอร์สนี้เหมาะสำหรับใคร?
           </div>
@@ -87,7 +87,7 @@
                     class="w-full h-full"
                   />
                 </div>
-                <div class="text-base font-medium">
+                <div class="text-lg font-medium">
                   {{ item.title }}
                 </div>
               </div>
@@ -96,7 +96,7 @@
           <!---->
           <!--     WHAT WILL LEARN     -->
           <div
-            class="text-[24px] leading-[31.2px] font-bold text-[#0E1F1D] mt-[50px] mb-[25px]"
+            class="text-[26px] leading-[33.8px] font-bold text-[#0E1F1D] mt-[50px] mb-[25px]"
           >
             คอร์สนี้คุณจะได้เรียนรู้อะไร
           </div>
@@ -111,22 +111,23 @@
         </div>
         <!--    Master Profile Card    -->
         <div class="w-full max-w-[458px] flex flex-col gap-y-4">
-          <utils-card-instructor-card
+          <UtilsCardInstructorCard
             profile-img="/images/courseDetail/profile-image.png"
             title="อาจารย์เซิน"
             desc="เจ้าของสถาบัน Horo Academy"
-          ></utils-card-instructor-card>
+          />
+
           <!------------->
           <!------ Detail ------>
-          <utils-card-course-description></utils-card-course-description>
+          <UtilsCardCourseDescription />
           <!---- End Detail ---->
         </div>
       </div>
       <!--      -->
-      <utils-card-course-card-session
+      <UtilsCardCourseCardSession
         title="หลักสูตรที่คล้ายกัน"
         :course="courseCard"
-      ></utils-card-course-card-session>
+      />
       <!--      -->
     </div>
   </div>

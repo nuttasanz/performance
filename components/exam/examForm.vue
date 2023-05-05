@@ -2,8 +2,8 @@
   <div class="w-full max-w-[798px] mx-auto mt-[9px]">
     <ValidationForm @submit="onSubmit">
       <div class="text-white bg-[#5762C5] rounded-[16px] py-6 px-8 mb-6">
-        <div class="text-base mb-2">แบบทดสอบ</div>
-        <div class="text-[24px] leading-[31.2px] font-medium">
+        <div class="text-lg mb-2">แบบทดสอบ</div>
+        <div class="text-[26px] leading-[31.2px] font-medium">
           Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ
           สร้างรายได้หลักล้าน
         </div>
@@ -13,7 +13,7 @@
         <div
           class="bg-white rounded-[16px] py-6 px-8 border-t-[8px] border-t-[#5762C5] shadow-[#0000000F]"
         >
-          <div class="text-[20px] leading-[26px] text-[#24285F] font-bold">
+          <div class="text-[22px] leading-[26px] text-[#24285F] font-bold">
             แบบข้อเขียน
           </div>
         </div>
@@ -22,18 +22,18 @@
           v-for="(subjective, i) in examSubjective"
           :key="`subjective-${i}`"
         >
-          <utils-card-exam-subjective-card
+          <UtilsCardExamSubjectiveCard
             :answer="`subjective-answer-${i + 1}`"
             :title="subjective.title"
             :url="subjective.url"
             :upload="subjective.upload"
-          ></utils-card-exam-subjective-card>
+          />
         </template>
 
         <div
           class="bg-white rounded-[16px] py-6 px-8 border-t-[8px] border-t-[#5762C5] shadow-[#0000000F]"
         >
-          <div class="text-[20px] leading-[26px] text-[#24285F] font-bold">
+          <div class="text-[22px] leading-[26px] text-[#24285F] font-bold">
             แบบเลือกตอบ
           </div>
         </div>
@@ -42,20 +42,20 @@
           v-for="(objective, i) in examObjective"
           :key="`objective-${i}`"
         >
-          <utils-card-exam-objective-card
+          <UtilsCardExamObjectiveCard
             :title="objective.title"
             :choices="objective.choices"
             :multi-choices="objective.multiChoices"
-          ></utils-card-exam-objective-card>
+          />
         </template>
       </div>
       <div class="flex justify-between items-center mt-[50px]">
         <utils-button-form
-          class="max-w-[261px] h-[52px]"
+          class="max-w-[261px] h-[52px] text-lg"
           text="ส่งคำตอบ"
           text-color="bg-white"
         ></utils-button-form>
-        <button type="reset" class="text-[#5762C5] cursor-pointer">
+        <button type="reset" class="text-lg text-[#5762C5] cursor-pointer">
           ล้างคำตอบทั้งหมด
         </button>
       </div>

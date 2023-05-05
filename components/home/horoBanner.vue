@@ -23,23 +23,23 @@
           >
             <div class="flex flex-col justify-center">
               <div
-                class="text-[84px] leading-[108.44px] tracking-[0.04em] font-fraunces font-bold text-white"
+                class="text-[86px] leading-[108.44px] tracking-[0.04em] font-fraunces font-bold text-white"
               >
                 Horo Academy
               </div>
               <div
-                class="text-[32px] leading-[44.8px] tracking-[0.02em] text-white"
+                class="text-[34px] leading-[44.8px] tracking-[0.02em] text-white"
               >
                 สังคมพยากรณ์สมัยใหม่ ไม่งมงาย
               </div>
               <utils-button-style
-                class="max-w-[207px] max-h-[54px] py-[18px] px-9 mt-[54px] text-[#5762C5] font-bold text-[18px] tracking-[0.04em]"
+                class="max-w-[207px] max-h-[54px] py-[18px] px-9 mt-[54px] text-[#5762C5] font-bold text-xl tracking-[0.04em]"
                 button-color="#FFFFFF"
                 text="ดูหลักสูตรทั้งหมด"
               ></utils-button-style>
             </div>
             <div
-              class="text-[20px] text-white font-light leading-[28px] tracking-[0.02em] italic"
+              class="text-[22px] text-white font-light leading-[28px] tracking-[0.02em] italic"
             >
               อาจารย์ เซิน
             </div>
@@ -56,9 +56,7 @@
             @click="go(social.link)"
           >
             <div class="w-6 h-6"><img :src="social.icon" /></div>
-            <div
-              class="text-[18px] leading-[32px] tracking-[0.04em] font-medium"
-            >
+            <div class="text-xl leading-[32px] tracking-[0.04em] font-medium">
               {{ social.title }}
             </div>
           </div>

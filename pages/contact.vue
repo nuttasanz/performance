@@ -3,13 +3,13 @@
     <div class="bg-gradient-to-r from-[#4148AD] to-[#6570DA]">
       <div class="max-w-[1440px] mx-auto py-24 px-20">
         <div class="flex flex-col justify-center items-center">
-          <div class="text-base text-[#AAAACB] font-semibold">Contact Us</div>
+          <div class="text-lg text-[#AAAACB] font-semibold">Contact Us</div>
           <div
-            class="text-[48px] text-[#FFF] leading-[60px] font-semibold mt-3 mb-6"
+            class="text-[50px] text-[#FFF] leading-[60px] font-semibold mt-3 mb-6"
           >
             ติดต่อเรา
           </div>
-          <div class="text-[20px] text-[#AAAACB] leading-[30px]">
+          <div class="text-[22px] text-[#AAAACB] leading-[30px]">
             Come visit our friendly team at one of our offices.
           </div>
         </div>
@@ -20,10 +20,10 @@
       <div class="max-w-[1440px] mx-auto pt-14 px-20 pb-9">
         <div class="flex justify-between">
           <div>
-            <div class="text-[40px] text-[#0e1f1d] leading-[58px] font-medium">
+            <div class="text-[42px] text-[#0e1f1d] leading-[58px] font-medium">
               Horo Academy
             </div>
-            <div class="text-[20px] text-[#24285F] leading-[32px] mt-3 mb-8">
+            <div class="text-[22px] text-[#24285F] leading-[32px] mt-3 mb-8">
               454/1 (ชั้น 1) ซ. สุคนธสวัสดิ์ แขวงลาดพร้าว เขตลาดพร้าว กรุงเทพฯ
               10230
             </div>
@@ -41,7 +41,7 @@
                 >
                   <div><img :src="contact.icon" class="max-w-6 max-h-6" /></div>
                   <div
-                    class="text-[18px] leading-[32px] tracking-[0.04em] font-medium"
+                    class="text-xl leading-[32px] tracking-[0.04em] font-medium"
                   >
                     {{ contact.title }}
                   </div>
@@ -60,7 +60,7 @@
                 >
                   <div><img :src="contact.icon" class="max-w-6 max-h-6" /></div>
                   <div
-                    class="text-[18px] leading-[32px] tracking-[0.04em] font-medium"
+                    class="text-xl leading-[32px] tracking-[0.04em] font-medium"
                   >
                     {{ contact.title }}
                   </div>
@@ -73,7 +73,7 @@
           class="w-fit mx-auto flex gap-x-[10px] items-center py-6 px-8 border border-[#5762C533] rounded-full mt-20"
         >
           <div><img src="/images/icons/map.png" class="w-6 h-6" /></div>
-          <div class="text-[#5762C5] text-xl">ดูแผนที่และการเดินทาง</div>
+          <div class="text-[#5762C5] text-[22px]">ดูแผนที่และการเดินทาง</div>
         </div>
       </div>
     </div>

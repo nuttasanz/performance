@@ -2,7 +2,7 @@
   <div class="w-full bg-[#F7F7FD]">
     <div class="max-w-[440px] mx-auto py-[60px] pb-[90px]">
       <div
-        class="text-center text-[32px] text-[#5762C5] leading-[44.8px] font-bold font-bold mb-5"
+        class="text-center text-[34px] text-[#5762C5] leading-[44.8px] font-bold font-bold mb-5"
       >
         เข้าสู่ระบบ
       </div>
@@ -25,18 +25,20 @@
             placeholder="กรอกรหัสผ่าน"
             rules="required"
           ></utils-input-text-fields>
-          <div class="text-right text-sm text-[#5762C5] my-4 mb-6">
+          <div class="text-right text-base text-[#5762C5] my-4 mb-6">
             ลืมรหัสผ่าน?
           </div>
           <div class="px-8">
             <utils-button-style
-              class="w-full max-h-[52px] text-white font-bold py-[17px]"
+              class="w-full max-h-[52px] text-lg text-white font-bold py-[17px]"
               text="เข้าสู่ระบบ"
             >
             </utils-button-style>
-            <div class="text-center text-sm text-[#A2A2A8] my-[10px]">หรือ</div>
+            <div class="text-center text-base text-[#A2A2A8] my-[10px]">
+              หรือ
+            </div>
             <utils-button-line
-              class="w-full max-h-[58px] text-white font-bold py-5"
+              class="w-full max-h-[58px] text-lg text-white font-bold py-5"
               text="เข้าสู่ระบด้วย LINE"
               icon
             ></utils-button-line>

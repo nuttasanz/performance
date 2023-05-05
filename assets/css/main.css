@@ -5,10 +5,11 @@ textarea {
   border: 1px solid #d0d5dd;
   border-radius: 8px;
   resize: none;
+  font-size: 18px;
 }
 
 textarea::placeholder {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   color: #667085;
   font-weight: 400;
@@ -25,7 +26,7 @@ textarea::placeholder {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 22.4px;
 }
 
@@ -90,7 +91,7 @@ textarea::placeholder {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 22.4px;
 }
 

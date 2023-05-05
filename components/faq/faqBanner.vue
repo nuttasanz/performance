@@ -19,7 +19,7 @@
             <input class="w-full" placeholder="Search" />
           </div>
         </div>
-        <div class="text-base leading-[30px] text-[#AAAACB]">
+        <div class="text-xl leading-[30px] text-[#AAAACB]">
           Need something cleared up? Here are our most frequently asked
           questions.
         </div>

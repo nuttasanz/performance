@@ -15,7 +15,7 @@
                 style="color: #ffffff"
               />
             </div>
-            <div class="text-sm ml-[9px]">088-244-1915</div>
+            <div class="text-lg ml-[9px]">088-244-1915</div>
           </div>
 
           <div class="flex justify-center items-center gap-x-4">
@@ -76,7 +76,7 @@
                     @mouseover="openDropDown"
                   >
                     <div
-                      class="text-base text-[#24285F]"
+                      class="text-lg text-[#24285F]"
                       :class="
                         subMenu === `${menu.title}` && menu.arrow
                           ? 'font-bold'
@@ -111,7 +111,7 @@
                         v-for="(subMenus, j) in menu.dropDownMenus"
                         :key="j"
                       >
-                        <div class="text-[#24285F] text-base">
+                        <div class="text-[#24285F] text-lg">
                           <nuxt-link
                             :to="subMenus.link"
                             class="hover:underline hover:font-bold"
@@ -127,7 +127,7 @@
               </template>
               <nuxt-link to="/login">
                 <button
-                  class="w-fit flex items-center gap-x-2 text-base text-white leading-[18px] bg-[#5762C5] rounded-full py-3 px-6"
+                  class="w-fit flex items-center gap-x-2 text-lg text-white leading-[18px] bg-[#5762C5] rounded-full py-3 px-6"
                 >
                   <div class="w-4 h-4">
                     <font-awesome-icon :icon="['fas', 'user']" size="sm" />

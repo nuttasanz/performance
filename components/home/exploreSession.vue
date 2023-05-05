@@ -17,7 +17,7 @@
           </div>
           <div class="flex flex-col px-[42px]">
             <div
-              class="text-left text-[24px] text-white leading-[45px] tracking-[0.01em] font-medium"
+              class="text-left text-[26px] text-white leading-[45px] tracking-[0.01em] font-medium"
             >
               หากคุณกำลังมองหาอาจารย์
               <span class="font-bold"
@@ -30,13 +30,13 @@
             </div>
             <div class="flex h-[54px] gap-x-8 mt-8">
               <utils-button-style
-                class="w-full max-w-[320px] font-bold text-[#5762C5] text-[18px] tracking-[0.04em]"
+                class="w-full max-w-[320px] font-bold text-[#5762C5] text-xl tracking-[0.04em]"
                 text="ทำความรู้จัก อาจารย์เซิน มากขึ้น"
                 button-color="#FFFFFF"
               ></utils-button-style>
               <utils-button-line
                 v-if="lineButton"
-                class="w-full max-w-[320px] font-bold text-white text-[16px] leading-[18px]"
+                class="w-full max-w-[320px] font-bold text-white text-xl leading-[18px]"
                 text="LINE: @aj_zern"
                 icon
               ></utils-button-line>
