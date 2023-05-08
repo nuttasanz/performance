@@ -1,7 +1,56 @@
 <template>
   <div>
+    <!--    <div v-if="!loading" class="w-full h-full fixed top-0 z-50 bg-black">-->
+    <!--      <div-->
+    <!--        class="w-full h-full flex items-center justify-center text-white text-[400px] animate-pulse"-->
+    <!--      >-->
+    <!--        Loading...-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <UtilsLoadingSpinner v-if="loading" />
     <LayoutsTheHeader />
     <slot />
     <LayoutsTheFooter />
   </div>
 </template>
+
+<!--<script setup lang="ts">-->
+<!--const nuxtApp = useNuxtApp();-->
+<!--const loading = ref(true);-->
+<!--nuxtApp.hook("page:start", () => {-->
+<!--  loading.value = true;-->
+<!--});-->
+<!--// tru to set timeout here-->
+<!--nuxtApp.hook("page:finish", () => {-->
+<!--  loading.value = false;-->
+<!--});-->
+<!--</script>-->
+<!--setTimeout(async () => {-->
+<!--try {-->
+
+<!--console.log(loading.value);-->
+<!--}-->
+<!--catch (error) {-->
+<!--console.log(error)-->
+<!--}-->
+<!--finally {-->
+<!--console.log(loading.value)-->
+<!--}-->
+<!--},500)-->
+
+<!--<script setup>-->
+<!--const loading = ref(true);-->
+<!--const router = useRouter();-->
+<!--nextTick(() => {-->
+<!--  setTimeout(async () => {-->
+<!--    try {-->
+<!--      console.log(loading.value); // correctly loggs out - true-->
+<!--    } catch (error) {-->
+<!--      console.error(error);-->
+<!--    } finally {-->
+<!--      loading.value = false;-->
+<!--      console.log(loading.value); // correctly loggs out - false-->
+<!--    }-->
+<!--  }, 500);-->
+<!--});-->
+<!--</script>-->

@@ -15,8 +15,8 @@
           class="w-6 h-6 mt-0.5"
         />
 
-        <div class="text-lg text-[#26242E]">
-          สามารถเรียน Online ผ่านทาง Website e-learning เรียนได้ทุกที่ ทุกเวลา
+        <div class="text-lg text-[#26242E] font-noto font-medium">
+          สามารถเรียน Online ผ่านทาง Website E-Learning เรียนได้ทุกที่ ทุกเวลา
         </div>
       </div>
       <div class="flex gap-x-[10px] mb-10">
@@ -25,14 +25,14 @@
           class="w-6 h-6 mt-0.5"
         />
 
-        <div class="text-lg text-[#26242E]">
+        <div class="text-lg text-[#26242E] font-noto font-medium">
           มีใบ certificate ให้หลังเรียนจบหลักสูตร
         </div>
       </div>
       <div class="text-[34px] text-[#5762C5] leading-[44.8px] font-bold">
         ราคา 15,000 บาท
       </div>
-      <div class="text-lg text-[#87898D] mt-4">
+      <div class="text-lg text-[#87898D] mt-4 font-noto">
         *สำหรับท่านที่ต้องการไพ่ หรือผ้า จัดส่งถึงบ้าน
         สามารถแจ้งทีมงานเพื่อสอบถามราคาได้ครับ
       </div>

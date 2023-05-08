@@ -19,9 +19,12 @@
       </div>
       <!-- eslint-disable vue/no-v-html -->
       <div class="flex flex-col">
-        <div class="text-xl leading-[28px] font-medium" v-html="title"></div>
         <div
-          class="flex-col text-lg leading-[28px] text-[#AAAACB]"
+          class="text-xl leading-[28px] font-noto font-bold"
+          v-html="title"
+        ></div>
+        <div
+          class="flex-col text-lg leading-[28px] text-[#AAAACB] font-noto"
           :class="dropBox ? 'flex' : 'hidden'"
           v-html="desc"
         ></div>

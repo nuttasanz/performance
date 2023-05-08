@@ -34,13 +34,15 @@
               <div>
                 <img src="/images/icons/cloudUpload.png" class="w-5 h-[18px]" />
               </div>
-              <div class="text-base text-[#24285F] font-semibold mt-4 mb-1">
+              <div
+                class="text-base text-[#24285F] font-semibold font-noto mt-4 mb-1"
+              >
                 คลิกเพื่ออัพโหลด
                 <span class="text-[#475467] font-normal"
                   >หรือ ลากไฟล์เพื่ออัพโหลด</span
                 >
               </div>
-              <div class="text-sm text-[#A2A2A8]">
+              <div class="text-sm text-[#A2A2A8] font-noto">
                 PNG, JPG หรือ PDF (ขนาดสูงสุด 25MB)
               </div>
             </div>
@@ -93,7 +95,7 @@
         rules="required"
       ></Field>
       <!--      <ErrorMessage :name="answer"></ErrorMessage>-->
-      <div class="text-base text-[#979789]">จำกัด 300 ตัวอักษร</div>
+      <div class="text-base text-[#979789] font-noto">จำกัด 300 ตัวอักษร</div>
     </div>
   </div>
 </template>

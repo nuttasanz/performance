@@ -23,7 +23,9 @@
             <div class="text-[42px] text-[#0e1f1d] leading-[58px] font-medium">
               Horo Academy
             </div>
-            <div class="text-[22px] text-[#24285F] leading-[32px] mt-3 mb-8">
+            <div
+              class="max-w-[420px] text-[22px] text-[#24285F] leading-[32px] mt-3 mb-8 font-noto font-medium"
+            >
               454/1 (ชั้น 1) ซ. สุคนธสวัสดิ์ แขวงลาดพร้าว เขตลาดพร้าว กรุงเทพฯ
               10230
             </div>

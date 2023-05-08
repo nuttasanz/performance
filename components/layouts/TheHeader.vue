@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full relative top-0" @mouseleave="closeDropDown">
+  <div class="w-full relative top-0 z-50" @mouseleave="closeDropDown">
     <div class="flex flex-col">
       <div class="w-full bg-[#24285F]">
         <div

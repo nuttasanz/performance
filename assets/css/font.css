@@ -24,6 +24,34 @@
     url("../font/Fraunces/Fraunces-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Noto Serif Thai";
+  font-weight: 400;
+  src: local("Noto Serif Thai"),
+    url("../font/NotoSerifThai/NotoSerifThai-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Noto Serif Thai";
+  font-weight: 500;
+  src: local("Noto Serif Thai"),
+    url("../font/NotoSerifThai/NotoSerifThai-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Noto Serif Thai";
+  font-weight: 600;
+  src: local("Noto Serif Thai"),
+    url("../font/NotoSerifThai/NotoSerifThai-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Noto Serif Thai";
+  font-weight: 700;
+  src: local("Noto Serif Thai"),
+    url("../font/NotoSerifThai/NotoSerifThai-Bold.ttf");
+}
+
 body {
   font-family: "FC Iconic", sans-serif;
 }
@@ -31,4 +59,24 @@ body {
 .font-fraunces {
   font-family: "Fraunces", sans-serif;
   font-weight: 700;
+}
+
+.font-noto {
+  font-family: "Noto Serif Thai", sans-serif;
+  font-weight: 400;
+}
+
+.font-noto.font-medium {
+  font-weight: 500;
+  font-family: "Noto Serif Thai", sans-serif;
+}
+
+.font-noto.font-semibold {
+  font-weight: 600;
+  font-family: "Noto Serif Thai", sans-serif;
+}
+
+.font-noto.font-bold {
+  font-weight: 700;
+  font-family: "Noto Serif Thai", sans-serif;
 }

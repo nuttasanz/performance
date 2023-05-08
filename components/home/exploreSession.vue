@@ -17,7 +17,7 @@
           </div>
           <div class="flex flex-col px-[42px]">
             <div
-              class="text-left text-[26px] text-white leading-[45px] tracking-[0.01em] font-medium"
+              class="text-left text-[26px] text-white leading-[45px] tracking-[0.01em] font-medium font-noto"
             >
               หากคุณกำลังมองหาอาจารย์
               <span class="font-bold"

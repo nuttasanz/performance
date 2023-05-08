@@ -62,7 +62,7 @@
           <!--    END COURSE VIDEO      -->
           <!--    HEADER CONTENT    -->
           <div
-            class="text-xl text-[#24285F] leading-[25.2px] font-medium mt-8 mb-[50px]"
+            class="text-xl text-[#24285F] leading-[25.2px] font-medium mt-8 mb-[50px] font-noto"
           >
             Online Tarot Course 1/63 คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ
             สร้างรายได้หลักล้าน สอนไพ่ยิปซีที่แก่นแท้ ไม่เน้นท่องจำ ทำนายได้เร็ว
@@ -87,7 +87,7 @@
                     class="w-full h-full"
                   />
                 </div>
-                <div class="text-lg font-medium">
+                <div class="text-lg font-medium font-noto">
                   {{ item.title }}
                 </div>
               </div>

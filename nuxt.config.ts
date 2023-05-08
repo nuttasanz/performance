@@ -4,6 +4,15 @@ export default defineNuxtConfig({
     strict: true,
   },
   app: {
+    head: {
+      title: "Horo Academy e-Learning",
+      meta: [
+        {
+          name: "description",
+          content: "Website Description",
+        },
+      ],
+    },
     pageTransition: { name: "page", mode: "out-in" },
   },
   modules: ["@nuxtjs/tailwindcss"],

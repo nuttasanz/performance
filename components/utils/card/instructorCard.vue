@@ -11,10 +11,12 @@
         <img :src="profileImg" />
       </div>
       <div>
-        <div class="text-[26px] text-[#24285F] leading-[33.6px] font-bold">
+        <div
+          class="text-[26px] text-[#24285F] leading-[33.6px] font-noto font-bold"
+        >
           {{ title }}
         </div>
-        <div class="text-lg text-[#A2A2A8] leading-[17.82px]">
+        <div class="text-lg text-[#A2A2A8] leading-[17.82px] font-noto">
           {{ desc }}
         </div>
       </div>
