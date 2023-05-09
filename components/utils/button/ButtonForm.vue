@@ -4,6 +4,13 @@ import { useIsFormDirty, useIsFormValid } from "vee-validate";
 const isDisabled = computed(() => {
   return !useIsFormDirty().value || !useIsFormValid().value;
 });
+
+defineProps({
+  text: {
+    type: String,
+    default: null,
+  },
+});
 </script>
 
 <template>
@@ -13,6 +20,6 @@ const isDisabled = computed(() => {
     :class="isDisabled ? 'bg-[#A2A2A8]' : 'bg-[#5762C5]'"
     :disabled="isDisabled"
   >
-    ส่งคำตอบ
+    {{ text }}
   </button>
 </template>

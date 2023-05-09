@@ -3,7 +3,7 @@
     <!--  VDO COURSE  -->
     <div class="max-w-[1440px] mx-auto flex pb-[54px]">
       <div class="w-full flex">
-        <div class="flex flex-col relative w-full max-w-[350px]">
+        <div v-if="!exam" class="flex flex-col relative w-full max-w-[350px]">
           <!--     Learning Process     -->
           <div class="relative bg-white p-6">
             <div class="text-lg text-[#0E1F1D] mb-2">เรียนไปแล้ว 10%</div>
@@ -15,7 +15,7 @@
             </div>
           </div>
           <!--    End Learning Process     -->
-          <div class="overflow-y-scroll flex flex-col">
+          <div class="max-h-screen overflow-y-scroll flex flex-col">
             <template v-for="(item, i) in videoLesson" :key="i">
               <ExamVideoLesson
                 :title="item.title"
@@ -56,10 +56,10 @@
               >
                 <source src="/images/video/videotest.mp4" type="video/mp4" />
               </video>
-              <img :src="lessonSelect.vdoLink" />
+              <!--              <img :src="lessonSelect.vdoLink" />-->
 
               <!-- Chang this line to video link -->
-              {{ lessonSelect }}
+              <!--              {{ lessonSelect }}-->
               <div
                 v-if="quiz"
                 class="absolute bg-[#000]/[0.2] top-[10%] w-full h-[80%] flex flex-col items-center justify-center"
@@ -94,7 +94,7 @@
           </div>
           <!--   END EXAMPLE CONTENT   -->
           <!-- Next/Prev -->
-          <div class="bg-white flex justify-between p-7">
+          <div v-if="!exam" class="bg-white flex justify-between p-7">
             <div class="flex items-center gap-x-3 cursor-pointer">
               <div>
                 <font-awesome-icon

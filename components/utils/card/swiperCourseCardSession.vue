@@ -28,7 +28,7 @@
         <div class="flex flex-col mb-12">
           <div><img :src="card.image" /></div>
           <div
-            class="w-fit py-[6px] px-3 rounded-full text-[14px] text-white leading-[12px] mt-4"
+            class="w-fit py-[6px] px-3 rounded-full text-[14px] text-white leading-[12px] mt-4 font-noto"
             :class="
               card.tag === 'หนังสือเสียง' ? 'bg-[#979789]' : 'bg-[#6F93DD]'
             "

@@ -1,12 +1,5 @@
 <template>
   <div>
-    <!--    <div v-if="!loading" class="w-full h-full fixed top-0 z-50 bg-black">-->
-    <!--      <div-->
-    <!--        class="w-full h-full flex items-center justify-center text-white text-[400px] animate-pulse"-->
-    <!--      >-->
-    <!--        Loading...-->
-    <!--      </div>-->
-    <!--    </div>-->
     <UtilsLoadingSpinner v-if="loading" />
     <LayoutsTheHeader />
     <slot />
@@ -14,17 +7,17 @@
   </div>
 </template>
 
-<!--<script setup lang="ts">-->
-<!--const nuxtApp = useNuxtApp();-->
-<!--const loading = ref(true);-->
-<!--nuxtApp.hook("page:start", () => {-->
-<!--  loading.value = true;-->
-<!--});-->
-<!--// tru to set timeout here-->
-<!--nuxtApp.hook("page:finish", () => {-->
-<!--  loading.value = false;-->
-<!--});-->
-<!--</script>-->
+<script setup lang="ts">
+const nuxtApp = useNuxtApp();
+const loading = ref(true);
+nuxtApp.hook("page:start", () => {
+  loading.value = true;
+});
+// tru to set timeout here
+nuxtApp.hook("page:finish", () => {
+  loading.value = false;
+});
+</script>
 <!--setTimeout(async () => {-->
 <!--try {-->
 

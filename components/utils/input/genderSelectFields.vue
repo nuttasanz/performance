@@ -1,19 +1,22 @@
 <template>
-  <label
-    :for="name"
-    class="text-[#24285F] text-[22px] leading-[28px] font-bold"
+  <label :for="name" class="text-[#24285F] text-[22px] leading-[28px] font-bold"
+    >{{ label }}<span class="text-[#EA560D]">*</span></label
   >
-    {{ label }}<span class="text-[#EA560D]">*</span>
-  </label>
   <Field
     :id="name"
+    as="select"
     class="w-full border-b border-[#AEAFC5] outline-0 text-base leading-[19.6px] font-normal mt-2"
     :name="name"
     :type="type"
     :value="value"
     :placeholder="placeholder"
     :rules="rules"
-  ></Field>
+    required
+  >
+    <option value="" disabled selected hidden>เลือกเพศ</option>
+    <option value="ชาย">ชาย</option>
+    <option value="หญิง">หญิง</option>
+  </Field>
   <ErrorMessage :name="name"></ErrorMessage>
 </template>
 

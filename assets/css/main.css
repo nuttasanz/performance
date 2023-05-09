@@ -2,6 +2,19 @@
   display: none;
 }
 
+select {
+  height: 100%;
+}
+select:required:invalid {
+  color: #b1b1b1;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: #000;
+}
+
 textarea {
   width: 100%;
   height: 154px;
