@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full h-full fixed z-50 flex items-center justify-center bg-black/[0.9]"
+    class="w-full h-full fixed z-[9999] flex items-center justify-center bg-black"
   >
     <img
       src="/images/loadding.gif"
