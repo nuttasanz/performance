@@ -8,11 +8,13 @@ defineProps({
     type: String,
     default: "",
   },
+  status: Boolean,
+  active: Boolean,
 });
 </script>
 
 <template>
-  <div class="w-full border border-[#EBEAE9]">
+  <div class="w-full border border-[#EBEAE9]" :class="status?'bg-[#D9FFEA]':''">
     <div class="border-b border-b-[#EBEAE9] py-3 px-6">
       <!-- eslint-disable vue/no-v-html -->
       <div class="flex justify-between items-center">
@@ -29,7 +31,7 @@ defineProps({
           </div>
         </div>
 
-        <div class="hidden">
+        <div :class="status?'block':'hidden'">
           <font-awesome-icon
             :icon="['fas', 'check']"
             style="color: #6cb88e"
