@@ -11,9 +11,13 @@
             </div>
             <div class="w-full bg-gray-200 rounded-full h-2">
               <div
-                  class=" h-2 rounded-full"
-                  :class="learningProgress==100?'bg-gradient-to-r from-[#6CB88E] to-[#9DEABF]':'bg-gradient-to-r from-[#E8A43E] to-[#FFDAA1]'"
-                  :style="{width: `${learningProgress}%`}"
+                class="h-2 rounded-full"
+                :class="
+                  learningProgress == 100
+                    ? 'bg-gradient-to-r from-[#6CB88E] to-[#9DEABF]'
+                    : 'bg-gradient-to-r from-[#E8A43E] to-[#FFDAA1]'
+                "
+                :style="{ width: `${learningProgress}%` }"
               ></div>
             </div>
           </div>
@@ -21,35 +25,34 @@
           <div class="max-h-[496px] overflow-y-scroll">
             <template v-for="(item, i) in videoLesson" :key="i">
               <ExamVideoLesson
-                  :id="`lesson-${i}`"
-                  :title="item.title"
-                  :time="item.time"
-                  :status="item.lessonComplete"
-                  @click="selectedLesson(item, i)"
+                :id="`lesson-${i}`"
+                :title="item.title"
+                :time="item.time"
+                :status="item.lessonComplete"
+                @click="selectedLesson(item, i)"
               />
             </template>
           </div>
           <!-- Homework Button -->
           <div class="bg-white p-6">
             <UtilsButtonStyle
-                text="ทำการบ้านหลังเรียน"
-                icon-type="fas"
-                icon-name="square-check"
-                class="w-full h-[56px] max-h-[56px] text-white text-lg font-semibold"
-                @click="showQuiz"
+              text="ทำการบ้านหลังเรียน"
+              icon-type="fas"
+              icon-name="square-check"
+              class="w-full h-[56px] max-h-[56px] text-white text-lg font-semibold"
+              button-color="bg-[#5762C5]"
+              :disabled="disabled"
+              @click="showQuiz"
             />
           </div>
           <!-- Homework Button -->
         </div>
-        <div
-            v-if="lessonSelect.length > 0"
-            class="w-full flex flex-col"
-        >
+        <div v-if="lessonSelect.length > 0" class="w-full flex flex-col">
           <div>
             <!--   VDO HEADER   -->
             <div
-                class="text-[26px] leading-[36.4px] font-semibold text-[#24285F] text-center my-6"
-                @click="closeQuiz"
+              class="text-[26px] leading-[36.4px] font-semibold text-[#24285F] text-center my-6"
+              @click="closeQuiz"
             >
               Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ
               สร้างรายได้หลักล้าน
@@ -58,24 +61,32 @@
             <!--   VDO CONTENT   -->
             <div class="relative" @click="playVideo">
               <video
-                  :id="`video-${index}`"
-                  :src="videoLesson[index].vdoLink"
-                  controls
-                  class="w-full h-full max-h-[560px] object-cover"
+                :id="`video-${index}`"
+                :src="videoLesson[index].vdoLink"
+                controls
+                class="w-full h-full max-h-[560px] object-cover"
               ></video>
-              <div v-if="learningProgress==100" class="absolute top-0 z-50 w-full h-full bg-black/[0.8]">
+              <div
+                v-if="learningProgress == 100"
+                class="absolute top-0 z-50 w-full h-full bg-black/[0.8]"
+              >
                 <div class="flex w-full h-full items-center justify-center">
                   <div class="text-white text-center">
-                    <div class="text-[60px] leading-[81.2px] font-bold">ยินดีด้วย!</div>
-                    <div class="text-xl mt-3 mb-[30px]">คุณได้เรียนหลักสูตรนี้เสร็จสิ้นแล้ว กรุณทำแบบทดสอบหลังเรียน
+                    <div class="text-[60px] leading-[81.2px] font-bold">
+                      ยินดีด้วย!
+                    </div>
+                    <div class="text-xl mt-3 mb-[30px]">
+                      คุณได้เรียนหลักสูตรนี้เสร็จสิ้นแล้ว
+                      กรุณทำแบบทดสอบหลังเรียน
                     </div>
                     <UtilsButtonStyle
-                        text="ทำการบ้านหลังเรียน"
-                        icon-type="fas"
-                        icon-name="square-check"
-                        class="w-full max-w-[256px] mx-auto h-[56px] max-h-[56px] text-[#5762C5] text-lg font-semibold"
-                        button-color="#FFF"
-                        @click="showQuiz"
+                      text="ทำการบ้านหลังเรียน"
+                      icon-type="fas"
+                      icon-name="square-check"
+                      class="w-full h-[56px] max-h-[56px] text-[#5762C5] text-lg font-semibold"
+                      :disabled="disabled"
+                      button-color="bg-[#FFFFFF]"
+                      @click="showQuiz"
                     />
                   </div>
                 </div>
@@ -85,28 +96,26 @@
             <!-- Next/Prev -->
             <div class="bg-white flex justify-between p-7">
               <div
-                  class="flex items-center gap-x-3 cursor-pointer"
-                  @click="prev"
+                class="flex items-center gap-x-3 cursor-pointer"
+                @click="prev"
               >
                 <div>
                   <font-awesome-icon
-                      :icon="['far', 'arrow-left']"
-                      class="w-4 h-4 text-[#5762C5]"
+                    :icon="['far', 'arrow-left']"
+                    class="w-4 h-4 text-[#5762C5]"
                   />
                 </div>
-                <div class="text-lg text-[#24285F] font-semibold">
-                  ก่อนหน้า
-                </div>
+                <div class="text-lg text-[#24285F] font-semibold">ก่อนหน้า</div>
               </div>
               <div
-                  class="flex items-center gap-x-3 cursor-pointer"
-                  @click="next"
+                class="flex items-center gap-x-3 cursor-pointer"
+                @click="next"
               >
                 <div class="text-lg text-[#24285F] font-semibold">ถัดไป</div>
                 <div>
                   <font-awesome-icon
-                      :icon="['far', 'arrow-right']"
-                      class="w-4 h-4 text-[#5762C5]"
+                    :icon="['far', 'arrow-right']"
+                    class="w-4 h-4 text-[#5762C5]"
                   />
                 </div>
               </div>
@@ -116,18 +125,17 @@
         </div>
       </div>
       <div v-else class="max-w-[1440px] mx-auto">
-        <ExamForm/>
+        <ExamForm />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
-      showExam: false,
+      disabled: false,
       learningProgress: 0,
       index: null,
       lessonSelect: [],
@@ -194,21 +202,21 @@ export default {
           lessonComplete: false,
         },
         {
-          title: `บทที่10 <br>ไพ่ชุดเล็ก`,
-          time: "26นาที",
-          vdoLink: "/images/video/testVid/vid5.mp4",
+          title: `บทที่ 1 <br>เกริ่นนำ`,
+          time: "18นาที",
+          vdoLink: "/images/video/testVid/vid1.mp4",
           lessonComplete: false,
         },
         {
-          title: `บทที่10 <br>ไพ่ชุดเล็ก`,
-          time: "26นาที",
-          vdoLink: "/images/video/testVid/vid5.mp4",
+          title: `บทที่ 2<br>การเป็นนักพยากรณ์มืออาชีพ`,
+          time: "1ขั่วโมง 8นาที",
+          vdoLink: "/images/video/testVid/vid2.mp4",
           lessonComplete: false,
         },
         {
-          title: `บทที่10 <br>ไพ่ชุดเล็ก`,
-          time: "26นาที",
-          vdoLink: "/images/video/testVid/vid5.mp4",
+          title: `บทที่ 3<br>ทุกเรื่องเกี่ยวกับไพ่`,
+          time: "54นาที",
+          vdoLink: "/images/video/testVid/vid3.mp4",
           lessonComplete: false,
         },
       ],
@@ -227,22 +235,30 @@ export default {
     },
     playVideo() {
       const vid = document.getElementById(`video-${this.index}`);
-      vid.addEventListener("ended", () => {
-        this.videoLesson[this.index].lessonComplete = true;
-        this.learningProgress += (100/this.videoLesson.length)
-      },{once: true});
+      vid.addEventListener(
+        "ended",
+        () => {
+          this.videoLesson[this.index].lessonComplete = true;
+          this.learningProgress += Math.round(100 / this.videoLesson.length);
+          if (this.learningProgress >= 100) {
+            this.learningProgress = 100;
+            this.disabled = true;
+          }
+        },
+        { once: true }
+      );
     },
     next() {
-      if (this.index >= this.videoLesson.length-1){
-        return false
+      if (this.index >= this.videoLesson.length - 1) {
+        return false;
       } else {
         this.index++;
       }
     },
     prev() {
-      if (this.index <= 0){
-        return false
-      }else {
+      if (this.index <= 0) {
+        return false;
+      } else {
         this.index--;
       }
     },
