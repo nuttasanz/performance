@@ -5,7 +5,7 @@
       <span
         v-if="multiChoices"
         class="text-[22px] leading-[26px] text-[#A2A2A8] font-normal"
-        >(ตอบได้มากกว่า 1 ข้อ)</span
+        >(Can choose more than 1 item.)</span
       >
     </div>
 

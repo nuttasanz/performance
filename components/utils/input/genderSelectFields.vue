@@ -13,9 +13,9 @@
     :rules="rules"
     required
   >
-    <option value="" disabled selected hidden>เลือกเพศ</option>
-    <option value="ชาย">ชาย</option>
-    <option value="หญิง">หญิง</option>
+    <option value="" disabled selected hidden>Choose your gender</option>
+    <option value="ชาย">Male</option>
+    <option value="หญิง">Female</option>
   </Field>
   <ErrorMessage :name="name"></ErrorMessage>
 </template>

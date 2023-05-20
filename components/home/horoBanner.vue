@@ -2,21 +2,13 @@
   <div class="w-full">
     <div class="max-w-[1440px] mx-auto pt-6 px-20 pb-9">
       <div
-        class="w-full relative mx-auto rounded-3xl"
+        class="w-full h-[500px] relative mx-auto rounded-3xl flex items-center justify-center"
         style="
           background: linear-gradient(83.05deg, #4148ad 39.52%, #6570da 98.57%);
         "
       >
         <!--   BG IMAGE   -->
-        <div class="relative flex justify-between">
-          <!--    BG IMAGE CONTENT    -->
-          <div class="relative">
-            <img src="/images/HeroBanner/horo-tree.png" />
-          </div>
-          <div class="relative top-[0px]">
-            <img src="/images/HeroBanner/master-zern.png" />
-          </div>
-          <!--   END BG IMAGE CONTENT   -->
+        <div class="relative w-full h-full flex justify-between">
           <!--    CONTENT    -->
           <div
             class="absolute w-full h-full flex justify-between items-center pl-20 pr-[70px]"
@@ -25,23 +17,18 @@
               <div
                 class="text-[86px] leading-[108.44px] tracking-[0.04em] font-fraunces font-bold text-white"
               >
-                Horo Academy
+                Nuttasan Kotchawat
               </div>
               <div
                 class="text-[34px] leading-[44.8px] tracking-[0.02em] text-white"
               >
-                สังคมพยากรณ์สมัยใหม่ ไม่งมงาย
+                Front-End Developer
               </div>
-              <utils-button-style
-                class="max-w-[207px] max-h-[54px] py-[18px] px-9 mt-[54px] text-[#5762C5] font-bold text-xl tracking-[0.04em]"
-                button-color="#FFFFFF"
-                text="ดูหลักสูตรทั้งหมด"
-              ></utils-button-style>
             </div>
             <div
               class="text-[22px] text-white font-light leading-[28px] tracking-[0.02em] italic"
             >
-              อาจารย์ เซิน
+              Freud (ฟรอยด์)
             </div>
           </div>
           <!--   END CONTENT   -->
@@ -52,10 +39,16 @@
       <div class="flex justify-center gap-x-14 mt-8">
         <template v-for="(social, i) in socialContact" :key="i">
           <div
-            class="flex items-center gap-x-4 cursor-pointer"
+            class="flex items-center gap-x-2 hover:cursor-pointer"
             @click="go(social.link)"
           >
-            <div class="w-6 h-6"><img :src="social.icon" /></div>
+            <div class="flex items-center">
+              <font-awesome-icon
+                :icon="[`${social.iconType}`, `${social.iconName}`]"
+                :style="{ color: `${social.iconColor}` }"
+                size="lg"
+              />
+            </div>
             <div class="text-xl leading-[32px] tracking-[0.04em] font-medium">
               {{ social.title }}
             </div>
@@ -74,24 +67,32 @@ function go(url) {
 
 const socialContact = [
   {
-    icon: "/images/icons/facebook.png",
-    title: "zernhoroacademy",
-    link: "https://www.facebook.com/zernhoroacademy",
+    iconType: "fab",
+    iconName: "facebook",
+    iconColor: "#1778F2",
+    title: "Nuttasan Kotchawat",
+    link: null,
   },
   {
-    icon: "/images/icons/line.png",
-    title: "@aj_zern",
-    link: "https://liff.line.me/1645278921-kWRPP32q/?accountId=aj_zern",
+    iconType: "fab",
+    iconName: "line",
+    iconColor: "#00B900",
+    title: "froynts",
+    link: null,
   },
   {
-    icon: "/images/icons/youtube.png",
-    title: "อจ เซิน ซินแสที่ปรึกษาธุรกิจ",
-    link: "https://youtube.com/@aj_zern",
+    iconType: "fas",
+    iconName: "envelope",
+    iconColor: "#000",
+    title: "nuttasan.kotchawat@gmail.com",
+    link: "mailto: nuttasan.kotchawat@gmail.com",
   },
   {
-    icon: "/images/icons/tiktok.png",
-    title: "@horoacademy",
-    link: "https://www.tiktok.com/@horoacademy?_t=8bfrFDmItCj&_r=1",
+    iconType: "fas",
+    iconName: "phone",
+    iconColor: "#000",
+    title: "092-423-5999",
+    link: "tel:0924235999",
   },
 ];
 </script>

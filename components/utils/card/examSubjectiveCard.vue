@@ -14,7 +14,7 @@
           as="textarea"
           :name="answer"
           type="text"
-          placeholder="ใส่คำตอบของคุณ"
+          placeholder="Answer"
           maxlength="300"
           rules="required"
           class="h-11 py-[10px] px-[14px] overflow-hidden"
@@ -37,13 +37,11 @@
               <div
                 class="text-base text-[#24285F] font-semibold font-noto mt-4 mb-1"
               >
-                คลิกเพื่ออัพโหลด
-                <span class="text-[#475467] font-normal"
-                  >หรือ ลากไฟล์เพื่ออัพโหลด</span
-                >
+                Choose a file
+                <span class="text-[#475467] font-normal">or drag it here.</span>
               </div>
               <div class="text-sm text-[#A2A2A8] font-noto">
-                PNG, JPG หรือ PDF (ขนาดสูงสุด 25MB)
+                PNG, JPG or PDF (Max Size 25MB)
               </div>
             </div>
             <Field
@@ -90,12 +88,12 @@
         as="textarea"
         :name="answer"
         type="text"
-        placeholder="ใส่คำตอบของคุณ"
+        placeholder="Answer"
         maxlength="300"
         rules="required"
       ></Field>
       <!--      <ErrorMessage :name="answer"></ErrorMessage>-->
-      <div class="text-base text-[#979789] font-noto">จำกัด 300 ตัวอักษร</div>
+      <div class="text-base text-[#979789]">300 character limit</div>
     </div>
   </div>
 </template>

@@ -3,11 +3,13 @@
     <!--  VDO COURSE  -->
     <div class="max-w-[1440px] mx-auto flex px-20 pb-[54px]">
       <div v-if="!exam" class="w-full flex">
-        <div class="relative flex flex-col w-full max-w-[350px]">
+        <div
+          class="relative flex flex-col justify-between w-full max-w-[350px]"
+        >
           <!--     Learning Process     -->
           <div class="bg-white p-6">
             <div class="text-lg text-[#0E1F1D] mb-2">
-              เรียนไปแล้ว {{ learningProgress }}%
+              Learning Progress {{ learningProgress }}%
             </div>
             <div class="w-full bg-gray-200 rounded-full h-2">
               <div
@@ -22,7 +24,7 @@
             </div>
           </div>
           <!--    End Learning Process     -->
-          <div class="max-h-[496px] overflow-y-scroll">
+          <div class="relative top-0 h-full max-h-[535px] overflow-y-scroll">
             <template v-for="(item, i) in videoLesson" :key="i">
               <ExamVideoLesson
                 :id="`lesson-${i}`"
@@ -36,7 +38,7 @@
           <!-- Homework Button -->
           <div class="bg-white p-6">
             <UtilsButtonStyle
-              text="ทำการบ้านหลังเรียน"
+              text="Quiz Test"
               icon-type="fas"
               icon-name="square-check"
               class="w-full h-[56px] max-h-[56px] text-white text-lg font-semibold"
@@ -54,8 +56,8 @@
               class="text-[26px] leading-[36.4px] font-semibold text-[#24285F] text-center my-6"
               @click="closeQuiz"
             >
-              Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์มืออาชีพ
-              สร้างรายได้หลักล้าน
+              Course Title<br />
+              If video completed button will active for Quiz
             </div>
             <!--   END VDO HEADER   -->
             <!--   VDO CONTENT   -->
@@ -73,14 +75,13 @@
                 <div class="flex w-full h-full items-center justify-center">
                   <div class="text-white text-center">
                     <div class="text-[60px] leading-[81.2px] font-bold">
-                      ยินดีด้วย!
+                      Congraturation!
                     </div>
                     <div class="text-xl mt-3 mb-[30px]">
-                      คุณได้เรียนหลักสูตรนี้เสร็จสิ้นแล้ว
-                      กรุณทำแบบทดสอบหลังเรียน
+                      You Have Completed All Chapters
                     </div>
                     <UtilsButtonStyle
-                      text="ทำการบ้านหลังเรียน"
+                      text="Quiz"
                       icon-type="fas"
                       icon-name="square-check"
                       class="w-full h-[56px] max-h-[56px] text-[#5762C5] text-lg font-semibold"
@@ -105,13 +106,13 @@
                     class="w-4 h-4 text-[#5762C5]"
                   />
                 </div>
-                <div class="text-lg text-[#24285F] font-semibold">ก่อนหน้า</div>
+                <div class="text-lg text-[#24285F] font-semibold">Previous</div>
               </div>
               <div
                 class="flex items-center gap-x-3 cursor-pointer"
                 @click="next"
               >
-                <div class="text-lg text-[#24285F] font-semibold">ถัดไป</div>
+                <div class="text-lg text-[#24285F] font-semibold">Next</div>
                 <div>
                   <font-awesome-icon
                     :icon="['far', 'arrow-right']"
@@ -124,7 +125,7 @@
           </div>
         </div>
       </div>
-      <div v-else class="max-w-[1440px] mx-auto">
+      <div v-else class="w-full max-w-[798px] mx-auto">
         <ExamForm />
       </div>
     </div>
@@ -142,83 +143,83 @@ export default {
       exam: false,
       videoLesson: [
         {
-          title: `บทที่ 1 <br>เกริ่นนำ`,
-          time: "18นาที",
+          title: `Lesson1<br>Chapter Title`,
+          time: "Duration",
           vdoLink: "/images/video/testVid/vid1.mp4",
           lessonComplete: false,
         },
         {
-          title: `บทที่ 2<br>การเป็นนักพยากรณ์มืออาชีพ`,
-          time: "1ขั่วโมง 8นาที",
+          title: `Lesson2<br>Chapter Title`,
+          time: "Duration",
           vdoLink: "/images/video/testVid/vid2.mp4",
           lessonComplete: false,
         },
-        {
-          title: `บทที่ 3<br>ทุกเรื่องเกี่ยวกับไพ่`,
-          time: "54นาที",
-          vdoLink: "/images/video/testVid/vid3.mp4",
-          lessonComplete: false,
-        },
-        {
-          title: `บทที่ 4<br>ไพ่ชุดใหญ่`,
-          time: "30นาที",
-          vdoLink: "/images/video/testVid/vid4.mp4",
-          lessonComplete: false,
-        },
-        {
-          title: `บทที่5 <br>ไพ่ชุดเล็ก`,
-          time: "26นาที",
-          vdoLink: "/images/video/testVid/vid5.mp4",
-          lessonComplete: false,
-        },
-        {
-          title: `บทที่6 <br>ไพ่ชุดเล็ก`,
-          time: "26นาที",
-          vdoLink: "/images/video/testVid/vid1.mp4",
-          lessonComplete: false,
-        },
-        {
-          title: `บทที่7 <br>ไพ่ชุดเล็ก`,
-          time: "26นาที",
-          vdoLink: "/images/video/testVid/vid2.mp4",
-          lessonComplete: false,
-        },
-        {
-          title: `บทที่8 <br>ไพ่ชุดเล็ก`,
-          time: "26นาที",
-          vdoLink: "/images/video/testVid/vid3.mp4",
-          lessonComplete: false,
-        },
-        {
-          title: `บทที่9 <br>ไพ่ชุดเล็ก`,
-          time: "26นาที",
-          vdoLink: "/images/video/testVid/vid4.mp4",
-          lessonComplete: false,
-        },
-        {
-          title: `บทที่10 <br>ไพ่ชุดเล็ก`,
-          time: "26นาที",
-          vdoLink: "/images/video/testVid/vid5.mp4",
-          lessonComplete: false,
-        },
-        {
-          title: `บทที่ 1 <br>เกริ่นนำ`,
-          time: "18นาที",
-          vdoLink: "/images/video/testVid/vid1.mp4",
-          lessonComplete: false,
-        },
-        {
-          title: `บทที่ 2<br>การเป็นนักพยากรณ์มืออาชีพ`,
-          time: "1ขั่วโมง 8นาที",
-          vdoLink: "/images/video/testVid/vid2.mp4",
-          lessonComplete: false,
-        },
-        {
-          title: `บทที่ 3<br>ทุกเรื่องเกี่ยวกับไพ่`,
-          time: "54นาที",
-          vdoLink: "/images/video/testVid/vid3.mp4",
-          lessonComplete: false,
-        },
+        // {
+        //   title: `Lesson3<br>Chapter Title`,
+        //   time: "Duration",
+        //   vdoLink: "/images/video/testVid/vid3.mp4",
+        //   lessonComplete: false,
+        // },
+        // {
+        //   title: `Lesson4<br>Chapter Title`,
+        //   time: "Duration",
+        //   vdoLink: "/images/video/testVid/vid4.mp4",
+        //   lessonComplete: false,
+        // },
+        // {
+        //   title: `Lesson5<br>Chapter Title`,
+        //   time: "Duration",
+        //   vdoLink: "/images/video/testVid/vid5.mp4",
+        //   lessonComplete: false,
+        // },
+        // {
+        //   title: `Lesson6<br>Chapter Title`,
+        //   time: "Duration",
+        //   vdoLink: "/images/video/testVid/vid1.mp4",
+        //   lessonComplete: false,
+        // },
+        // {
+        //   title: `Lesson7<br>Chapter Title`,
+        //   time: "Duration",
+        //   vdoLink: "/images/video/testVid/vid2.mp4",
+        //   lessonComplete: false,
+        // },
+        // {
+        //   title: `Lesson8<br>Chapter Title`,
+        //   time: "Duration",
+        //   vdoLink: "/images/video/testVid/vid3.mp4",
+        //   lessonComplete: false,
+        // },
+        // {
+        //   title: `Lesson9<br>Chapter Title`,
+        //   time: "Duration",
+        //   vdoLink: "/images/video/testVid/vid4.mp4",
+        //   lessonComplete: false,
+        // },
+        // {
+        //   title: `Lesson10<br>Chapter Title`,
+        //   time: "Duration",
+        //   vdoLink: "/images/video/testVid/vid5.mp4",
+        //   lessonComplete: false,
+        // },
+        // {
+        //   title: `Lesson11<br>Chapter Title`,
+        //   time: "Duration",
+        //   vdoLink: "/images/video/testVid/vid1.mp4",
+        //   lessonComplete: false,
+        // },
+        // {
+        //   title: `Lesson12<br>Chapter Title`,
+        //   time: "Duration",
+        //   vdoLink: "/images/video/testVid/vid2.mp4",
+        //   lessonComplete: false,
+        // },
+        // {
+        //   title: `Lesson13<br>Chapter Title`,
+        //   time: "Duration",
+        //   vdoLink: "/images/video/testVid/vid3.mp4",
+        //   lessonComplete: false,
+        // },
       ],
     };
   },
@@ -239,7 +240,7 @@ export default {
         "ended",
         () => {
           this.videoLesson[this.index].lessonComplete = true;
-          this.learningProgress += Math.round(100 / this.videoLesson.length);
+          this.learningProgress += Math.ceil(100 / this.videoLesson.length);
           if (this.learningProgress >= 100) {
             this.learningProgress = 100;
             this.disabled = true;

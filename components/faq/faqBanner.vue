@@ -8,15 +8,7 @@
           <div
             class="text-[48px] leading-[60px] text-[#FFF] font-semibold mt-3 mb-10"
           >
-            คำถามที่พบบ่อย (FAQs)
-          </div>
-          <div
-            class="max-w-[320px] bg-white rounded-[8px] flex gap-x-2 py-3 px-[14px]"
-          >
-            <div class="w-5 h-5">
-              <img src="/images/icons/search-lg.png" class="w-full h-full" />
-            </div>
-            <input class="w-full" placeholder="Search" />
+            FAQs
           </div>
         </div>
         <div class="text-xl leading-[30px] text-[#AAAACB]">

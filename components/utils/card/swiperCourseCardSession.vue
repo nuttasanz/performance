@@ -26,11 +26,16 @@
     <template v-for="(card, i) in courseCard" :key="i">
       <swiper-slide class="max-w-[305px]">
         <div class="flex flex-col mb-12">
-          <div><img :src="card.image" /></div>
+          <div>
+            <img
+              :src="card.image"
+              class="w-full h-[300px] max-h-[300px] object-cover"
+            />
+          </div>
           <div
-            class="w-fit py-[6px] px-3 rounded-full text-[14px] text-white leading-[12px] mt-4 font-noto"
+            class="w-fit py-[6px] px-3 rounded-full text-[14px] text-white leading-[12px] mt-4"
             :class="
-              card.tag === 'หนังสือเสียง' ? 'bg-[#979789]' : 'bg-[#6F93DD]'
+              card.tag === 'Audio Course' ? 'bg-[#979789]' : 'bg-[#6F93DD]'
             "
           >
             {{ card.tag }}
@@ -47,9 +52,9 @@
               :class="popularCourseColor ? 'text-[#7C89FF]' : 'text-[#A2A2A8]'"
             >
               <div class="w-6 h-6 flex items-center justify-center">
-                <font-awesome-icon :icon="['fal', 'clock']" />
+                <font-awesome-icon :icon="['fas', 'clock']" />
               </div>
-              <div class="text-[22px] leading-[28px] ml-[14.5px]">
+              <div class="text-[22px] leading-[28px] ml-2">
                 {{ card.time }}
               </div>
             </div>

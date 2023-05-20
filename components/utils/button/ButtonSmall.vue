@@ -1,11 +1,11 @@
 <template>
   <button
-    class="flex items-center gap-x-2 rounded-full py-2 px-8"
+    class="flex justify-center items-center gap-x-2 rounded-full py-2 px-8"
     type="submit"
     :style="{ backgroundColor: buttonColor }"
   >
-    <div v-if="iconName" class="w-4 h-4">
-      <font-awesome-icon :icon="[iconType, iconName]" />
+    <div v-if="iconName" class="flex items-center w-5 h-5">
+      <font-awesome-icon :icon="[iconType, iconName]" class="w-full h-full"/>
       <img />
     </div>
     <div>{{ text }}</div>

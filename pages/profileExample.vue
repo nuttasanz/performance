@@ -7,10 +7,12 @@
         <ProfileMenuCard :menu="menu" @click="select" />
         <!-- END MENU -->
         <!-- END PROFILE MENU CARD -->
-        <ProfilePersonalInformation v-if="selectedMenu === 'ข้อมูลส่วนตัว'" />
-        <ProfileMyCourse v-if="selectedMenu === 'คอร์สของฉัน'" />
-        <ProfileCertificateSession v-if="selectedMenu === 'ใบประกาศนียบัตร'" />
-        <ProfileOrderHistory v-if="selectedMenu === 'ประวัติการสั่งซื้อ'" />
+        <ProfilePersonalInformation
+          v-if="selectedMenu === 'Personal Information'"
+        />
+        <ProfileMyCourse v-if="selectedMenu === 'My Course'" />
+        <ProfileCertificateSession v-if="selectedMenu === 'Certificate'" />
+        <ProfileOrderHistory v-if="selectedMenu === 'Order History'" />
       </div>
     </div>
   </div>
@@ -22,23 +24,23 @@ export default {
     return {
       menu: [
         {
-          title: "ข้อมูลส่วนตัว",
+          title: "Personal Information",
           icon: "/images/icons/avatar.png",
         },
         {
-          title: "คอร์สของฉัน",
+          title: "My Course",
           icon: "/images/icons/online-learning.png",
         },
         {
-          title: "ใบประกาศนียบัตร",
+          title: "Certificate",
           icon: "/images/icons/certify.png",
         },
         {
-          title: "ประวัติการสั่งซื้อ",
+          title: "Order History",
           icon: "/images/icons/cart.png",
         },
       ],
-      selectedMenu: "ข้อมูลส่วนตัว",
+      selectedMenu: "Personal Information",
     };
   },
   methods: {

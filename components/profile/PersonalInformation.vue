@@ -4,7 +4,7 @@
     <!-- HEADER TITLE -->
     <div class="border-b border-[#AEAFC5]">
       <div class="text-[32px] font-bold leading-[44.8px] text-[#24285F]">
-        ข้อมูลส่วนตัว
+        Personal Information
       </div>
     </div>
     <!-- END HEADER TITLE -->
@@ -16,9 +16,9 @@
         class="w-full h-full flex flex-col gap-y-[10px] items-center justify-center text-[#7D8592]"
       >
         <div>
-          <font-awesome-icon :icon="['far', 'circle-plus']" class="w-6 h-6" />
+          <font-awesome-icon :icon="['fas', 'circle-plus']" size="xl" />
         </div>
-        <div class="text-[24px] leading-[23.76px]">เพิ่มรูปภาพ</div>
+        <div class="text-xl">Add Profile Picture</div>
       </div>
     </div>
     <!-- END PROFILE PICTURE -->
@@ -28,9 +28,9 @@
         <div class="flex flex-col w-full">
           <UtilsInputTextFields
             id="name"
-            label="ชื่อ"
+            label="First Name"
             type="text"
-            placeholder="ชื่อ"
+            placeholder="First Name"
             name="name"
             for="name"
           />
@@ -38,9 +38,9 @@
         <div class="flex flex-col w-full">
           <UtilsInputTextFields
             id="last-name"
-            label="นามสกุล"
+            label="Last Name"
             type="text"
-            placeholder="นามสกุล"
+            placeholder="Last Name"
             name="last-name"
             for="last-name"
           />
@@ -51,9 +51,9 @@
         <div class="flex flex-col w-full">
           <UtilsInputTextFields
             id="nick-name"
-            label="ชื่อเล่น"
+            label="Nickname"
             type="text"
-            placeholder="ชื่อเล่น"
+            placeholder="Nickname"
             name="nick-name"
             for="nick-name"
           />
@@ -61,8 +61,8 @@
         <div class="flex flex-col w-full">
           <UtilsInputGenderSelectFields
             id="gender-select"
-            label="เพศ"
-            placeholder="เพศ"
+            label="Gender"
+            placeholder="Gender"
             name="gender"
             for="gender-select"
           />
@@ -71,7 +71,7 @@
 
       <div class="flex gap-x-7">
         <div class="flex flex-col w-full">
-          <UtilsInputBirthSelectFields label="วันเกิด" />
+          <UtilsInputBirthSelectFields label="Birth Date" />
         </div>
       </div>
 
@@ -79,9 +79,9 @@
         <div class="flex flex-col w-full">
           <UtilsInputTextFields
             id="tel"
-            label="เบอร์โทรศัพท์"
+            label="Telephone"
             type="tel"
-            placeholder="เบอร์โทรศัพท์"
+            placeholder="Telephone"
             name="tel"
             for="tel"
           />
@@ -103,7 +103,7 @@
           id="lineID"
           label="Line ID"
           type="text"
-          placeholder="ไอดีไลน์"
+          placeholder="LineID"
           name="lineID"
           for="lineID"
         />
@@ -111,7 +111,7 @@
     </div>
     <!-- END VALIDATE -->
     <div class="max-w-[171px] h-full max-h-[52px] mx-auto mt-[60px] mb-[45px]">
-      <UtilsButtonForm text="บันทึกข้อมูล" class="h-full" />
+      <UtilsButtonForm text="Submit" class="h-full" />
     </div>
   </div>
 </template>

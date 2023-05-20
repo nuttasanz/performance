@@ -26,9 +26,7 @@ export default {
   },
   methods: {
     go() {
-      window.open(
-        "https://line.me/R/ti/p/@aj_zern?from=page&accountId=aj_zern"
-      );
+      window.open("https://line.me/ti/p/jvja95Z-fD");
     },
   },
 };

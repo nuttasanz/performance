@@ -1,7 +1,7 @@
 <script setup>
 useHead({
-  title: "Horo Academy e-Learning",
-  meta: [{ name: "Horo Academy Home Page", content: "คอร์สเรียนดูดวงออนไลน์" }],
+  title: "Nuttasan Kotchawat",
+  meta: [{ name: "", content: "" }],
 });
 </script>
 
@@ -11,6 +11,5 @@ useHead({
     <HomePopularCoursesSession />
     <HomeRecommendedCourseSession />
     <HomeExploreSession />
-    <HomeActivitySession />
   </div>
 </template>

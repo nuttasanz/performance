@@ -13,7 +13,7 @@
       :rules="rules"
       required
     >
-      <option value="" disabled selected hidden>วัน</option>
+      <option value="" disabled selected hidden>Day</option>
       <template v-for="(days, i) in 31" :key="i">
         <option :value="`day-${i}`">{{ days }}</option>
       </template>
@@ -29,7 +29,7 @@
       :rules="rules"
       required
     >
-      <option value="" disabled selected hidden>เดือน</option>
+      <option value="" disabled selected hidden>Month</option>
       <template v-for="(month, i) in 12" :key="i">
         <option :value="`month-${i}`">{{ month }}</option>
       </template>
@@ -44,7 +44,7 @@
       :rules="rules"
       required
     >
-      <option value="" disabled selected hidden>ปี</option>
+      <option value="" disabled selected hidden>Year</option>
       <template v-for="(year, i) in 2" :key="i">
         <option :value="`year-${i}`">{{ year }}</option>
       </template>

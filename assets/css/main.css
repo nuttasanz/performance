@@ -23,7 +23,6 @@ textarea {
   border-radius: 8px;
   resize: none;
   font-size: 18px;
-  font-family: "Noto Serif Thai";
 }
 
 textarea::placeholder {
@@ -46,7 +45,6 @@ textarea::placeholder {
   user-select: none;
   font-size: 18px;
   line-height: 22.4px;
-  font-family: "Noto Serif Thai";
 }
 
 /* Hide the browser's default radio button */
@@ -112,7 +110,6 @@ textarea::placeholder {
   user-select: none;
   font-size: 18px;
   line-height: 22.4px;
-  font-family: "Noto Serif Thai";
 }
 
 /* Hide the browser's default checkbox */

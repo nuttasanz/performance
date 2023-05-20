@@ -1,3 +1,24 @@
+<script>
+import { defineComponent } from "@vue/composition-api";
+export default defineComponent({
+  props: {
+    title: {
+      type: String,
+      default: null,
+    },
+    grid: Boolean,
+    popularCourseColor: Boolean,
+    course: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  setup() {},
+  data() {
+    return {};
+  },
+});
+</script>
 <template>
   <div v-if="title" class="flex items-center gap-x-8 mb-10">
     <div
@@ -13,13 +34,18 @@
     :class="grid ? 'grid' : 'flex'"
   >
     <template v-for="(card, i) in course" :key="i">
-      <nuxt-link to="/course-detail/_slug">
+      <nuxt-link :to="`/course-detail/${card.title}`">
         <div class="h-full flex flex-col">
-          <div><img :src="card.image" /></div>
+          <div>
+            <img
+              :src="card.image"
+              class="w-full h-[300px] max-h-[300px] object-cover"
+            />
+          </div>
           <div
-            class="w-fit py-[6px] px-3 rounded-full text-[14px] text-white leading-[12px] mt-4 font-noto"
+            class="w-fit py-[6px] px-3 rounded-full text-[14px] text-white leading-[12px] mt-4"
             :class="
-              card.tag === 'หนังสือเสียง' ? 'bg-[#979789]' : 'bg-[#6F93DD]'
+              card.tag === 'Audio Course' ? 'bg-[#979789]' : 'bg-[#6F93DD]'
             "
           >
             {{ card.tag }}
@@ -40,9 +66,9 @@
                 "
               >
                 <div class="w-6 h-6 flex items-center justify-center">
-                  <font-awesome-icon :icon="['fal', 'clock']" />
+                  <font-awesome-icon :icon="['fas', 'clock']" />
                 </div>
-                <div class="text-[22px] leading-[30.8px] ml-[14.5px]">
+                <div class="text-[22px] leading-[30.8px] ml-2">
                   {{ card.time }}
                 </div>
               </div>
@@ -59,20 +85,3 @@
     </template>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      default: null,
-    },
-    grid: Boolean,
-    popularCourseColor: Boolean,
-    course: {
-      type: Array,
-      default: () => [],
-    },
-  },
-};
-</script>

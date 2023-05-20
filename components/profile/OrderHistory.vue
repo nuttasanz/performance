@@ -3,12 +3,12 @@
     <!-- HEADER TITLE -->
     <div class="border-b border-[#AEAFC5]">
       <div class="text-[32px] font-bold leading-[44.8px] text-[#24285F]">
-        ประวัติการสั่งซื้อ
+        Order History
       </div>
     </div>
     <!-- END HEADER TITLE -->
     <div class="text-xl text-[#24285F] font-medium my-5">
-      {{ orderDetail.length + " รายการ" }}
+      {{ orderDetail.length + " Order" }}
     </div>
     <div class="flex flex-col gap-y-5">
       <template v-for="(order, i) in orderDetail" :key="i">
@@ -21,12 +21,17 @@
                 {{ order.orderNO }}
               </div>
               <div class="bg-[#6CB88E] rounded-[40px] text-white py-1 px-5">
-                ชำระเงินแล้ว
+                Paid
               </div>
             </div>
 
             <div class="w-full flex gap-x-5 p-5">
-              <div><img :src="order.orderCover" class="max-w-[230px]" /></div>
+              <div class="w-[600px] h-[300px]">
+                <img
+                  :src="order.orderCover"
+                  class="w-full h-full object-cover"
+                />
+              </div>
               <div class="w-full flex flex-col">
                 <div
                   class="text-[22px] text-[#24285F] leading-[30.8px] font-medium mb-6"
@@ -35,10 +40,8 @@
                 </div>
                 <div class="flex gap-x-[92px] mb-4">
                   <div>
-                    <div
-                      class="font-noto text-[18px] leading-[17.82px] text-[#A2A2A8]"
-                    >
-                      วันที่สั่งซื้อ
+                    <div class="text-[18px] leading-[17.82px] text-[#A2A2A8]">
+                      Order Date
                     </div>
                     <div class="text-xl font-medium text-[#050505]">
                       {{ order.orderPurchase }}
@@ -46,10 +49,8 @@
                   </div>
 
                   <div>
-                    <div
-                      class="font-noto text-[18px] leading-[17.82px] text-[#A2A2A8]"
-                    >
-                      วิธีการชำระเงิน
+                    <div class="text-[18px] leading-[17.82px] text-[#A2A2A8]">
+                      Payment Method
                     </div>
                     <div class="text-xl font-medium text-[#050505]">
                       {{ order.orderPayment }}
@@ -58,10 +59,8 @@
                 </div>
 
                 <div>
-                  <div
-                    class="font-noto text-[18px] leading-[17.82px] text-[#A2A2A8]"
-                  >
-                    วันที่ชำระเงิน
+                  <div class="text-[18px] leading-[17.82px] text-[#A2A2A8]">
+                    Paid Date
                   </div>
                   <div class="text-xl font-medium text-[#050505]">
                     {{ order.orderPayDate }}
@@ -73,12 +72,12 @@
             <div
               class="w-full flex items-center justify-between p-5 border-t border-t-[#AEAFC5]"
             >
-              <div class="text-xl text-[#24285F] font-medium">ยอดชำระ</div>
+              <div class="text-xl text-[#24285F] font-medium">Total</div>
               <div class="text-xl text-[#24285F] font-medium">
                 <span class="text-[24px] leading-[33.6px]">{{
                   order.orderAmountCost
                 }}</span>
-                บาท
+                $
               </div>
             </div>
           </div>
@@ -94,53 +93,21 @@ export default {
     return {
       orderDetail: [
         {
-          orderNO: "คำสั่งซื้อ: 220500643",
-          orderCover: "/images/recommendCourse/course1.png",
-          orderTitle:
-            "Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์ มืออาชีพ สร้างรายได้หลักล้าน",
-          orderPurchase: "19 พ.ค. 2565 13:16",
-          orderPayment: "ชำระผ่านบัตรเครดิต/เดบิต",
-          orderPayDate: "19 พ.ค. 2565 13:18",
+          orderNO: "Order No.: 220500643",
+          orderCover: "/images/recommendCourse/course1.jpg",
+          orderTitle: "Course1",
+          orderPurchase: "19/05/2023 13:16",
+          orderPayment: "Credit/Debit Cards",
+          orderPayDate: "19/05/2023 13:18",
           orderAmountCost: "2,906.17",
         },
         {
-          orderNO: "คำสั่งซื้อ: 220500643",
-          orderCover: "/images/recommendCourse/course1.png",
-          orderTitle:
-            "Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์ มืออาชีพ สร้างรายได้หลักล้าน",
-          orderPurchase: "19 พ.ค. 2565 13:16",
-          orderPayment: "ชำระผ่านบัตรเครดิต/เดบิต",
-          orderPayDate: "19 พ.ค. 2565 13:18",
-          orderAmountCost: "2,906.17",
-        },
-        {
-          orderNO: "คำสั่งซื้อ: 220500643",
-          orderCover: "/images/recommendCourse/course1.png",
-          orderTitle:
-            "Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์ มืออาชีพ สร้างรายได้หลักล้าน",
-          orderPurchase: "19 พ.ค. 2565 13:16",
-          orderPayment: "ชำระผ่านบัตรเครดิต/เดบิต",
-          orderPayDate: "19 พ.ค. 2565 13:18",
-          orderAmountCost: "2,906.17",
-        },
-        {
-          orderNO: "คำสั่งซื้อ: 220500643",
-          orderCover: "/images/recommendCourse/course1.png",
-          orderTitle:
-            "Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์ มืออาชีพ สร้างรายได้หลักล้าน",
-          orderPurchase: "19 พ.ค. 2565 13:16",
-          orderPayment: "ชำระผ่านบัตรเครดิต/เดบิต",
-          orderPayDate: "19 พ.ค. 2565 13:18",
-          orderAmountCost: "2,906.17",
-        },
-        {
-          orderNO: "คำสั่งซื้อ: 220500643",
-          orderCover: "/images/recommendCourse/course1.png",
-          orderTitle:
-            "Online Tarot Course คอร์สไพ่ยิปซี จาก 0 สู่นักพยากรณ์ มืออาชีพ สร้างรายได้หลักล้าน",
-          orderPurchase: "19 พ.ค. 2565 13:16",
-          orderPayment: "ชำระผ่านบัตรเครดิต/เดบิต",
-          orderPayDate: "19 พ.ค. 2565 13:18",
+          orderNO: "Order No.: 220500643",
+          orderCover: "/images/recommendCourse/course1.jpg",
+          orderTitle: "Course2",
+          orderPurchase: "19/05/2023 13:16",
+          orderPayment: "Credit/Debit Cards",
+          orderPayDate: "19/05/2023 13:18",
           orderAmountCost: "2,906.17",
         },
       ],

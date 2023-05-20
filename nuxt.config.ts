@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "Horo Academy e-Learning",
+      title: "Test",
       meta: [
         {
           name: "description",
@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "~/assets/css/tailwind.css",
     "~/assets/css/font.css",
     "~/assets/css/main.css",
+    "@fortawesome/fontawesome-svg-core/styles.css",
   ],
   postcss: {
     plugins: {
