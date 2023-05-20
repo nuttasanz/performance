@@ -8,14 +8,7 @@
         <div class="max-w-[1440px] mx-auto py-[10px] px-20">
           <div class="flex items-center justify-between">
             <nuxt-link to="/">
-              <div class="flex gap-x-3">
-                <div class="max-w-[60px]">
-                  <img src="/images/brandLogo/HeaderHoroLogo.png" />
-                </div>
-                <div class="max-w-[180px] flex items-center">
-                  <img src="/images/brandLogo/HeaderHoroLogoText.png" />
-                </div>
-              </div>
+              <div class="text-lg text-[#24285F] font-bold">Logo Here Back to Home</div>
             </nuxt-link>
 
             <div class="flex gap-x-10">

@@ -4,14 +4,6 @@
       <div class="flex justify-between">
         <!--   LOGO & MAPS   -->
         <div class="flex flex-col">
-          <div class="flex gap-x-3">
-            <div class="max-w-[60px]">
-              <img src="@/public/images/brandLogo/FooterHoroLogo.png" />
-            </div>
-            <div class="max-w-[180px] flex items-center">
-              <img src="@/public/images/brandLogo/FooterHoroLogoText.png" />
-            </div>
-          </div>
           <div class="max-w-[290px] h-[172px] mt-6">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d287.4106234133958!2d101.0771228257441!3d14.25782901516666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sth!2sth!4v1684309020412!5m2!1sth!2sth"
