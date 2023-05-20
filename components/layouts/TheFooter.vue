@@ -37,7 +37,7 @@
           </div>
 
           <div class="flex flex-col text-lg text-white gap-y-3 text-center">
-            <div class="font-semibold mb-3">ช่องทางติดต่อ</div>
+            <div class="font-semibold mb-3">contact</div>
             <UtilsButtonSmall
               class="w-full"
               icon-type="fas"
