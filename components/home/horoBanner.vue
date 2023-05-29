@@ -27,7 +27,7 @@
         <!--   END BG IMAGE   -->
       </div>
       <!--   SOCIAL CONTACT   -->
-      <div class="flex justify-center gap-x-14 mt-8">
+      <div class="hidden xl:flex justify-center gap-x-14 mt-8">
         <template v-for="(social, i) in socialContact" :key="i">
           <div
             class="flex items-center gap-x-2 hover:cursor-pointer"
@@ -73,7 +73,7 @@
       <!--   END BG IMAGE   -->
     </div>
     <!--   SOCIAL CONTACT   -->
-    <div class="flex flex-col px-5 pb-5">
+    <div class="xl:hidden flex flex-col px-5 pb-5">
       <template v-for="(social, i) in socialContact" :key="i">
         <div
           class="flex items-center gap-x-2 hover:cursor-pointer"
