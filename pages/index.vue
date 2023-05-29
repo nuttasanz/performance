@@ -10,6 +10,6 @@ useHead({
     <HomeHoroBanner />
     <HomePopularCoursesSession />
     <HomeRecommendedCourseSession />
-    <HomeExploreSession />
+    <!-- <HomeExploreSession /> -->
   </div>
 </template>

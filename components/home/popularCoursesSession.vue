@@ -1,12 +1,23 @@
 <template>
   <div class="w-full bg-[#24285F]">
-    <div class="max-w-[1440px] mx-auto pt-[30px] px-20">
+    <!-- DESKTOP RESPONSIVE -->
+    <div class="hidden xl:block max-w-[1440px] mx-auto pt-[30px] px-20">
       <utils-card-swiper-course-card-session
         title="Poppular Content"
         popular-course-color
         :course-card="courseCard"
       ></utils-card-swiper-course-card-session>
     </div>
+    <!-- END DESKTOP RESPONSIVE -->
+    <!-- MOBILE RESPONSIVE -->
+    <div class="block xl:hidden max-w-[1440px] mx-auto p-10">
+      <utils-card-swiper-course-card-session
+        title="Poppular Content"
+        popular-course-color
+        :course-card="courseCard"
+      ></utils-card-swiper-course-card-session>
+    </div>
+    <!-- END MOBILE RESPONSIVE -->
   </div>
 </template>
 

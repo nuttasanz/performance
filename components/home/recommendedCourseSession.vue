@@ -1,6 +1,7 @@
 <template>
   <div class="w-full">
-    <div class="max-w-[1440px] mx-auto pt-8 px-20">
+    <!-- DESKTOP RESPONSIVE -->
+    <div class="hidden xl:block max-w-[1440px] mx-auto pt-8 px-20">
       <utils-card-course-card-session
         title="Recommended Content"
         :course="courseCard"
@@ -12,6 +13,20 @@
         <NuxtLink to="/all-course"> VIEW ALL CONTENT</NuxtLink>
       </div>
     </div>
+    <!-- END DESKTOP RESPONSIVE -->
+    <!-- MOBILE RESPONSIVE -->
+    <div class="block xl:hidden max-w-[1440px] mx-auto p-10">
+      <UtilsCardSwiperCourseCardSession
+        title="Recommended Content"
+        :course-card="courseCard"
+      />
+      <div
+        class="text-center text-[#5762C5] text-[22px] leading-[28px] font-medium border-2 rounded-full p-5 mt-12"
+      >
+        <NuxtLink to="/all-course"> VIEW ALL CONTENT</NuxtLink>
+      </div>
+    </div>
+    <!-- END MOBILE RESPONSIVE -->
   </div>
 </template>
 
