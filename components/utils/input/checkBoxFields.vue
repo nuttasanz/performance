@@ -1,5 +1,5 @@
 <template>
-  <label :for="choice" class="check-button">
+  <label class="check-button">
     <Field
       :id="choice"
       :name="answer"
